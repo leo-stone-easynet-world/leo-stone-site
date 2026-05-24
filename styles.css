@@ -68,11 +68,11 @@ a { color: inherit; }
 .hero-title,
 .page-intro h1,
 .about-hero h1 {
-  max-width: 900px;
-  font-size: clamp(2.35rem, 5.5vw, 5rem);
-  font-weight: 900;
+  max-width: 760px;
+  font-size: clamp(2rem, 3.4vw, 3rem);
+  font-weight: 850;
   letter-spacing: 0;
-  line-height: 1;
+  line-height: 1.08;
 }
 
 .hero-copy,
@@ -80,7 +80,7 @@ a { color: inherit; }
 .profile-text,
 .about-story p {
   color: #475467;
-  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  font-size: clamp(1rem, 1.45vw, 1.15rem);
   line-height: 1.7;
 }
 
@@ -108,9 +108,9 @@ a { color: inherit; }
 .section-head h2,
 .profile-band h2 {
   max-width: 720px;
-  font-size: clamp(1.8rem, 3.4vw, 3.2rem);
-  font-weight: 900;
-  line-height: 1;
+  font-size: clamp(1.6rem, 2.4vw, 2.35rem);
+  font-weight: 850;
+  line-height: 1.1;
 }
 
 .profile-band { background: #fff; }
@@ -134,9 +134,9 @@ a { color: inherit; }
 
 .ai-news-intro h2 {
   max-width: 620px;
-  font-size: clamp(1.9rem, 3.8vw, 3.5rem);
-  font-weight: 900;
-  line-height: 0.96;
+  font-size: clamp(1.65rem, 2.7vw, 2.5rem);
+  font-weight: 850;
+  line-height: 1.08;
 }
 
 .ai-news-intro p {
@@ -181,6 +181,15 @@ a { color: inherit; }
 .ai-news-item p {
   margin-bottom: 0;
   color: var(--muted);
+  line-height: 1.6;
+}
+
+.empty-state {
+  padding: 1.25rem;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid var(--line);
+  border-radius: 10px;
   line-height: 1.6;
 }
 
@@ -233,9 +242,9 @@ a { color: inherit; }
 
 .featured-title {
   color: var(--ink);
-  font-size: clamp(1.55rem, 3vw, 2.5rem);
-  font-weight: 900;
-  line-height: 1.02;
+  font-size: clamp(1.35rem, 2.2vw, 2rem);
+  font-weight: 850;
+  line-height: 1.12;
 }
 
 .news-image {
@@ -247,9 +256,9 @@ a { color: inherit; }
 
 .news-title {
   color: var(--ink);
-  font-size: 1.18rem;
-  font-weight: 900;
-  line-height: 1.25;
+  font-size: 1.05rem;
+  font-weight: 850;
+  line-height: 1.3;
 }
 
 .read-link {
@@ -274,9 +283,9 @@ a { color: inherit; }
 
 .news-ai-intro h2 {
   max-width: 720px;
-  font-size: clamp(1.8rem, 3.2vw, 3rem);
-  font-weight: 900;
-  line-height: 1;
+  font-size: clamp(1.55rem, 2.4vw, 2.25rem);
+  font-weight: 850;
+  line-height: 1.1;
 }
 
 .news-ai-intro p {
@@ -303,29 +312,6 @@ a { color: inherit; }
   border-radius: 14px;
 }
 
-.about-quiet-image {
-  overflow: hidden;
-  margin: 0 0 1.45rem;
-  background: #f7f9fa;
-  border: 1px solid var(--line);
-  border-radius: 10px;
-}
-
-.about-quiet-image img {
-  display: block;
-  width: 100%;
-  max-height: 260px;
-  object-fit: cover;
-  filter: saturate(0.72) contrast(0.94) brightness(1.04);
-}
-
-.about-quiet-image figcaption {
-  padding: 0.7rem 0.85rem;
-  color: var(--muted);
-  font-size: 0.78rem;
-  line-height: 1.45;
-}
-
 .profile-card { border: 1px solid var(--line); box-shadow: none; }
 .profile-card p { color: var(--muted); line-height: 1.65; }
 .profile-card h2 { color: var(--deep); font-weight: 900; }
@@ -346,16 +332,16 @@ a { color: inherit; }
 
 .article-content { padding: clamp(1.4rem, 5vw, 3.2rem); }
 .article-content h1 {
-  max-width: 850px;
-  font-size: clamp(1.9rem, 4vw, 3.6rem);
-  font-weight: 900;
+  max-width: 780px;
+  font-size: clamp(1.65rem, 3vw, 2.55rem);
+  font-weight: 850;
   letter-spacing: 0;
-  line-height: 1.04;
+  line-height: 1.12;
 }
 
 .article-summary {
   color: #475467;
-  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  font-size: clamp(1rem, 1.55vw, 1.18rem);
   line-height: 1.65;
 }
 
@@ -378,9 +364,9 @@ a { color: inherit; }
   margin-bottom: 1rem;
   color: var(--deep);
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: clamp(1.55rem, 3vw, 2.2rem);
-  font-weight: 900;
-  line-height: 1.12;
+  font-size: clamp(1.35rem, 2.1vw, 1.8rem);
+  font-weight: 850;
+  line-height: 1.18;
 }
 
 .article-body li { margin-bottom: 0.65rem; }
@@ -433,7 +419,7 @@ a { color: inherit; }
   .ai-news-layout { grid-template-columns: 1fr; }
   .ai-news-intro { position: static; }
   .ai-news-item { grid-template-columns: 1fr; }
-  .hero-title, .page-intro h1, .about-hero h1 { font-size: 2.55rem; }
+  .hero-title, .page-intro h1, .about-hero h1 { font-size: 2rem; }
   .featured-image { min-height: 250px; }
   .news-image { height: 205px; }
 }

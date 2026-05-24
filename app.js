@@ -95,6 +95,11 @@ function aiNewsItem(article) {
   return link;
 }
 
+function emptyState(text) {
+  const node = el("div", "empty-state", text);
+  return node;
+}
+
 function isAiArticle(article) {
   if (article.category !== "technology") return false;
   const haystack = `${article.title} ${article.summary} ${article.slug}`.toLowerCase();
@@ -103,9 +108,12 @@ function isAiArticle(article) {
 
 async function renderHome() {
   const articles = await loadIndex();
+  const aiArticles = articles.filter(isAiArticle).slice(0, 3);
   document.querySelector("#home-featured")?.replaceChildren(featured(articles[0]));
   document.querySelector("#home-grid")?.replaceChildren(...articles.slice(1, 4).map(card));
-  document.querySelector("#home-ai-news")?.replaceChildren(...articles.filter(isAiArticle).slice(0, 3).map(aiNewsItem));
+  document.querySelector("#home-ai-news")?.replaceChildren(
+    ...(aiArticles.length ? aiArticles.map(aiNewsItem) : [emptyState("AI briefings will appear here as soon as the news desk has a fresh, source-backed item.")]),
+  );
 }
 
 async function renderNews() {
@@ -113,7 +121,9 @@ async function renderNews() {
   const aiArticles = articles.filter(isAiArticle);
   document.querySelector("#news-all")?.replaceChildren(...articles.map(card));
   document.querySelector("#news-tech")?.replaceChildren(...articles.filter((article) => article.category === "technology").map(card));
-  document.querySelector("#news-ai")?.replaceChildren(...aiArticles.map(card));
+  document.querySelector("#news-ai")?.replaceChildren(
+    ...(aiArticles.length ? aiArticles.map(card) : [emptyState("No AI briefing is available yet. The next verified AI story will appear here.")]),
+  );
   document.querySelector("#news-finance")?.replaceChildren(...articles.filter((article) => article.category === "finance").map(card));
   activateHashTab();
 }
