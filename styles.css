@@ -306,6 +306,37 @@ a { color: inherit; }
   border-color: var(--deep);
 }
 
+.news-pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.45rem;
+  margin-top: 2rem;
+}
+
+.news-page-button {
+  min-width: 2.45rem;
+  min-height: 2.45rem;
+  padding: 0 0.8rem;
+  color: var(--deep);
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font-weight: 850;
+}
+
+.news-page-button:hover:not(:disabled),
+.news-page-button.active {
+  color: #fff;
+  background: var(--deep);
+  border-color: var(--deep);
+}
+
+.news-page-button:disabled {
+  color: #98a2b3;
+  cursor: not-allowed;
+}
+
 .about-story {
   padding: 1.8rem;
   background: rgba(255, 255, 255, 0.72);

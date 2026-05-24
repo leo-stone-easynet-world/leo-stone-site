@@ -12,6 +12,7 @@ const categoryLabel = (category) => category === "finance" ? "Finance" : categor
 const categoryClass = (category) => category === "finance" ? "badge-finance" : category === "ai" ? "badge-ai" : "badge-tech";
 const articleUrl = (article) => `article.html?slug=${encodeURIComponent(article.slug)}`;
 const AI_TERMS = ["ai", "artificial intelligence", "gemini", "automation", "large language", "generative"];
+const NEWS_PAGE_SIZE = 9;
 
 const el = (tag, className, text) => {
   const node = document.createElement(tag);
@@ -100,6 +101,36 @@ function emptyState(text) {
   return node;
 }
 
+function paginationButton(label, disabled, onClick, current = false) {
+  const button = document.createElement("button");
+  button.type = "button";
+  button.className = current ? "news-page-button active" : "news-page-button";
+  button.textContent = label;
+  button.disabled = disabled;
+  button.addEventListener("click", onClick);
+  return button;
+}
+
+function renderPagination(container, totalItems, currentPage, onPageChange) {
+  const totalPages = Math.max(1, Math.ceil(totalItems / NEWS_PAGE_SIZE));
+  if (totalPages <= 1) {
+    container.replaceChildren();
+    return;
+  }
+
+  const start = Math.max(1, currentPage - 2);
+  const end = Math.min(totalPages, start + 4);
+  const adjustedStart = Math.max(1, end - 4);
+  const controls = el("nav", "news-pagination");
+  controls.setAttribute("aria-label", "Article pagination");
+  controls.append(paginationButton("Previous", currentPage === 1, () => onPageChange(currentPage - 1)));
+  for (let page = adjustedStart; page <= end; page += 1) {
+    controls.append(paginationButton(String(page), false, () => onPageChange(page), page === currentPage));
+  }
+  controls.append(paginationButton("Next", currentPage === totalPages, () => onPageChange(currentPage + 1)));
+  container.replaceChildren(controls);
+}
+
 function isAiArticle(article) {
   return article.category === "ai";
 }
@@ -121,18 +152,41 @@ async function renderNews() {
     technology: articles.filter((article) => article.category === "technology"),
     finance: articles.filter((article) => article.category === "finance"),
   };
-  const renderPanel = (selector, items, emptyText) => {
-    document.querySelector(selector)?.replaceChildren(
-      ...(items.length ? items.map(card) : [emptyState(emptyText)]),
-    );
+  const pageState = { all: 1, ai: 1, technology: 1, finance: 1 };
+  const panels = {
+    all: { selector: "#news-all", pager: "#news-all-pagination", items: articles, emptyText: "No briefings are available yet." },
+    ai: { selector: "#news-ai", pager: "#news-ai-pagination", items: byCategory.ai, emptyText: "No AI briefing is available yet. The next verified AI story will appear here." },
+    technology: { selector: "#news-tech", pager: "#news-tech-pagination", items: byCategory.technology, emptyText: "No technology briefing is available yet." },
+    finance: { selector: "#news-finance", pager: "#news-finance-pagination", items: byCategory.finance, emptyText: "No finance briefing is available yet." },
   };
-  renderPanel("#news-all", articles, "No briefings are available yet.");
-  renderPanel("#news-ai", byCategory.ai, "No AI briefing is available yet. The next verified AI story will appear here.");
-  renderPanel("#news-tech", byCategory.technology, "No technology briefing is available yet.");
-  renderPanel("#news-finance", byCategory.finance, "No finance briefing is available yet.");
-  document.querySelector("#ai-tab")?.addEventListener("shown.bs.tab", () => renderPanel("#news-ai", byCategory.ai, "No AI briefing is available yet. The next verified AI story will appear here."));
-  document.querySelector("#tech-tab")?.addEventListener("shown.bs.tab", () => renderPanel("#news-tech", byCategory.technology, "No technology briefing is available yet."));
-  document.querySelector("#finance-tab")?.addEventListener("shown.bs.tab", () => renderPanel("#news-finance", byCategory.finance, "No finance briefing is available yet."));
+
+  const renderPanel = (key) => {
+    const panel = panels[key];
+    const list = document.querySelector(panel.selector);
+    const pager = document.querySelector(panel.pager);
+    if (!list || !pager) return;
+    const totalPages = Math.max(1, Math.ceil(panel.items.length / NEWS_PAGE_SIZE));
+    pageState[key] = Math.min(Math.max(1, pageState[key]), totalPages);
+    const start = (pageState[key] - 1) * NEWS_PAGE_SIZE;
+    const pageItems = panel.items.slice(start, start + NEWS_PAGE_SIZE);
+    list.replaceChildren(
+      ...(pageItems.length ? pageItems.map(card) : [emptyState(panel.emptyText)]),
+    );
+    renderPagination(pager, panel.items.length, pageState[key], (page) => {
+      pageState[key] = page;
+      renderPanel(key);
+      list.scrollIntoView({ block: "start", behavior: "smooth" });
+    });
+  };
+
+  renderPanel("all");
+  renderPanel("ai");
+  renderPanel("technology");
+  renderPanel("finance");
+  document.querySelector("#all-tab")?.addEventListener("shown.bs.tab", () => renderPanel("all"));
+  document.querySelector("#ai-tab")?.addEventListener("shown.bs.tab", () => renderPanel("ai"));
+  document.querySelector("#tech-tab")?.addEventListener("shown.bs.tab", () => renderPanel("technology"));
+  document.querySelector("#finance-tab")?.addEventListener("shown.bs.tab", () => renderPanel("finance"));
   activateHashTab();
 }
 
