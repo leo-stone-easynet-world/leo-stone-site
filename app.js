@@ -11,6 +11,7 @@ const formatDate = (iso) => new Intl.DateTimeFormat("en", {
 const categoryLabel = (category) => category === "finance" ? "Finance" : "Technology";
 const categoryClass = (category) => category === "finance" ? "badge-finance" : "badge-tech";
 const articleUrl = (article) => `article.html?slug=${encodeURIComponent(article.slug)}`;
+const AI_TERMS = ["ai", "artificial intelligence", "gemini", "automation", "large language", "generative"];
 
 const el = (tag, className, text) => {
   const node = document.createElement(tag);
@@ -76,10 +77,29 @@ function card(article) {
   return col;
 }
 
+function aiNewsItem(article) {
+  const link = el("a", "ai-news-item text-decoration-none");
+  link.href = articleUrl(article);
+  const copy = el("div", "");
+  copy.append(meta(article, true));
+  copy.append(el("h3", "", article.title));
+  copy.append(el("p", "", article.summary));
+  link.append(copy);
+  link.append(el("span", "read-link", "Open"));
+  return link;
+}
+
+function isAiArticle(article) {
+  if (article.category !== "technology") return false;
+  const haystack = `${article.title} ${article.summary} ${article.slug}`.toLowerCase();
+  return AI_TERMS.some((term) => haystack.includes(term));
+}
+
 async function renderHome() {
   const articles = await loadIndex();
   document.querySelector("#home-featured")?.replaceChildren(featured(articles[0]));
   document.querySelector("#home-grid")?.replaceChildren(...articles.slice(1, 4).map(card));
+  document.querySelector("#home-ai-news")?.replaceChildren(...articles.filter(isAiArticle).slice(0, 3).map(aiNewsItem));
 }
 
 async function renderNews() {
