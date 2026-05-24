@@ -8,8 +8,8 @@ const formatDate = (iso) => new Intl.DateTimeFormat("en", {
   minute: "2-digit",
 }).format(new Date(iso));
 
-const categoryLabel = (category) => category === "finance" ? "Finance" : "Technology";
-const categoryClass = (category) => category === "finance" ? "badge-finance" : "badge-tech";
+const categoryLabel = (category) => category === "finance" ? "Finance" : category === "ai" ? "AI" : "Technology";
+const categoryClass = (category) => category === "finance" ? "badge-finance" : category === "ai" ? "badge-ai" : "badge-tech";
 const articleUrl = (article) => `article.html?slug=${encodeURIComponent(article.slug)}`;
 const AI_TERMS = ["ai", "artificial intelligence", "gemini", "automation", "large language", "generative"];
 
@@ -101,6 +101,7 @@ function emptyState(text) {
 }
 
 function isAiArticle(article) {
+  if (article.category === "ai") return true;
   if (article.category !== "technology") return false;
   const haystack = `${article.title} ${article.summary} ${article.slug}`.toLowerCase();
   return AI_TERMS.some((term) => haystack.includes(term));
