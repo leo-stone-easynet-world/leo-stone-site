@@ -50,6 +50,9 @@
           <button class="nav-link" id="tech-tab" data-bs-toggle="pill" data-bs-target="#tech-panel" type="button" role="tab">Technology</button>
         </li>
         <li class="nav-item" role="presentation">
+          <button class="nav-link" id="ai-tab" data-bs-toggle="pill" data-bs-target="#ai-panel" type="button" role="tab">AI</button>
+        </li>
+        <li class="nav-item" role="presentation">
           <button class="nav-link" id="finance-tab" data-bs-toggle="pill" data-bs-target="#finance-panel" type="button" role="tab">Finance</button>
         </li>
       </ul>
@@ -60,6 +63,19 @@
         </div>
         <div class="tab-pane fade" id="tech-panel" role="tabpanel" aria-labelledby="tech-tab">
           <div id="news-tech" class="row g-4" aria-live="polite"></div>
+        </div>
+        <div class="tab-pane fade" id="ai-panel" role="tabpanel" aria-labelledby="ai-tab">
+          <section class="news-ai-section">
+            <div class="news-ai-intro">
+              <p class="eyebrow">Artificial intelligence</p>
+              <h2>AI briefings with an operator's eye.</h2>
+              <p>
+                Platform shifts, model infrastructure, education, security, and product habits:
+                the AI stories worth reading after the announcement fades.
+              </p>
+            </div>
+            <div id="news-ai" class="row g-4" aria-live="polite"></div>
+          </section>
         </div>
         <div class="tab-pane fade" id="finance-panel" role="tabpanel" aria-labelledby="finance-tab">
           <div id="news-finance" class="row g-4" aria-live="polite"></div>

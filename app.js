@@ -38,9 +38,15 @@ function meta(article, withReadTime = false) {
 function image(article, className) {
   const img = document.createElement("img");
   img.className = className;
-  img.src = article.image || "";
   img.alt = article.imageAlt || article.title || "";
   img.loading = "lazy";
+  img.src = article.image || "";
+  img.onerror = () => {
+    img.onerror = null;
+    img.removeAttribute("src");
+    img.hidden = true;
+  };
+  if (!article.image) img.hidden = true;
   return img;
 }
 
@@ -104,17 +110,24 @@ async function renderHome() {
 
 async function renderNews() {
   const articles = await loadIndex();
+  const aiArticles = articles.filter(isAiArticle);
   document.querySelector("#news-all")?.replaceChildren(...articles.map(card));
   document.querySelector("#news-tech")?.replaceChildren(...articles.filter((article) => article.category === "technology").map(card));
+  document.querySelector("#news-ai")?.replaceChildren(...aiArticles.map(card));
   document.querySelector("#news-finance")?.replaceChildren(...articles.filter((article) => article.category === "finance").map(card));
+  activateHashTab();
 }
 
 function renderInlineImage(block) {
   const figure = el("figure", "inline-article-image");
   const img = document.createElement("img");
-  img.src = block.src;
   img.alt = block.alt || "";
   img.loading = "lazy";
+  img.src = block.src;
+  img.onerror = () => {
+    img.onerror = null;
+    figure.remove();
+  };
   figure.append(img);
   const caption = el("figcaption", "");
   caption.append(document.createTextNode(block.caption || block.alt || "Source image"));
@@ -128,6 +141,12 @@ function renderInlineImage(block) {
   }
   figure.append(caption);
   return figure;
+}
+
+function activateHashTab() {
+  if (!window.location.hash) return;
+  const trigger = document.querySelector(`[data-bs-target="${window.location.hash}-panel"]`);
+  if (trigger && window.bootstrap?.Tab) window.bootstrap.Tab.getOrCreateInstance(trigger).show();
 }
 
 function renderBlocks(blocks, container) {
@@ -181,7 +200,21 @@ async function renderArticle() {
   }
   body.append(credit);
   const articleBody = el("div", "article-body");
-  renderBlocks(article.body || [], articleBody);
+  const hasInlineImage = (article.body || []).some((block) => block.type === "image" && block.src);
+  const bodyBlocks = [...(article.body || [])];
+  if (article.image && !hasInlineImage) {
+    const firstParagraph = bodyBlocks.findIndex((block) => block.type === "paragraph");
+    const inlineImage = {
+      type: "image",
+      src: article.image,
+      alt: article.imageAlt,
+      caption: article.imageCaption || article.imageAlt,
+      sourceTitle: article.imageSourceTitle,
+      sourceUrl: article.imageSourceUrl,
+    };
+    bodyBlocks.splice(firstParagraph === -1 ? 0 : firstParagraph + 1, 0, inlineImage);
+  }
+  renderBlocks(bodyBlocks, articleBody);
   if (article.sources?.length) {
     const sources = el("div", "sources");
     sources.append(el("h2", "", "Sources"));
