@@ -5,121 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="Leo Stone is a Silicon Valley senior IT expert focused on enterprise architecture, AI platforms, cloud operations, and elegant software products."
+      content="Leo Stone publishes thoughtful technology and finance briefings for builders, operators, and investors."
     >
-    <title>Leo Stone</title>
+    <title>Leo Stone | Technology & Finance</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
   </head>
   <body>
     <header class="site-header" aria-label="Site header">
-      <a class="brand" href="#top" aria-label="Leo Stone home">Leo Stone</a>
+      <a class="brand" href="index.html" aria-label="Leo Stone home">
+        <span>Leo Stone</span>
+        <small>Technology & Finance</small>
+      </a>
       <nav aria-label="Primary navigation">
-        <a href="#profile">Profile</a>
-        <a href="#principles">Principles</a>
-        <a href="#capabilities">Capabilities</a>
-        <a href="#contact">Contact</a>
+        <a href="#latest">Latest</a>
+        <a href="#technology">Technology</a>
+        <a href="#finance">Finance</a>
+        <a href="#about">About</a>
       </nav>
     </header>
 
-    <main id="top">
+    <main>
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-copy">
-          <p class="eyebrow">OpenClaw / Easynet World</p>
-          <h1 id="hero-title">Leo Stone</h1>
+          <p class="eyebrow">Silicon Valley intelligence desk</p>
+          <h1 id="hero-title">Clear thinking on technology, markets, and the systems behind both.</h1>
           <p class="hero-text">
-            Senior IT expert in Silicon Valley, shaping AI platforms, cloud
-            operations, and enterprise systems with calm judgment and product
-            taste.
+            Leo Stone tracks the signal inside AI, cloud infrastructure,
+            software platforms, macro markets, and company strategy, then turns
+            it into concise, source-aware analysis for serious readers.
           </p>
-          <div class="hero-actions" aria-label="Primary actions">
-            <a class="button primary" href="#contact">Start a conversation</a>
-            <a class="button secondary" href="#capabilities">View capabilities</a>
-          </div>
         </div>
-        <div class="signal-panel" aria-label="Current focus">
-          <p>Current focus</p>
-          <ul>
-            <li>AI infrastructure that operators can trust</li>
-            <li>Cloud systems that stay understandable</li>
-            <li>Software products with quiet, durable utility</li>
-          </ul>
+        <aside class="hero-brief" aria-label="Publishing rhythm">
+          <p>Publishing rhythm</p>
+          <strong>Hourly briefings</strong>
+          <span>Technology and finance articles, each with a dedicated editorial image.</span>
+        </aside>
+      </section>
+
+      <section id="latest" class="section latest-section" aria-labelledby="latest-title">
+        <div class="section-heading">
+          <p class="eyebrow">Latest</p>
+          <h2 id="latest-title">Fresh analysis from Leo.</h2>
+        </div>
+        <div id="latest-grid" class="article-grid" aria-live="polite"></div>
+      </section>
+
+      <section class="section split-section" aria-label="Topic channels">
+        <div id="technology" class="channel">
+          <div class="section-heading compact">
+            <p class="eyebrow">Technology</p>
+            <h2>AI, cloud, chips, security, and product platforms.</h2>
+          </div>
+          <div id="technology-list" class="story-list"></div>
+        </div>
+        <div id="finance" class="channel">
+          <div class="section-heading compact">
+            <p class="eyebrow">Finance</p>
+            <h2>Markets, macro, companies, and capital flows.</h2>
+          </div>
+          <div id="finance-list" class="story-list"></div>
         </div>
       </section>
 
-      <section id="profile" class="section two-column" aria-labelledby="profile-title">
+      <section id="about" class="section about-section" aria-labelledby="about-title">
         <div>
-          <p class="eyebrow">Profile</p>
-          <h2 id="profile-title">Builder, operator, and architecture partner.</h2>
+          <p class="eyebrow">About Leo</p>
+          <h2 id="about-title">A calm operator's view of fast-moving systems.</h2>
         </div>
         <p>
-          Leo works at the intersection of practical engineering and clear
-          systems thinking. His work favors robust foundations, humane tools,
-          disciplined automation, and products that feel obvious after they
-          exist.
+          Leo Stone is a Silicon Valley senior IT expert focused on enterprise
+          architecture, AI platforms, cloud operations, and elegant software
+          products. This site is maintained as a lightweight publishing system:
+          new articles are added as content files, not by rebuilding the site.
         </p>
-      </section>
-
-      <section id="principles" class="section" aria-labelledby="principles-title">
-        <p class="eyebrow">Principles</p>
-        <h2 id="principles-title">How Leo approaches technical work.</h2>
-        <div class="principle-grid">
-          <article>
-            <h3>Calm systems</h3>
-            <p>Architectures should reduce operational anxiety, not hide it.</p>
-          </article>
-          <article>
-            <h3>Small surfaces</h3>
-            <p>Good platforms expose the few controls people actually need.</p>
-          </article>
-          <article>
-            <h3>Trustworthy automation</h3>
-            <p>AI and scripts earn their place through logs, rollback paths, and clear ownership.</p>
-          </article>
-          <article>
-            <h3>Product restraint</h3>
-            <p>Elegant tools do their job without making the room louder.</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="capabilities" class="section two-column" aria-labelledby="capabilities-title">
-        <div>
-          <p class="eyebrow">Capabilities</p>
-          <h2 id="capabilities-title">Practical help across the stack.</h2>
-        </div>
-        <div class="capability-list">
-          <div>
-            <span>01</span>
-            <p>Enterprise architecture and platform strategy</p>
-          </div>
-          <div>
-            <span>02</span>
-            <p>AI agent operations, evaluation, and deployment workflows</p>
-          </div>
-          <div>
-            <span>03</span>
-            <p>Cloud infrastructure, Kubernetes, observability, and automation</p>
-          </div>
-          <div>
-            <span>04</span>
-            <p>Software product shaping, review, and implementation guidance</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="section contact" aria-labelledby="contact-title">
-        <p class="eyebrow">Contact</p>
-        <h2 id="contact-title">Work with Leo Stone.</h2>
-        <p>
-          For AI platforms, cloud operations, and software architecture
-          conversations, contact Leo through Easynet World.
-        </p>
-        <a class="button primary" href="mailto:leo.stone@easynet.world">leo.stone@easynet.world</a>
       </section>
     </main>
 
     <footer>
-      <p>Leo Stone. Built for clarity, maintained with Codex.</p>
+      <p>Leo Stone. Technology and finance intelligence, maintained with OpenClaw.</p>
+      <a href="mailto:leo.stone@easynet.world">leo.stone@easynet.world</a>
     </footer>
   </body>
 </html>

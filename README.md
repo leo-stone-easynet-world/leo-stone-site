@@ -1,10 +1,64 @@
-# Leo Stone Site
+# Leo Stone Technology & Finance Site
 
-A lightweight static personal website for Leo Stone.
+A lightweight static publishing site for Leo Stone.
+
+Public URL:
+
+```text
+https://leo.easynet.world/
+```
+
+## Content Model
+
+The site does not need to be rebuilt when a new article is published. Add:
+
+```text
+content/articles/<slug>.json
+assets/articles/<slug>.<ext>
+```
+
+Then add the article metadata to:
+
+```text
+content/articles/index.json
+```
+
+The homepage loads `content/articles/index.json`. Article pages load individual
+JSON files through:
+
+```text
+article.html?slug=<slug>
+```
+
+## Article JSON
+
+```json
+{
+  "slug": "example-article",
+  "category": "technology",
+  "title": "Article title",
+  "summary": "Short summary.",
+  "publishedAt": "2026-05-23T23:55:00Z",
+  "readingMinutes": 5,
+  "image": "assets/articles/example.svg",
+  "imageAlt": "Image description",
+  "imageCaption": "Optional caption.",
+  "body": [
+    { "type": "paragraph", "text": "Paragraph text." },
+    { "type": "heading", "text": "Section title" },
+    { "type": "list", "items": ["Point one", "Point two"] }
+  ],
+  "sources": [
+    { "title": "Source title", "url": "https://example.com" }
+  ]
+}
+```
+
+Finance articles are informational analysis, not investment advice.
 
 ## Local Preview
 
-Open `index.html` in a browser, or run:
+Run a local static server:
 
 ```bash
 python3 -m http.server 8080
@@ -16,22 +70,13 @@ Then open:
 http://127.0.0.1:8080
 ```
 
-## Deploy To The Google Cloud VM
+## Deploy
 
-The first deployment should be done on the VM:
+Deployments run on the Google Cloud VM behind Cloudflare Tunnel:
 
 ```bash
-sudo apt update
-sudo apt install -y nginx git
-sudo systemctl enable --now nginx
-
-sudo mkdir -p /srv/leo
-sudo chown -R "$USER:$USER" /srv/leo
-cd /srv/leo
-git clone https://github.com/leo-stone-easynet-world/leo-stone-site.git
-
-sudo rm -rf /var/www/html
-sudo ln -s /srv/leo/leo-stone-site /var/www/html
+cd /srv/leo/leo-stone-site
+git pull --ff-only
 sudo nginx -t
 sudo systemctl reload nginx
 ```
@@ -40,25 +85,5 @@ Verify:
 
 ```bash
 curl -I http://localhost
-curl -I http://130.211.192.153
-```
-
-## Update Workflow
-
-Make changes locally with Codex, then:
-
-```bash
-git status
-git add .
-git commit -m "Update site"
-git push
-```
-
-On the VM:
-
-```bash
-cd /srv/leo/leo-stone-site
-git pull --ff-only
-sudo nginx -t
-sudo systemctl reload nginx
+curl -I https://leo.easynet.world/
 ```
