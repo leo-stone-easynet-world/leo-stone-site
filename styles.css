@@ -403,3 +403,30 @@ footer a {
     grid-template-columns: 1fr;
   }
 }
+
+
+.inline-article-image {
+  overflow: hidden;
+  margin: 18px 0 28px;
+  background: var(--surface-clean, #fff);
+  border: 1px solid var(--line, #ddd);
+  border-radius: 8px;
+}
+
+.inline-article-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.inline-article-image figcaption,
+.article-hero figcaption {
+  line-height: 1.45;
+}
+
+.inline-article-image a,
+.article-hero figcaption a {
+  color: var(--teal, #0c6f79);
+  font-weight: 800;
+  text-decoration: none;
+}

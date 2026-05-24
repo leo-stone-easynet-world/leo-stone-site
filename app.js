@@ -83,6 +83,27 @@ async function renderHome() {
   }
 }
 
+function renderInlineImage(block) {
+  const figure = el("figure", "inline-article-image");
+  const image = document.createElement("img");
+  image.src = block.src;
+  image.alt = block.alt || "";
+  image.loading = "lazy";
+  figure.append(image);
+  const caption = el("figcaption", "");
+  caption.append(document.createTextNode(block.caption || block.alt || "Source image"));
+  if (block.sourceUrl) {
+    caption.append(document.createTextNode(" "));
+    const link = document.createElement("a");
+    link.href = block.sourceUrl;
+    link.rel = "noreferrer";
+    link.textContent = block.sourceTitle ? `Source: ${block.sourceTitle}` : "Source article";
+    caption.append(link);
+  }
+  figure.append(caption);
+  return figure;
+}
+
 function renderBlocks(blocks, container) {
   blocks.forEach((block) => {
     if (block.type === "heading") {
@@ -94,6 +115,11 @@ function renderBlocks(blocks, container) {
       const list = document.createElement("ul");
       block.items.forEach((item) => list.append(el("li", "", item)));
       container.append(list);
+      return;
+    }
+
+    if (block.type === "image" && block.src) {
+      container.append(renderInlineImage(block));
       return;
     }
 
@@ -128,7 +154,16 @@ async function renderArticle() {
     image.src = article.image;
     image.alt = article.imageAlt || "";
     figure.append(image);
-    figure.append(el("figcaption", "", article.imageCaption || article.imageAlt || ""));
+    const heroCaption = el("figcaption", "", article.imageCaption || article.imageAlt || "");
+    if (article.imageSourceUrl) {
+      heroCaption.append(document.createTextNode(" "));
+      const heroLink = document.createElement("a");
+      heroLink.href = article.imageSourceUrl;
+      heroLink.rel = "noreferrer";
+      heroLink.textContent = article.imageSourceTitle ? `Source: ${article.imageSourceTitle}` : "Source article";
+      heroCaption.append(heroLink);
+    }
+    figure.append(heroCaption);
 
     const body = el("div", "article-body");
     renderBlocks(article.body, body);
