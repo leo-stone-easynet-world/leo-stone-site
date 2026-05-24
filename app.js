@@ -101,10 +101,7 @@ function emptyState(text) {
 }
 
 function isAiArticle(article) {
-  if (article.category === "ai") return true;
-  if (article.category !== "technology") return false;
-  const haystack = `${article.title} ${article.summary} ${article.slug}`.toLowerCase();
-  return AI_TERMS.some((term) => haystack.includes(term));
+  return article.category === "ai";
 }
 
 async function renderHome() {
