@@ -116,13 +116,23 @@ async function renderHome() {
 
 async function renderNews() {
   const articles = await loadIndex();
-  const aiArticles = articles.filter(isAiArticle);
-  document.querySelector("#news-all")?.replaceChildren(...articles.map(card));
-  document.querySelector("#news-tech")?.replaceChildren(...articles.filter((article) => article.category === "technology").map(card));
-  document.querySelector("#news-ai")?.replaceChildren(
-    ...(aiArticles.length ? aiArticles.map(card) : [emptyState("No AI briefing is available yet. The next verified AI story will appear here.")]),
-  );
-  document.querySelector("#news-finance")?.replaceChildren(...articles.filter((article) => article.category === "finance").map(card));
+  const byCategory = {
+    ai: articles.filter((article) => article.category === "ai"),
+    technology: articles.filter((article) => article.category === "technology"),
+    finance: articles.filter((article) => article.category === "finance"),
+  };
+  const renderPanel = (selector, items, emptyText) => {
+    document.querySelector(selector)?.replaceChildren(
+      ...(items.length ? items.map(card) : [emptyState(emptyText)]),
+    );
+  };
+  renderPanel("#news-all", articles, "No briefings are available yet.");
+  renderPanel("#news-ai", byCategory.ai, "No AI briefing is available yet. The next verified AI story will appear here.");
+  renderPanel("#news-tech", byCategory.technology, "No technology briefing is available yet.");
+  renderPanel("#news-finance", byCategory.finance, "No finance briefing is available yet.");
+  document.querySelector("#ai-tab")?.addEventListener("shown.bs.tab", () => renderPanel("#news-ai", byCategory.ai, "No AI briefing is available yet. The next verified AI story will appear here."));
+  document.querySelector("#tech-tab")?.addEventListener("shown.bs.tab", () => renderPanel("#news-tech", byCategory.technology, "No technology briefing is available yet."));
+  document.querySelector("#finance-tab")?.addEventListener("shown.bs.tab", () => renderPanel("#news-finance", byCategory.finance, "No finance briefing is available yet."));
   activateHashTab();
 }
 
