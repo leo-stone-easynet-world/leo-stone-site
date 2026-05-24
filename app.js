@@ -208,20 +208,7 @@ async function renderArticle() {
   }
   body.append(credit);
   const articleBody = el("div", "article-body");
-  const hasInlineImage = (article.body || []).some((block) => block.type === "image" && block.src);
-  const bodyBlocks = [...(article.body || [])];
-  if (article.image && !hasInlineImage) {
-    const firstParagraph = bodyBlocks.findIndex((block) => block.type === "paragraph");
-    const inlineImage = {
-      type: "image",
-      src: article.image,
-      alt: article.imageAlt,
-      caption: article.imageCaption || article.imageAlt,
-      sourceTitle: article.imageSourceTitle,
-      sourceUrl: article.imageSourceUrl,
-    };
-    bodyBlocks.splice(firstParagraph === -1 ? 0 : firstParagraph + 1, 0, inlineImage);
-  }
+  const bodyBlocks = (article.body || []).filter((block) => !(block.type === "image" && block.src === article.image));
   renderBlocks(bodyBlocks, articleBody);
   if (article.sources?.length) {
     const sources = el("div", "sources");
