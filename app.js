@@ -624,7 +624,7 @@ async function renderArticle() {
   body.append(el("p", "article-summary", article.summary));
   body.append(renderReaderControls(article, nextArticle, previousArticle));
   const articleBody = el("div", "article-body");
-  const mediaImageUrls = new Set(collectArticleImages(article).map((image) => image.src));
+  const mediaImageUrls = new Set([article.image].filter(Boolean));
   renderBlocks(article.body || [], articleBody, { skipImageUrls: mediaImageUrls });
   if (article.sources?.length) {
     const sources = el("div", "sources");
