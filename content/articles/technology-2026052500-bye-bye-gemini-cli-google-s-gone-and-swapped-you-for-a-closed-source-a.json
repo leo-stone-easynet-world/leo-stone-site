@@ -1,0 +1,138 @@
+{
+  "slug": "technology-2026052500-bye-bye-gemini-cli-google-s-gone-and-swapped-you-for-a-closed-source-a",
+  "category": "technology",
+  "title": "Technology Briefing: Bye-bye, Gemini CLI; Google's Gone and Swapped You for a Closed‑Source AI",
+  "summary": "Google’s recent shift from an open Gemini command‑line interface to a proprietary AI tool signals a broader trend of platform lock‑in, while other firms grapple with AI reliability—from kitchen bots at Pizza Hut to clinical note‑taking errors in Ontario. These developments highlight the trade‑offs between innovation, s",
+  "publishedAt": "2026-05-25T00:06:29.052Z",
+  "readingMinutes": 4,
+  "image": "https://image.theregister.com/?imageId=259329&width=800",
+  "imageAlt": "Image from source article for Bye-bye, Gemini CLI; Google's gone and swapped you for a closed-source AI",
+  "imageCaption": "Bye-bye, Gemini CLI; Google's gone and swapped you for a closed-source AI",
+  "imageSourceTitle": "Bye-bye, Gemini CLI; Google's gone and swapped you for a closed-source AI",
+  "imageSourceUrl": "https://www.theregister.com/ai-ml/2026/05/20/bye-bye-gemini-cli-google-nudges-devs-toward-antigravity/5243605",
+  "inlineImages": [
+    {
+      "src": "https://image.theregister.com/?imageId=5243006&width=800",
+      "alt": "Image from source article for Frustrated franchisee sues Pizza Hut over crappy kitchen AI",
+      "caption": "Frustrated franchisee sues Pizza Hut over crappy kitchen AI",
+      "sourceTitle": "Frustrated franchisee sues Pizza Hut over crappy kitchen AI",
+      "sourceUrl": "https://www.theregister.com/ai-ml/2026/05/19/frustrated-franchisee-sues-pizza-hut-over-crappy-kitchen-ai/5242899"
+    },
+    {
+      "src": "https://image.theregister.com/?imageId=5240796&width=800",
+      "alt": "Image from source article for Sick and wrong: Ontario auditors find doctors' AI note takers routinely blow basic facts",
+      "caption": "Sick and wrong: Ontario auditors find doctors' AI note takers routinely blow basic facts",
+      "sourceTitle": "Sick and wrong: Ontario auditors find doctors' AI note takers routinely blow basic facts",
+      "sourceUrl": "https://www.theregister.com/ai-ml/2026/05/14/ontario-auditors-find-doctors-ai-note-takers-routinely-blow-basic-facts/5240771"
+    },
+    {
+      "src": "https://image.theregister.com/?imageId=5240038&width=800",
+      "alt": "Image from source article for Google's AI-enabled mouse pointer understands 'this' and 'that'",
+      "caption": "Google's AI-enabled mouse pointer understands 'this' and 'that'",
+      "sourceTitle": "Google's AI-enabled mouse pointer understands 'this' and 'that'",
+      "sourceUrl": "https://www.theregister.com/software/2026/05/13/googles-ai-enabled-mouse-pointer-understands-this-and-that/5240005"
+    }
+  ],
+  "body": [
+    {
+      "type": "heading",
+      "text": "Platform Lock‑In and the Gemini Exit"
+    },
+    {
+      "type": "paragraph",
+      "text": "Google’s decision to retire the Gemini command‑line interface in favor of a closed‑source AI reflects a strategic pivot toward tighter ecosystem control. The open Gemini CLI had become a popular tool for developers seeking lightweight, scriptable access to generative models. By moving to a proprietary interface, Google signals a willingness to sacrifice community‑driven extensibility for a more controlled revenue stream and tighter security posture. The change also forces developers to migrate tooling, potentially increasing integration costs and reducing the speed of experimentation."
+    },
+    {
+      "type": "heading",
+      "text": "AI in the Fast‑Food Kitchen: Pizza Hut’s Bot Battle"
+    },
+    {
+      "type": "paragraph",
+      "text": "A franchisee’s lawsuit against Pizza Hut over a malfunctioning kitchen‑automation bot underscores the volatility of deploying AI in high‑volume, low‑margin environments. The bot, intended to streamline prep and reduce labor costs, reportedly mis‑identified ingredients and produced inconsistent orders, leading to customer complaints and revenue loss. The legal action highlights the operational risk of relying on untested AI systems in a domain where precision and reliability are non‑negotiable. For the chain, the case forces a reassessment of vendor contracts and a potential shift back to hybrid human‑machine workflows."
+    },
+    {
+      "type": "image",
+      "src": "https://image.theregister.com/?imageId=5240038&width=800",
+      "alt": "Image from source article for Google's AI-enabled mouse pointer understands 'this' and 'that'",
+      "caption": "Google's AI-enabled mouse pointer understands 'this' and 'that'",
+      "sourceTitle": "Google's AI-enabled mouse pointer understands 'this' and 'that'",
+      "sourceUrl": "https://www.theregister.com/software/2026/05/13/googles-ai-enabled-mouse-pointer-understands-this-and-that/5240005"
+    },
+    {
+      "type": "heading",
+      "text": "Clinical AI Gone Wrong: Ontario Audit Findings"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ontario auditors’ report on AI note‑taking assistants in medical practices reveals a systemic failure to capture basic facts. The tools, marketed as time‑saving aids, routinely omitted or misrepresented patient data, leading to potential diagnostic errors. The audit raises questions about data validation protocols, model training biases, and the adequacy of regulatory oversight. Hospitals and clinics now face the dual challenge of maintaining compliance while preserving the efficiency gains promised by AI. The findings also suggest that cost‑cutting through automation can backfire if the underlying models are not rigorously vetted."
+    },
+    {
+      "type": "heading",
+      "text": "Pointer Precision: Google’s AI‑Enabled Mouse"
+    },
+    {
+      "type": "paragraph",
+      "text": "Google’s new AI‑enhanced input device demonstrates a subtle but impactful shift in human‑computer interaction. By interpreting contextual cues such as 'this' and 'that', the pointer can anticipate user intent and reduce click friction. The underlying architecture relies on lightweight inference engines running in the browser, allowing rapid updates without heavy cloud dependencies. While the feature promises smoother workflows, it also introduces new attack surfaces; malicious scripts could potentially hijack pointer behavior if the inference model is compromised. The move illustrates how incremental AI integration can yield measurable productivity gains while demanding vigilant security practices."
+    },
+    {
+      "type": "heading",
+      "text": "Command‑Line 3D: Ratty’s Novelty"
+    },
+    {
+      "type": "paragraph",
+      "text": "A developer with a penchant for rodents has released Ratty, a terminal emulator that renders 3D graphics directly in the command line. The project leverages low‑level graphics libraries to map pixel data onto the console, creating a pseudo‑3D experience that can be scripted like any other CLI tool. While the novelty is clear, the practical applications remain niche; performance is limited by terminal emulators, and the learning curve may deter mainstream adoption. Ratty exemplifies how open‑source enthusiasts continue to push the boundaries of what can be done with legacy interfaces, even as cloud‑native solutions dominate the industry."
+    },
+    {
+      "type": "heading",
+      "text": "Economic Implications of AI Platform Shifts"
+    },
+    {
+      "type": "paragraph",
+      "text": "The transition from open to proprietary AI interfaces affects cloud economics in two ways. First, vendors can monetize access by locking developers into subscription models that bundle compute, storage, and support, thereby creating predictable revenue streams. Second, the cost of maintaining an in‑house inference stack rises, as companies must invest in GPU clusters, data pipelines, and continuous model retraining. For smaller firms, the barrier to entry can increase, potentially stifling innovation. Conversely, larger enterprises may benefit from economies of scale, negotiating lower per‑token costs and gaining priority access to new features. The net effect is a shift toward a more consolidated AI marketplace, where platform dominance can translate into pricing power and market influence."
+    },
+    {
+      "type": "heading",
+      "text": "Security Posture in AI‑Enabled Peripherals"
+    },
+    {
+      "type": "paragraph",
+      "text": "AI‑enabled peripherals, such as Google’s pointer or kitchen bots, introduce new attack vectors that traditional security models may overlook. The inference engines often run in privileged contexts or rely on browser extensions, creating potential privilege escalation paths. Attackers could manipulate contextual cues or feed poisoned data to subvert the model, leading to erroneous actions. Mitigating these risks requires a combination of secure coding practices, rigorous testing, and continuous monitoring of model outputs. Organizations deploying such devices must also consider supply‑chain vetting and enforce least‑privilege policies to reduce the blast radius of a compromised component."
+    },
+    {
+      "type": "heading",
+      "text": "Cross‑Sector Operational Consequences"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Increased vendor lock‑in and migration costs as platforms move from open to closed ecosystems.",
+        "Reliability gaps in AI‑driven automation can erode customer trust and trigger legal liability.",
+        "Data validation failures in clinical settings expose regulatory and financial risks.",
+        "Incremental AI features in consumer devices raise new security attack vectors.",
+        "Niche AI tools illustrate the persistence of low‑overhead innovation amid cloud dominance."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Bye-bye, Gemini CLI; Google's gone and swapped you for a closed-source AI",
+      "url": "https://www.theregister.com/ai-ml/2026/05/20/bye-bye-gemini-cli-google-nudges-devs-toward-antigravity/5243605"
+    },
+    {
+      "title": "Frustrated franchisee sues Pizza Hut over crappy kitchen AI",
+      "url": "https://www.theregister.com/ai-ml/2026/05/19/frustrated-franchisee-sues-pizza-hut-over-crappy-kitchen-ai/5242899"
+    },
+    {
+      "title": "Sick and wrong: Ontario auditors find doctors' AI note takers routinely blow basic facts",
+      "url": "https://www.theregister.com/ai-ml/2026/05/14/ontario-auditors-find-doctors-ai-note-takers-routinely-blow-basic-facts/5240771"
+    },
+    {
+      "title": "Google's AI-enabled mouse pointer understands 'this' and 'that'",
+      "url": "https://www.theregister.com/software/2026/05/13/googles-ai-enabled-mouse-pointer-understands-this-and-that/5240005"
+    },
+    {
+      "title": "Rodent-obsessed developer creates Ratty to bring 3D graphics to the command line",
+      "url": "https://www.theregister.com/software/2026/05/11/ratty-terminal-emulator-brings-3d-graphics-to-the-command-line/5238299"
+    }
+  ]
+}
