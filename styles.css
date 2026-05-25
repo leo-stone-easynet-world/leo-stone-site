@@ -568,3 +568,15 @@ a { color: inherit; }
     border-radius: 0;
   }
 }
+
+
+.article-audio-player {
+  width: 100%;
+  min-height: 42px;
+  grid-column: 1 / -1;
+  accent-color: var(--ink, #1f2d33);
+}
+
+.reader-controls.has-audio {
+  align-items: center;
+}

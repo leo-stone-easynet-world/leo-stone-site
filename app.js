@@ -360,11 +360,19 @@ function articleSpeechText(article) {
 
 function renderReaderControls(article, nextArticle) {
   const controls = el("section", "reader-controls");
+  if (article.audioUrl) controls.classList.add("has-audio");
   const copy = el("div", "reader-copy");
   copy.append(el("p", "eyebrow", "Listen"));
-  copy.append(el("p", "", "Read this article aloud, or continue through the archive."));
+  copy.append(el("p", "", article.audioUrl ? "Listen to the generated article audio, or continue through the archive." : "Read this article aloud, or continue through the archive."));
+  const articleAudio = article.audioUrl ? document.createElement("audio") : null;
+  if (articleAudio) {
+    articleAudio.className = "article-audio-player";
+    articleAudio.controls = true;
+    articleAudio.preload = "metadata";
+    articleAudio.src = article.audioUrl;
+  }
   const actions = el("div", "reader-actions");
-  const readButton = el("button", "reader-button primary", "Read aloud");
+  const readButton = el("button", "reader-button primary", article.audioUrl ? "Browser read" : "Read aloud");
   const pauseButton = el("button", "reader-button", "Pause");
   const stopButton = el("button", "reader-button", "Stop");
   const nextLink = el("a", "reader-next", nextArticle ? "Next article" : "No next article");
@@ -387,7 +395,7 @@ function renderReaderControls(article, nextArticle) {
     if (!canSpeak) return;
     window.speechSynthesis.cancel();
     reading = false;
-    readButton.textContent = "Read aloud";
+    readButton.textContent = article.audioUrl ? "Browser read" : "Read aloud";
     pauseButton.textContent = "Pause";
   };
 
@@ -403,7 +411,7 @@ function renderReaderControls(article, nextArticle) {
     utterance.pitch = 0.95;
     utterance.onend = () => {
       reading = false;
-      readButton.textContent = "Read aloud";
+      readButton.textContent = article.audioUrl ? "Browser read" : "Read aloud";
       if (continuous.checked && nextArticle) {
         window.location.href = `${articleUrl(nextArticle)}&read=1&continuous=1`;
       }
@@ -431,13 +439,23 @@ function renderReaderControls(article, nextArticle) {
   continuous.addEventListener("change", () => {
     if (nextArticle) nextLink.href = `${articleUrl(nextArticle)}&continuous=${continuous.checked ? "1" : "0"}`;
   });
+  if (articleAudio) {
+    articleAudio.addEventListener("ended", () => {
+      if (continuous.checked && nextArticle) {
+        window.location.href = `${articleUrl(nextArticle)}&read=1&continuous=1`;
+      }
+    });
+  }
   window.addEventListener("beforeunload", stopSpeech, { once: true });
 
   actions.append(readButton, pauseButton, stopButton, continuousLabel, nextLink);
-  controls.append(copy, actions);
+  controls.append(copy);
+  if (articleAudio) controls.append(articleAudio);
+  controls.append(actions);
 
   if (params.get("read") === "1") {
-    setTimeout(startSpeech, 700);
+    if (articleAudio) setTimeout(() => articleAudio.play().catch(() => {}), 400);
+    else setTimeout(startSpeech, 700);
   }
   return controls;
 }
