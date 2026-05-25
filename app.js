@@ -358,24 +358,14 @@ function articleSpeechText(article) {
   return [article.title, article.summary, blockText].filter(Boolean).join("\n\n");
 }
 
-function renderReaderControls(article, nextArticle) {
+function renderReaderControls(article, nextArticle, previousArticle = null) {
   const controls = el("section", "reader-controls");
   if (article.audioUrl) controls.classList.add("has-audio");
   const copy = el("div", "reader-copy");
   copy.append(el("p", "eyebrow", "Listen"));
-  copy.append(el("p", "", article.audioUrl ? "Play the generated article audio, or continue through the archive." : "Read this article aloud, or continue through the archive."));
+  copy.append(el("p", "", article.audioUrl ? "Listen to the generated article audio, or continue through the archive." : "Read this article aloud, or continue through the archive."));
   const articleAudio = article.audioUrl ? document.createElement("audio") : null;
-  if (articleAudio) {
-    articleAudio.className = "article-audio-player";
-    articleAudio.controls = true;
-    articleAudio.preload = "metadata";
-    articleAudio.src = article.audioUrl;
-  }
   const actions = el("div", "reader-actions");
-  const readButton = el("button", "reader-button primary", articleAudio ? "Play audio" : "Read aloud");
-  const pauseButton = el("button", "reader-button", "Pause");
-  const stopButton = el("button", "reader-button", "Stop");
-  const browserReadButton = articleAudio ? el("button", "reader-button", "Browser read") : null;
   const nextLink = el("a", "reader-next", nextArticle ? "Next article" : "No next article");
   const continuousLabel = el("label", "reader-toggle");
   const continuous = document.createElement("input");
@@ -387,96 +377,167 @@ function renderReaderControls(article, nextArticle) {
   if (nextArticle) nextLink.href = articleUrl(nextArticle) + "&continuous=" + (continuous.checked ? "1" : "0");
   else nextLink.removeAttribute("href");
 
+  continuous.addEventListener("change", () => {
+    if (nextArticle) nextLink.href = articleUrl(nextArticle) + "&continuous=" + (continuous.checked ? "1" : "0");
+  });
+
+  if (articleAudio) {
+    const iconPaths = {
+      play: ["M8 5v14l11-7-11-7Z"],
+      pause: ["M8 5v14", "M16 5v14"],
+      volume: ["M11 5 6 9H3v6h3l5 4V5Z", "M15.5 8.5a5 5 0 0 1 0 7"],
+      previous: ["M19 20 9 12l10-8v16Z", "M5 19V5"],
+      repeat: ["M17 1l4 4-4 4", "M3 11V9a4 4 0 0 1 4-4h14", "M7 23l-4-4 4-4", "M21 13v2a4 4 0 0 1-4 4H3"],
+      next: ["M5 4l10 8-10 8V4Z", "M19 5v14"],
+    };
+    const iconButton = (name, label) => {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "reader-icon-button audio-control-button";
+      button.setAttribute("aria-label", label);
+      button.title = label;
+      const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+      svg.setAttribute("viewBox", "0 0 24 24");
+      svg.setAttribute("aria-hidden", "true");
+      for (const d of iconPaths[name]) {
+        const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+        path.setAttribute("d", d);
+        svg.append(path);
+      }
+      button.append(svg);
+      return button;
+    };
+    const setIcon = (button, name) => {
+      const svg = button.querySelector("svg");
+      svg.replaceChildren();
+      for (const d of iconPaths[name]) {
+        const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+        path.setAttribute("d", d);
+        svg.append(path);
+      }
+    };
+    const formatTime = (seconds) => {
+      if (!Number.isFinite(seconds) || seconds < 0) return "0:00";
+      const mins = Math.floor(seconds / 60);
+      const secs = Math.floor(seconds % 60);
+      return mins + ":" + String(secs).padStart(2, "0");
+    };
+    const player = el("div", "article-audio-player article-audio-custom");
+    const playButton = iconButton("play", "Play");
+    const time = el("span", "audio-time", "0:00 / 0:00");
+    const progress = document.createElement("input");
+    progress.type = "range";
+    progress.className = "audio-progress";
+    progress.min = "0";
+    progress.max = "1000";
+    progress.value = "0";
+    progress.setAttribute("aria-label", "Seek");
+    const volumeButton = iconButton("volume", "Mute");
+    const previousButton = iconButton("previous", "Previous article");
+    const continuousButton = iconButton("repeat", "Continuous reading");
+    const nextButton = iconButton("next", "Next article");
+    previousButton.disabled = !previousArticle;
+    nextButton.disabled = !nextArticle;
+    const syncContinuousButton = () => {
+      continuousButton.classList.toggle("active", continuous.checked);
+      continuousButton.setAttribute("aria-pressed", continuous.checked ? "true" : "false");
+      if (nextArticle) nextLink.href = articleUrl(nextArticle) + "&continuous=" + (continuous.checked ? "1" : "0");
+    };
+    previousButton.addEventListener("click", () => {
+      if (previousArticle) window.location.href = articleUrl(previousArticle) + "&continuous=" + (continuous.checked ? "1" : "0");
+    });
+    continuousButton.addEventListener("click", () => {
+      continuous.checked = !continuous.checked;
+      syncContinuousButton();
+    });
+    nextButton.addEventListener("click", () => {
+      if (nextArticle) window.location.href = articleUrl(nextArticle) + "&continuous=" + (continuous.checked ? "1" : "0");
+    });
+    articleAudio.className = "article-audio-source";
+    articleAudio.preload = "metadata";
+    articleAudio.src = article.audioUrl;
+    const syncPlayer = () => {
+      setIcon(playButton, articleAudio.paused ? "play" : "pause");
+      playButton.setAttribute("aria-label", articleAudio.paused ? "Play" : "Pause");
+      playButton.title = articleAudio.paused ? "Play" : "Pause";
+      const duration = articleAudio.duration || 0;
+      progress.value = duration ? String(Math.round((articleAudio.currentTime / duration) * 1000)) : "0";
+      time.textContent = formatTime(articleAudio.currentTime) + " / " + formatTime(duration);
+      volumeButton.classList.toggle("active", articleAudio.muted || articleAudio.volume === 0);
+    };
+    playButton.addEventListener("click", () => {
+      if (articleAudio.paused) articleAudio.play().catch(() => {});
+      else articleAudio.pause();
+    });
+    progress.addEventListener("input", () => {
+      if (!articleAudio.duration) return;
+      articleAudio.currentTime = (Number(progress.value) / 1000) * articleAudio.duration;
+    });
+    volumeButton.addEventListener("click", () => {
+      articleAudio.muted = !articleAudio.muted;
+      syncPlayer();
+    });
+    articleAudio.addEventListener("loadedmetadata", syncPlayer);
+    articleAudio.addEventListener("timeupdate", syncPlayer);
+    articleAudio.addEventListener("play", syncPlayer);
+    articleAudio.addEventListener("pause", syncPlayer);
+    articleAudio.addEventListener("ended", () => {
+      syncPlayer();
+      if (continuous.checked && nextArticle) {
+        window.location.href = articleUrl(nextArticle) + "&read=1&continuous=1";
+      }
+    });
+    player.append(playButton, time, progress, volumeButton, previousButton, continuousButton, nextButton);
+    controls.append(copy, articleAudio, player);
+    syncContinuousButton();
+    syncPlayer();
+    if (params.get("read") === "1") setTimeout(() => articleAudio.play().catch(() => {}), 400);
+    return controls;
+  }
+
+  const readButton = el("button", "reader-button primary", "Read aloud");
+  const pauseButton = el("button", "reader-button", "Pause");
+  const stopButton = el("button", "reader-button", "Stop");
   const canSpeak = "speechSynthesis" in window && "SpeechSynthesisUtterance" in window;
   const text = articleSpeechText(article);
   let utterance = null;
   let reading = false;
 
-  const syncAudioLabels = () => {
-    if (!articleAudio) return;
-    readButton.textContent = articleAudio.paused ? "Play audio" : "Pause audio";
-    pauseButton.textContent = articleAudio.paused ? "Resume" : "Pause";
-  };
-
   const stopSpeech = () => {
     if (!canSpeak) return;
     window.speechSynthesis.cancel();
     reading = false;
-    if (!articleAudio) readButton.textContent = "Read aloud";
-  };
-
-  const stopAudio = () => {
-    if (!articleAudio) return;
-    articleAudio.pause();
-    articleAudio.currentTime = 0;
-    syncAudioLabels();
-  };
-
-  const stopAll = () => {
-    stopSpeech();
-    stopAudio();
-    if (!articleAudio) pauseButton.textContent = "Pause";
-  };
-
-  const playAudio = async () => {
-    if (!articleAudio) return;
-    stopSpeech();
-    try {
-      await articleAudio.play();
-      syncAudioLabels();
-    } catch {
-      readButton.textContent = "Use audio controls";
-    }
+    readButton.textContent = "Read aloud";
+    pauseButton.textContent = "Pause";
   };
 
   const startSpeech = () => {
     if (!canSpeak) {
-      const target = browserReadButton || readButton;
-      target.textContent = "Speech unavailable";
-      target.disabled = true;
+      readButton.textContent = "Speech unavailable";
+      readButton.disabled = true;
       return;
     }
-    if (articleAudio) articleAudio.pause();
     stopSpeech();
     utterance = new SpeechSynthesisUtterance(text);
     utterance.rate = 0.92;
     utterance.pitch = 0.95;
     utterance.onend = () => {
       reading = false;
-      if (!articleAudio) readButton.textContent = "Read aloud";
-      else syncAudioLabels();
+      readButton.textContent = "Read aloud";
       if (continuous.checked && nextArticle) {
         window.location.href = articleUrl(nextArticle) + "&read=1&continuous=1";
       }
     };
     window.speechSynthesis.speak(utterance);
     reading = true;
-    if (!articleAudio) readButton.textContent = "Restart";
-    else syncAudioLabels();
+    readButton.textContent = "Restart";
   };
 
   readButton.type = "button";
   pauseButton.type = "button";
   stopButton.type = "button";
-  if (browserReadButton) browserReadButton.type = "button";
-  readButton.addEventListener("click", () => {
-    if (!articleAudio) {
-      startSpeech();
-      return;
-    }
-    if (articleAudio.paused) playAudio();
-    else {
-      articleAudio.pause();
-      syncAudioLabels();
-    }
-  });
+  readButton.addEventListener("click", startSpeech);
   pauseButton.addEventListener("click", () => {
-    if (articleAudio) {
-      if (articleAudio.paused) playAudio();
-      else articleAudio.pause();
-      syncAudioLabels();
-      return;
-    }
     if (!canSpeak || !reading) return;
     if (window.speechSynthesis.paused) {
       window.speechSynthesis.resume();
@@ -486,34 +547,14 @@ function renderReaderControls(article, nextArticle) {
       pauseButton.textContent = "Resume";
     }
   });
-  stopButton.addEventListener("click", stopAll);
-  if (browserReadButton) browserReadButton.addEventListener("click", startSpeech);
-  continuous.addEventListener("change", () => {
-    if (nextArticle) nextLink.href = articleUrl(nextArticle) + "&continuous=" + (continuous.checked ? "1" : "0");
-  });
-  if (articleAudio) {
-    articleAudio.addEventListener("play", syncAudioLabels);
-    articleAudio.addEventListener("pause", syncAudioLabels);
-    articleAudio.addEventListener("ended", () => {
-      syncAudioLabels();
-      if (continuous.checked && nextArticle) {
-        window.location.href = articleUrl(nextArticle) + "&read=1&continuous=1";
-      }
-    });
-  }
-  window.addEventListener("beforeunload", stopAll, { once: true });
+  stopButton.addEventListener("click", stopSpeech);
+  window.addEventListener("beforeunload", stopSpeech, { once: true });
 
-  actions.append(readButton, pauseButton, stopButton);
-  if (browserReadButton) actions.append(browserReadButton);
-  actions.append(continuousLabel, nextLink);
-  controls.append(copy);
-  if (articleAudio) controls.append(articleAudio);
-  controls.append(actions);
-  syncAudioLabels();
+  actions.append(readButton, pauseButton, stopButton, continuousLabel, nextLink);
+  controls.append(copy, actions);
 
   if (params.get("read") === "1") {
-    if (articleAudio) setTimeout(playAudio, 400);
-    else setTimeout(startSpeech, 700);
+    setTimeout(startSpeech, 700);
   }
   return controls;
 }
@@ -531,6 +572,7 @@ async function renderArticle() {
   const articles = await loadIndex();
   const currentIndex = articles.findIndex((item) => item.slug === article.slug);
   const nextArticle = currentIndex >= 0 ? articles[currentIndex + 1] : null;
+  const previousArticle = currentIndex > 0 ? articles[currentIndex - 1] : null;
   document.title = `${article.title} | Leo Stone`;
 
   const shell = el("div", "row justify-content-center");
@@ -541,7 +583,7 @@ async function renderArticle() {
   body.append(meta(article, true));
   body.append(el("h1", "", article.title));
   body.append(el("p", "article-summary", article.summary));
-  body.append(renderReaderControls(article, nextArticle));
+  body.append(renderReaderControls(article, nextArticle, previousArticle));
   const articleBody = el("div", "article-body");
   const mediaImageUrls = new Set(collectArticleImages(article).map((image) => image.src));
   renderBlocks(article.body || [], articleBody, { skipImageUrls: mediaImageUrls });
