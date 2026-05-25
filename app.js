@@ -324,7 +324,8 @@ function activateHashTab() {
   if (trigger && window.bootstrap?.Tab) window.bootstrap.Tab.getOrCreateInstance(trigger).show();
 }
 
-function renderBlocks(blocks, container) {
+function renderBlocks(blocks, container, options = {}) {
+  const skipImageUrls = options.skipImageUrls || new Set();
   blocks.forEach((block) => {
     if (block.type === "heading") {
       container.append(el("h2", "", block.text));
@@ -337,6 +338,7 @@ function renderBlocks(blocks, container) {
       return;
     }
     if (block.type === "image" && block.src) {
+      if (skipImageUrls.has(block.src)) return;
       container.append(renderInlineImage(block));
       return;
     }
@@ -465,8 +467,8 @@ async function renderArticle() {
   body.append(el("p", "article-summary", article.summary));
   body.append(renderReaderControls(article, nextArticle));
   const articleBody = el("div", "article-body");
-  const bodyBlocks = (article.body || []).filter((block) => !(block.type === "image" && block.src === article.image));
-  renderBlocks(bodyBlocks, articleBody);
+  const mediaImageUrls = new Set(collectArticleImages(article).map((image) => image.src));
+  renderBlocks(article.body || [], articleBody, { skipImageUrls: mediaImageUrls });
   if (article.sources?.length) {
     const sources = el("div", "sources");
     sources.append(el("h2", "", "Sources"));
