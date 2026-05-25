@@ -10,7 +10,7 @@ const formatDate = (iso) => new Intl.DateTimeFormat("en", {
 
 const categoryLabel = (category) => category === "finance" ? "Finance" : category === "ai" ? "AI" : "Technology";
 const categoryClass = (category) => category === "finance" ? "badge-finance" : category === "ai" ? "badge-ai" : "badge-tech";
-const articleUrl = (article) => `article.html?slug=${encodeURIComponent(article.slug)}`;
+const articleUrl = (article) => `articles/${article.slug}.html`;
 const AI_TERMS = ["ai", "artificial intelligence", "gemini", "automation", "large language", "generative"];
 const NEWS_PAGE_SIZE = 9;
 const SLIDESHOW_INTERVAL_MS = 5200;
