@@ -1,0 +1,126 @@
+{
+  "slug": "ai-2026052521-how-ramp-engineers-accelerate-code-review-with-codex",
+  "category": "ai",
+  "title": "AI Briefing: How Ramp Engineers Accelerate Code Review with Codex",
+  "summary": "Ramp’s integration of OpenAI’s Codex into its code‑review workflow illustrates a broader shift toward AI‑augmented development pipelines. By combining model‑level enhancements, cost‑effective inference, and stringent data safeguards, Ramp demonstrates how enterprise teams can reduce review latency, improve code quality",
+  "publishedAt": "2026-05-25T21:07:17.351Z",
+  "readingMinutes": 5,
+  "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/AI_Mode_US.width-1300.png",
+  "imageAlt": "Image from source article for How AI Mode is changing the way people search in the U.S.",
+  "imageCaption": "How AI Mode is changing the way people search in the U.S.",
+  "imageSourceTitle": "How AI Mode is changing the way people search in the U.S.",
+  "imageSourceUrl": "https://blog.google/products-and-platforms/products/search/ai-mode-us-insights/",
+  "inlineImages": [
+    {
+      "src": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Search_AI_and_search_engine_v46_16x9_1.width-1300.jpg",
+      "alt": "Image from source article for A new era for AI Search",
+      "caption": "A new era for AI Search",
+      "sourceTitle": "A new era for AI Search",
+      "sourceUrl": "https://blog.google/products-and-platforms/products/search/search-io-2026/"
+    },
+    {
+      "src": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+      "alt": "Image from Axios for 5 ways Pope Leo says AI could warp humanity - Axios",
+      "caption": "5 ways Pope Leo says AI could warp humanity - Axios (Axios)",
+      "sourceTitle": "Axios",
+      "sourceUrl": "https://news.google.com/articles/CBMif0FVX3lxTE5MX3czOXhZY1MzZjB5MS1fYzZXTi1IMkhyeEVac2VoeEtxVEIwOVJKQjNXR0FNZ0RxRV9LZHlBcDFOd0k3dzFjUFE2V1dIcDhORmEteHpLc01Ha0o1VERYaEMzQUthOFg0M1JaWTdXMVpnbG9mLUZDZFRidTVCQkU?oc=5"
+    }
+  ],
+  "body": [
+    {
+      "type": "heading",
+      "text": "Model and Platform Shifts"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ramp’s adoption of Codex marks a clear transition from traditional rule‑based linting to a generative model that understands context across entire codebases. The platform shift involves moving from static analysis tools to a dynamic, transformer‑based system that can suggest refactorings, detect subtle bugs, and generate documentation snippets. This change is enabled by Codex’s ability to ingest large code repositories and produce context‑aware outputs, effectively acting as a senior developer who can review and comment on code in real time."
+    },
+    {
+      "type": "heading",
+      "text": "Inference Economics and Operational Efficiency"
+    },
+    {
+      "type": "paragraph",
+      "text": "Deploying Codex at scale requires careful attention to inference costs. Ramp mitigates these expenses by batching review requests and leveraging OpenAI’s pricing tiers that favor high‑volume usage. The result is a reduction in average review time from hours to minutes, freeing developers to focus on higher‑level design decisions. Moreover, the cost savings translate into a lower total cost of ownership for code‑quality tools, as the incremental expense of running Codex is offset by the productivity gains from faster feedback loops."
+    },
+    {
+      "type": "image",
+      "src": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Search_AI_and_search_engine_v46_16x9_1.width-1300.jpg",
+      "alt": "Image from source article for A new era for AI Search",
+      "caption": "A new era for AI Search",
+      "sourceTitle": "A new era for AI Search",
+      "sourceUrl": "https://blog.google/products-and-platforms/products/search/search-io-2026/"
+    },
+    {
+      "type": "heading",
+      "text": "Data Boundaries and Safety Considerations"
+    },
+    {
+      "type": "paragraph",
+      "text": "Data privacy remains a top concern when feeding proprietary code into a third‑party model. Ramp addresses this by implementing strict data boundary controls: code is tokenized, anonymized, and sent to Codex only in a form that excludes sensitive identifiers. The platform also incorporates safety filters that flag potential security vulnerabilities before the model generates suggestions. This dual approach ensures compliance with internal data governance policies while maintaining the integrity of the AI’s output."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Anonymization of code before model ingestion",
+        "Batching to reduce per‑request overhead",
+        "Built‑in safety filters for vulnerability detection",
+        "Compliance with internal data governance standards"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Product Strategy and Labor Design"
+    },
+    {
+      "type": "paragraph",
+      "text": "From a product perspective, integrating Codex positions Ramp as a forward‑thinking platform that empowers developers to deliver higher quality releases faster. The labor design shifts from manual review to a hybrid model where human engineers validate AI‑generated suggestions. This reduces the cognitive load on reviewers and allows them to focus on architectural decisions rather than syntactic correctness. The strategy also opens new revenue streams: offering AI‑enhanced review as a premium feature or as part of a subscription tier."
+    },
+    {
+      "type": "image",
+      "src": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+      "alt": "Image from Axios for 5 ways Pope Leo says AI could warp humanity - Axios",
+      "caption": "5 ways Pope Leo says AI could warp humanity - Axios (Axios)",
+      "sourceTitle": "Axios",
+      "sourceUrl": "https://news.google.com/articles/CBMif0FVX3lxTE5MX3czOXhZY1MzZjB5MS1fYzZXTi1IMkhyeEVac2VoeEtxVEIwOVJKQjNXR0FNZ0RxRV9LZHlBcDFOd0k3dzFjUFE2V1dIcDhORmEteHpLc01Ha0o1VERYaEMzQUthOFg0M1JaWTdXMVpnbG9mLUZDZFRidTVCQkU?oc=5"
+    },
+    {
+      "type": "heading",
+      "text": "Broader Implications and Future Outlook"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ramp’s experience echoes broader trends highlighted in Google’s I/O 2026 announcements, where the emphasis is on AI modes that augment developer productivity across ecosystems. The shift toward AI‑driven search, as seen in Google’s new search modes, parallels the move from manual to AI‑assisted code review: both aim to surface relevant information faster and reduce friction for users. Pope Leo’s cautionary remarks about AI warping humanity remind us that these tools must be deployed responsibly, with clear governance frameworks and transparency about model behavior. As AI models continue to evolve, organizations that balance speed, safety, and strategic alignment—like Ramp—will set the standard for next‑generation software engineering practices."
+    }
+  ],
+  "sources": [
+    {
+      "title": "How Ramp engineers accelerate code review with Codex",
+      "url": "https://openai.com/index/ramp"
+    },
+    {
+      "title": "I/O 2026",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/google-io-2026-collection/"
+    },
+    {
+      "title": "How AI Mode is changing the way people search in the U.S.",
+      "url": "https://blog.google/products-and-platforms/products/search/ai-mode-us-insights/"
+    },
+    {
+      "title": "A new era for AI Search",
+      "url": "https://blog.google/products-and-platforms/products/search/search-io-2026/"
+    },
+    {
+      "title": "5 ways Pope Leo says AI could warp humanity - Axios",
+      "url": "https://news.google.com/articles/CBMif0FVX3lxTE5MX3czOXhZY1MzZjB5MS1fYzZXTi1IMkhyeEVac2VoeEtxVEIwOVJKQjNXR0FNZ0RxRV9LZHlBcDFOd0k3dzFjUFE2V1dIcDhORmEteHpLc01Ha0o1VERYaEMzQUthOFg0M1JaWTdXMVpnbG9mLUZDZFRidTVCQkU?oc=5"
+    }
+  ],
+  "audioUrl": "content/audio/ai-2026052521-how-ramp-engineers-accelerate-code-review-with-codex.mp3",
+  "audioProvider": "kokoro",
+  "audioVoice": "am_michael",
+  "audioScript": "polished",
+  "audioZhUrl": "content/audio/ai-2026052521-how-ramp-engineers-accelerate-code-review-with-codex.zh.mp3",
+  "audioZhProvider": "kokoro",
+  "audioZhVoice": "zm_yunyang",
+  "audioZhScript": "polished-zh"
+}
