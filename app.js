@@ -13,6 +13,7 @@ const categoryClass = (category) => category === "finance" ? "badge-finance" : c
 const articleUrl = (article) => `article.html?slug=${encodeURIComponent(article.slug)}`;
 const AI_TERMS = ["ai", "artificial intelligence", "gemini", "automation", "large language", "generative"];
 const NEWS_PAGE_SIZE = 9;
+const SLIDESHOW_INTERVAL_MS = 5200;
 
 const el = (tag, className, text) => {
   const node = document.createElement(tag);
@@ -49,6 +50,108 @@ function image(article, className) {
   };
   if (!article.image) img.hidden = true;
   return img;
+}
+
+function collectArticleImages(article) {
+  const seen = new Set();
+  const images = [];
+  const add = (src, alt, caption, sourceTitle, sourceUrl) => {
+    if (!src || seen.has(src)) return;
+    seen.add(src);
+    images.push({ src, alt: alt || article.title || "", caption: caption || alt || "", sourceTitle: sourceTitle || "", sourceUrl: sourceUrl || "" });
+  };
+  add(article.image, article.imageAlt, article.imageCaption, article.imageSourceTitle, article.imageSourceUrl);
+  (article.body || []).forEach((block) => {
+    if (block.type === "image") add(block.src, block.alt, block.caption, block.sourceTitle, block.sourceUrl);
+  });
+  (article.inlineImages || []).forEach((block) => add(block.src, block.alt, block.caption, block.sourceTitle, block.sourceUrl));
+  return images;
+}
+
+function renderArticleMedia(article) {
+  const slides = collectArticleImages(article);
+  const frame = el("figure", "article-media-frame");
+  if (!slides.length) return frame;
+
+  let activeIndex = 0;
+  let timer = null;
+  const img = document.createElement("img");
+  img.className = "article-hero-image";
+  img.loading = "eager";
+  const caption = el("figcaption", "article-media-caption");
+  const controls = el("div", "media-controls");
+  const playButton = el("button", "reader-button", "Pause images");
+  const dots = el("div", "media-dots");
+
+  const renderCaption = (slide) => {
+    caption.replaceChildren(document.createTextNode(slide.caption || slide.alt || "Source image"));
+    if (slide.sourceUrl) {
+      caption.append(document.createTextNode(" "));
+      const link = document.createElement("a");
+      link.href = slide.sourceUrl;
+      link.rel = "noreferrer";
+      link.textContent = slide.sourceTitle ? `Source: ${slide.sourceTitle}` : "Source article";
+      caption.append(link);
+    }
+  };
+
+  const showSlide = (index) => {
+    activeIndex = (index + slides.length) % slides.length;
+    const slide = slides[activeIndex];
+    img.src = slide.src;
+    img.alt = slide.alt;
+    renderCaption(slide);
+    [...dots.children].forEach((dot, dotIndex) => dot.classList.toggle("active", dotIndex === activeIndex));
+  };
+
+  const stop = () => {
+    clearInterval(timer);
+    timer = null;
+    playButton.textContent = "Play images";
+  };
+
+  const play = () => {
+    if (slides.length <= 1 || timer) return;
+    timer = setInterval(() => showSlide(activeIndex + 1), SLIDESHOW_INTERVAL_MS);
+    playButton.textContent = "Pause images";
+  };
+
+  img.onerror = () => {
+    slides.splice(activeIndex, 1);
+    if (!slides.length) {
+      stop();
+      frame.remove();
+      return;
+    }
+    showSlide(activeIndex);
+  };
+
+  slides.forEach((_, index) => {
+    const dot = document.createElement("button");
+    dot.type = "button";
+    dot.className = "media-dot";
+    dot.setAttribute("aria-label", `Show image ${index + 1}`);
+    dot.addEventListener("click", () => {
+      showSlide(index);
+      play();
+    });
+    dots.append(dot);
+  });
+
+  playButton.type = "button";
+  playButton.addEventListener("click", () => {
+    if (timer) stop();
+    else play();
+  });
+
+  frame.append(img, caption);
+  if (slides.length > 1) {
+    controls.append(playButton, dots);
+    frame.append(controls);
+  }
+  showSlide(0);
+  play();
+  return frame;
 }
 
 function featured(article) {
@@ -241,6 +344,102 @@ function renderBlocks(blocks, container) {
   });
 }
 
+function articleSpeechText(article) {
+  const blockText = (article.body || [])
+    .map((block) => {
+      if (block.type === "heading" || block.type === "paragraph") return block.text || "";
+      if (block.type === "list") return (block.items || []).join(". ");
+      return "";
+    })
+    .filter(Boolean)
+    .join("\n\n");
+  return [article.title, article.summary, blockText].filter(Boolean).join("\n\n");
+}
+
+function renderReaderControls(article, nextArticle) {
+  const controls = el("section", "reader-controls");
+  const copy = el("div", "reader-copy");
+  copy.append(el("p", "eyebrow", "Listen"));
+  copy.append(el("p", "", "Read this article aloud, or continue through the archive."));
+  const actions = el("div", "reader-actions");
+  const readButton = el("button", "reader-button primary", "Read aloud");
+  const pauseButton = el("button", "reader-button", "Pause");
+  const stopButton = el("button", "reader-button", "Stop");
+  const nextLink = el("a", "reader-next", nextArticle ? "Next article" : "No next article");
+  const continuousLabel = el("label", "reader-toggle");
+  const continuous = document.createElement("input");
+  const params = new URLSearchParams(window.location.search);
+  continuous.type = "checkbox";
+  continuous.checked = params.get("continuous") === "1";
+  continuousLabel.append(continuous, document.createTextNode(" Continuous reading"));
+
+  if (nextArticle) nextLink.href = `${articleUrl(nextArticle)}&continuous=${continuous.checked ? "1" : "0"}`;
+  else nextLink.removeAttribute("href");
+
+  const canSpeak = "speechSynthesis" in window && "SpeechSynthesisUtterance" in window;
+  const text = articleSpeechText(article);
+  let utterance = null;
+  let reading = false;
+
+  const stopSpeech = () => {
+    if (!canSpeak) return;
+    window.speechSynthesis.cancel();
+    reading = false;
+    readButton.textContent = "Read aloud";
+    pauseButton.textContent = "Pause";
+  };
+
+  const startSpeech = () => {
+    if (!canSpeak) {
+      readButton.textContent = "Speech unavailable";
+      readButton.disabled = true;
+      return;
+    }
+    stopSpeech();
+    utterance = new SpeechSynthesisUtterance(text);
+    utterance.rate = 0.92;
+    utterance.pitch = 0.95;
+    utterance.onend = () => {
+      reading = false;
+      readButton.textContent = "Read aloud";
+      if (continuous.checked && nextArticle) {
+        window.location.href = `${articleUrl(nextArticle)}&read=1&continuous=1`;
+      }
+    };
+    window.speechSynthesis.speak(utterance);
+    reading = true;
+    readButton.textContent = "Restart";
+  };
+
+  readButton.type = "button";
+  pauseButton.type = "button";
+  stopButton.type = "button";
+  readButton.addEventListener("click", startSpeech);
+  pauseButton.addEventListener("click", () => {
+    if (!canSpeak || !reading) return;
+    if (window.speechSynthesis.paused) {
+      window.speechSynthesis.resume();
+      pauseButton.textContent = "Pause";
+    } else {
+      window.speechSynthesis.pause();
+      pauseButton.textContent = "Resume";
+    }
+  });
+  stopButton.addEventListener("click", stopSpeech);
+  continuous.addEventListener("change", () => {
+    if (nextArticle) nextLink.href = `${articleUrl(nextArticle)}&continuous=${continuous.checked ? "1" : "0"}`;
+  });
+  window.addEventListener("beforeunload", stopSpeech, { once: true });
+
+  actions.append(readButton, pauseButton, stopButton, continuousLabel, nextLink);
+  controls.append(copy, actions);
+
+  if (params.get("read") === "1") {
+    setTimeout(startSpeech, 700);
+  }
+  return controls;
+}
+
 async function renderArticle() {
   const root = document.querySelector("#article");
   const slug = new URLSearchParams(window.location.search).get("slug");
@@ -251,26 +450,20 @@ async function renderArticle() {
   const response = await fetch(`content/articles/${slug}.json?v=${Date.now()}`);
   if (!response.ok) throw new Error(`Unable to load article: ${response.status}`);
   const article = await response.json();
+  const articles = await loadIndex();
+  const currentIndex = articles.findIndex((item) => item.slug === article.slug);
+  const nextArticle = currentIndex >= 0 ? articles[currentIndex + 1] : null;
   document.title = `${article.title} | Leo Stone`;
 
   const shell = el("div", "row justify-content-center");
   const column = el("div", "col-lg-10 col-xl-8");
   const articleCard = el("div", "article-card");
-  articleCard.append(image(article, "article-hero-image"));
+  articleCard.append(renderArticleMedia(article));
   const body = el("div", "article-content");
   body.append(meta(article, true));
   body.append(el("h1", "", article.title));
   body.append(el("p", "article-summary", article.summary));
-  const credit = el("p", "image-credit", article.imageCaption || article.imageAlt || "Source image");
-  if (article.imageSourceUrl) {
-    credit.append(document.createTextNode(" "));
-    const link = document.createElement("a");
-    link.href = article.imageSourceUrl;
-    link.rel = "noreferrer";
-    link.textContent = article.imageSourceTitle ? `Source: ${article.imageSourceTitle}` : "Source article";
-    credit.append(link);
-  }
-  body.append(credit);
+  body.append(renderReaderControls(article, nextArticle));
   const articleBody = el("div", "article-body");
   const bodyBlocks = (article.body || []).filter((block) => !(block.type === "image" && block.src === article.image));
   renderBlocks(bodyBlocks, articleBody);
