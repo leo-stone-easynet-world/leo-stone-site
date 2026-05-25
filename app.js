@@ -370,15 +370,23 @@ function renderReaderControls(article, nextArticle, previousArticle = null) {
   const continuousLabel = el("label", "reader-toggle");
   const continuous = document.createElement("input");
   const params = new URLSearchParams(window.location.search);
+  const articleUrlWithState = (target, extras = {}) => {
+    const url = new URL(articleUrl(target), window.location.href);
+    url.searchParams.set("continuous", continuous.checked ? "1" : "0");
+    for (const [key, value] of Object.entries(extras)) {
+      if (value !== undefined && value !== null && value !== "") url.searchParams.set(key, value);
+    }
+    return url.pathname + url.search + url.hash;
+  };
   continuous.type = "checkbox";
   continuous.checked = params.get("continuous") === "1";
   continuousLabel.append(continuous, document.createTextNode(" Continuous reading"));
 
-  if (nextArticle) nextLink.href = articleUrl(nextArticle) + "&continuous=" + (continuous.checked ? "1" : "0");
+  if (nextArticle) nextLink.href = articleUrlWithState(nextArticle);
   else nextLink.removeAttribute("href");
 
   continuous.addEventListener("change", () => {
-    if (nextArticle) nextLink.href = articleUrl(nextArticle) + "&continuous=" + (continuous.checked ? "1" : "0");
+    if (nextArticle) nextLink.href = articleUrlWithState(nextArticle);
   });
 
   if (articleAudio) {
@@ -386,6 +394,7 @@ function renderReaderControls(article, nextArticle, previousArticle = null) {
       play: ["M8 5v14l11-7-11-7Z"],
       pause: ["M8 5v14", "M16 5v14"],
       volume: ["M11 5 6 9H3v6h3l5 4V5Z", "M15.5 8.5a5 5 0 0 1 0 7"],
+      translate: ["M5 8h8", "M9 4v4", "M7 8c.7 2.1 2.2 4 4 5.2", "M11 8c-.7 2.1-2.2 4-4 5.2", "M15 20l4-9 4 9", "M16.5 17h5"],
       previous: ["M19 20 9 12l10-8v16Z", "M5 19V5"],
       repeat: ["M17 1l4 4-4 4", "M3 11V9a4 4 0 0 1 4-4h14", "M7 23l-4-4 4-4", "M21 13v2a4 4 0 0 1-4 4H3"],
       next: ["M5 4l10 8-10 8V4Z", "M19 5v14"],
@@ -433,29 +442,44 @@ function renderReaderControls(article, nextArticle, previousArticle = null) {
     progress.value = "0";
     progress.setAttribute("aria-label", "Seek");
     const volumeButton = iconButton("volume", "Mute");
+    const languageButton = article.audioZhUrl ? iconButton("translate", "Switch audio language") : null;
     const previousButton = iconButton("previous", "Previous article");
     const continuousButton = iconButton("repeat", "Continuous reading");
     const nextButton = iconButton("next", "Next article");
+    const audioTracks = [
+      { lang: "en", url: article.audioUrl, label: "English audio" },
+      ...(article.audioZhUrl ? [{ lang: "zh", url: article.audioZhUrl, label: "中文朗读" }] : []),
+    ];
+    let currentTrack = params.get("lang") === "zh" && article.audioZhUrl ? audioTracks[1] : audioTracks[0];
     previousButton.disabled = !previousArticle;
     nextButton.disabled = !nextArticle;
+    const currentStateExtras = (extras = {}) => ({ lang: currentTrack.lang, ...extras });
     const syncContinuousButton = () => {
       continuousButton.classList.toggle("active", continuous.checked);
       continuousButton.setAttribute("aria-pressed", continuous.checked ? "true" : "false");
-      if (nextArticle) nextLink.href = articleUrl(nextArticle) + "&continuous=" + (continuous.checked ? "1" : "0");
+      if (nextArticle) nextLink.href = articleUrlWithState(nextArticle, currentStateExtras());
+    };
+    const syncLanguageButton = () => {
+      if (!languageButton) return;
+      languageButton.classList.toggle("active", currentTrack.lang === "zh");
+      languageButton.setAttribute("aria-pressed", currentTrack.lang === "zh" ? "true" : "false");
+      languageButton.title = currentTrack.lang === "zh" ? "Switch to English audio" : "切换到中文朗读";
+      languageButton.setAttribute("aria-label", languageButton.title);
+      if (nextArticle) nextLink.href = articleUrlWithState(nextArticle, currentStateExtras());
     };
     previousButton.addEventListener("click", () => {
-      if (previousArticle) window.location.href = articleUrl(previousArticle) + "&continuous=" + (continuous.checked ? "1" : "0");
+      if (previousArticle) window.location.href = articleUrlWithState(previousArticle, currentStateExtras());
     });
     continuousButton.addEventListener("click", () => {
       continuous.checked = !continuous.checked;
       syncContinuousButton();
     });
     nextButton.addEventListener("click", () => {
-      if (nextArticle) window.location.href = articleUrl(nextArticle) + "&continuous=" + (continuous.checked ? "1" : "0");
+      if (nextArticle) window.location.href = articleUrlWithState(nextArticle, currentStateExtras());
     });
     articleAudio.className = "article-audio-source";
     articleAudio.preload = "metadata";
-    articleAudio.src = article.audioUrl;
+    articleAudio.src = currentTrack.url;
     const syncPlayer = () => {
       setIcon(playButton, articleAudio.paused ? "play" : "pause");
       playButton.setAttribute("aria-label", articleAudio.paused ? "Play" : "Pause");
@@ -477,6 +501,18 @@ function renderReaderControls(article, nextArticle, previousArticle = null) {
       articleAudio.muted = !articleAudio.muted;
       syncPlayer();
     });
+    if (languageButton) {
+      languageButton.addEventListener("click", () => {
+        const wasPlaying = !articleAudio.paused;
+        articleAudio.pause();
+        currentTrack = currentTrack.lang === "zh" ? audioTracks[0] : audioTracks[1];
+        articleAudio.src = currentTrack.url;
+        articleAudio.currentTime = 0;
+        syncLanguageButton();
+        syncPlayer();
+        if (wasPlaying) articleAudio.play().catch(() => {});
+      });
+    }
     articleAudio.addEventListener("loadedmetadata", syncPlayer);
     articleAudio.addEventListener("timeupdate", syncPlayer);
     articleAudio.addEventListener("play", syncPlayer);
@@ -484,12 +520,15 @@ function renderReaderControls(article, nextArticle, previousArticle = null) {
     articleAudio.addEventListener("ended", () => {
       syncPlayer();
       if (continuous.checked && nextArticle) {
-        window.location.href = articleUrl(nextArticle) + "&read=1&continuous=1";
+        window.location.href = articleUrlWithState(nextArticle, currentStateExtras({ read: "1" }));
       }
     });
-    player.append(playButton, time, progress, volumeButton, previousButton, continuousButton, nextButton);
+    player.append(playButton, time, progress);
+    if (languageButton) player.append(languageButton);
+    player.append(volumeButton, previousButton, continuousButton, nextButton);
     controls.append(copy, articleAudio, player);
     syncContinuousButton();
+    syncLanguageButton();
     syncPlayer();
     if (params.get("read") === "1") setTimeout(() => articleAudio.play().catch(() => {}), 400);
     return controls;
@@ -525,7 +564,7 @@ function renderReaderControls(article, nextArticle, previousArticle = null) {
       reading = false;
       readButton.textContent = "Read aloud";
       if (continuous.checked && nextArticle) {
-        window.location.href = articleUrl(nextArticle) + "&read=1&continuous=1";
+        window.location.href = articleUrlWithState(nextArticle, { read: "1" });
       }
     };
     window.speechSynthesis.speak(utterance);

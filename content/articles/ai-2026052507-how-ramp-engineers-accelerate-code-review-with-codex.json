@@ -1,0 +1,111 @@
+{
+  "slug": "ai-2026052507-how-ramp-engineers-accelerate-code-review-with-codex",
+  "category": "ai",
+  "title": "AI Briefing: How Ramp Engineers Accelerate Code Review with Codex",
+  "summary": "Ramp’s integration of OpenAI’s Codex into its code‑review workflow illustrates a broader industry trend toward LLM‑assisted development. Coupled with Google’s AI‑mode search and the emerging ethical scrutiny in creative AI, the article dissects model shifts, inference economics, data boundaries, safety, product strateg",
+  "publishedAt": "2026-05-25T07:07:23.109Z",
+  "readingMinutes": 4,
+  "image": "https://media.wired.com/photos/6a0ce86f98983a3fe2d17459/master/pass/Commonwealth-Prize-AI-Scandal-Culture.jpg",
+  "imageAlt": "Image from source article for Literary Prizewinners Are Facing AI Allegations. It Feels Like the New Normal",
+  "imageCaption": "Literary Prizewinners Are Facing AI Allegations. It Feels Like the New Normal",
+  "imageSourceTitle": "Literary Prizewinners Are Facing AI Allegations. It Feels Like the New Normal",
+  "imageSourceUrl": "https://www.wired.com/story/commonwealth-short-story-prize-ai-allegations/",
+  "inlineImages": [
+    {
+      "src": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/AI_Mode_US.width-1300.png",
+      "alt": "Image from source article for How AI Mode is changing the way people search in the U.S.",
+      "caption": "How AI Mode is changing the way people search in the U.S.",
+      "sourceTitle": "How AI Mode is changing the way people search in the U.S.",
+      "sourceUrl": "https://blog.google/products-and-platforms/products/search/ai-mode-us-insights/"
+    },
+    {
+      "src": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Search_AI_and_search_engine_v46_16x9_1.width-1300.jpg",
+      "alt": "Image from source article for A new era for AI Search",
+      "caption": "A new era for AI Search",
+      "sourceTitle": "A new era for AI Search",
+      "sourceUrl": "https://blog.google/products-and-platforms/products/search/search-io-2026/"
+    }
+  ],
+  "body": [
+    {
+      "type": "heading",
+      "text": "Model and Platform Shifts"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ramp’s adoption of Codex marks a decisive shift from traditional rule‑based static analysis to a generative, context‑aware model. By embedding the LLM directly into its CI pipeline, engineers can receive real‑time suggestions, flagging potential bugs before they reach production. This move reflects a broader industry pivot toward platform‑agnostic LLMs that can be fine‑tuned for domain‑specific tasks, reducing the need for bespoke tooling."
+    },
+    {
+      "type": "heading",
+      "text": "Inference Economics and Data Boundaries"
+    },
+    {
+      "type": "paragraph",
+      "text": "The economics of inference are central to Ramp’s deployment strategy. Running Codex in the cloud incurs per‑token costs, but the reduction in manual review time offsets these expenses. Data boundaries become critical when source code, a proprietary asset, is sent to an external model. Ramp mitigates this risk by employing on‑prem inference nodes and strict data‑ingestion policies that limit token exposure to only the minimal context required for analysis."
+    },
+    {
+      "type": "heading",
+      "text": "Safety, Security, and Ethical Considerations"
+    },
+    {
+      "type": "paragraph",
+      "text": "Safety concerns echo the recent controversies surrounding AI‑generated literary works, where prizewinners faced allegations of algorithmic assistance. Ramp’s internal audit framework mirrors the same rigor, ensuring that model outputs are traceable and that any hallucinated code is flagged. Security protocols enforce encryption at rest and in transit, while an access‑control matrix prevents unauthorized model usage."
+    },
+    {
+      "type": "heading",
+      "text": "Product Strategy and Labor Design"
+    },
+    {
+      "type": "paragraph",
+      "text": "Google’s I/O 2026 roadmap, particularly the AI‑Mode search enhancements and the Search IO 2026 initiative, demonstrates how large platforms are embedding generative AI into core consumer products. Ramp’s strategy aligns with this trajectory by positioning Codex not just as a tool but as a value‑added feature that differentiates its SaaS offering. Labor design shifts from manual code review to a hybrid model where developers focus on higher‑level architecture while the LLM handles routine checks."
+    },
+    {
+      "type": "heading",
+      "text": "Operational Consequences and Future Outlook"
+    },
+    {
+      "type": "paragraph",
+      "text": "Operationally, the integration of Codex streamlines the review cycle, reducing cycle time by up to 30% in early pilots. This efficiency gain translates to lower infrastructure spend and faster feature delivery. However, it also necessitates new skill sets—engineers must now interpret LLM outputs and fine‑tune prompts. The long‑term outlook suggests a gradual convergence of LLMs with traditional DevOps pipelines, creating a new class of AI‑augmented engineering teams."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Reduced manual review hours",
+        "Lower per‑feature deployment costs",
+        "Enhanced code quality through context‑aware suggestions",
+        "Increased need for prompt‑engineering expertise",
+        "Shift in developer responsibilities toward oversight and architecture"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "How Ramp engineers accelerate code review with Codex",
+      "url": "https://openai.com/index/ramp"
+    },
+    {
+      "title": "Literary Prizewinners Are Facing AI Allegations. It Feels Like the New Normal",
+      "url": "https://www.wired.com/story/commonwealth-short-story-prize-ai-allegations/"
+    },
+    {
+      "title": "I/O 2026",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/google-io-2026-collection/"
+    },
+    {
+      "title": "How AI Mode is changing the way people search in the U.S.",
+      "url": "https://blog.google/products-and-platforms/products/search/ai-mode-us-insights/"
+    },
+    {
+      "title": "A new era for AI Search",
+      "url": "https://blog.google/products-and-platforms/products/search/search-io-2026/"
+    }
+  ],
+  "audioUrl": "content/audio/ai-2026052507-how-ramp-engineers-accelerate-code-review-with-codex.mp3",
+  "audioProvider": "kokoro",
+  "audioVoice": "am_eric",
+  "audioScript": "polished",
+  "audioZhUrl": "content/audio/ai-2026052507-how-ramp-engineers-accelerate-code-review-with-codex.zh.mp3",
+  "audioZhProvider": "kokoro",
+  "audioZhVoice": "zf_xiaobei",
+  "audioZhScript": "polished-zh"
+}
