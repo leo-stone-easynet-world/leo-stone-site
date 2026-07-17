@@ -1,0 +1,218 @@
+{
+  "slug": "technology-2026071704-psiquantum-has-a-plan-to-make-a-massive-quantum-computer-out-of-light",
+  "category": "technology",
+  "title": "Technology Briefing: PsiQuantum has a plan to make a massive quantum computer out of light",
+  "summary": "PsiQuantum's ambitious roadmap to build a photonic quantum computer from scratch, juxtaposed with the cooling winds of executive sentiment toward AI spending, regulatory tightening on world models, and a patchwork of communities pausing data center construction. The piece dissects the economics of light-based qubits, t",
+  "publishedAt": "2026-07-17T04:07:15.553Z",
+  "readingMinutes": 11,
+  "image": "https://wp.technologyreview.com/wp-content/uploads/2026/07/260126_Mk2_the_third-23.jpg?w=2000",
+  "imageAlt": "Image from source article for PsiQuantum has a plan to make a massive quantum computer out of light",
+  "imageCaption": "PsiQuantum has a plan to make a massive quantum computer out of light",
+  "imageSourceTitle": "PsiQuantum has a plan to make a massive quantum computer out of light",
+  "imageSourceUrl": "https://www.technologyreview.com/2026/07/14/1140356/psiquantum-plan-massive-quantum-computer-out-of-light/",
+  "inlineImages": [
+    {
+      "src": "https://image.theregister.com/?imageId=260052&width=800",
+      "alt": "Image from source article for Sticker shock has execs rethinking this whole AI thing",
+      "caption": "Sticker shock has execs rethinking this whole AI thing",
+      "sourceTitle": "Sticker shock has execs rethinking this whole AI thing",
+      "sourceUrl": "https://www.theregister.com/ai-and-ml/2026/07/13/sticker-shock-has-execs-rethinking-this-whole-ai-thing-1/5270073"
+    },
+    {
+      "src": "https://wp.technologyreview.com/wp-content/uploads/2026/02/COLOMBIA-6.edit_.jpg?w=3000",
+      "alt": "Image from source article for The Download: a donor conception cap and world models for AI",
+      "caption": "The Download: a donor conception cap and world models for AI",
+      "sourceTitle": "The Download: a donor conception cap and world models for AI",
+      "sourceUrl": "https://www.technologyreview.com/2026/07/13/1140339/the-download-sperm-donor-limits-ai-world-models/"
+    },
+    {
+      "src": "https://wp.technologyreview.com/wp-content/uploads/2025/08/PigeonIntoMissile.edit_.jpg?w=3000",
+      "alt": "Image from source article for The Download: Claude’s inner workings and OpenAI’s “super app”",
+      "caption": "The Download: Claude’s inner workings and OpenAI’s “super app”",
+      "sourceTitle": "The Download: Claude’s inner workings and OpenAI’s “super app”",
+      "sourceUrl": "https://www.technologyreview.com/2026/07/10/1140316/the-download-anthropic-claude-hidden-space-openai-super-app/"
+    }
+  ],
+  "body": [
+    {
+      "type": "heading",
+      "text": "The Light Path: PsiQuantum's Photonic Roadmap"
+    },
+    {
+      "type": "paragraph",
+      "text": "PsiQuantum has unveiled a detailed plan to construct a massive quantum computer using photons rather than trapped ions or superconducting circuits. The core of this strategy lies in the use of integrated silicon photonics, where light is guided through waveguides etched onto a chip, enabling high-fidelity qubit operations at room temperature or near-ambient conditions. Unlike superconducting qubits, which require dilution refrigerators operating near absolute zero, photonic qubits can be processed with minimal cooling overhead, fundamentally altering the cost structure of quantum hardware deployment."
+    },
+    {
+      "type": "paragraph",
+      "text": "The architecture relies on probabilistic entanglement sources, specifically spontaneous parametric down-conversion, to generate photon pairs that serve as logical qubits. By arranging these sources in a network and using linear optical elements such as beam splitters and phase shifters, PsiQuantum aims to scale the system to thousands of qubits. The engineering challenge here is not merely the number of components but the yield: as the network grows, the probability of generating a valid entangled state without photon loss drops precipitously. Mitigating this requires massive parallelism and error correction codes tailored to the probabilistic nature of the hardware."
+    },
+    {
+      "type": "image",
+      "src": "https://image.theregister.com/?imageId=260052&width=800",
+      "alt": "Image from source article for Sticker shock has execs rethinking this whole AI thing",
+      "caption": "Sticker shock has execs rethinking this whole AI thing",
+      "sourceTitle": "Sticker shock has execs rethinking this whole AI thing",
+      "sourceUrl": "https://www.theregister.com/ai-and-ml/2026/07/13/sticker-shock-has-execs-rethinking-this-whole-ai-thing-1/5270073"
+    },
+    {
+      "type": "heading",
+      "text": "Infrastructure and the Cloud Economics of Photonics"
+    },
+    {
+      "type": "paragraph",
+      "text": "From an infrastructure standpoint, the shift to photonic quantum computing presents a distinct set of supply chain dynamics. Silicon photonics manufacturing is already mature in the classical semiconductor industry, but the precision required for quantum-grade waveguides pushes the industry toward specialized foundries. This creates a bifurcation in the cloud economics model: classical cloud providers like AWS and Azure will likely host quantum workloads on existing silicon infrastructure, while a new class of quantum-native cloud services may emerge, optimized for the specific thermal and optical requirements of photonic processors."
+    },
+    {
+      "type": "paragraph",
+      "text": "The cooling requirements, while lower than superconducting systems, are not negligible. High-power laser sources and detection systems generate significant heat, necessitating advanced thermal management solutions that differ from the vacuum insulation used in cryogenic systems. This implies a different facility footprint and potentially higher operational costs per qubit compared to the current superconducting paradigm. For enterprise buyers, the total cost of ownership (TCO) will hinge on the maturity of these thermal and optical subsystems, which are currently in early development stages."
+    },
+    {
+      "type": "image",
+      "src": "https://wp.technologyreview.com/wp-content/uploads/2026/02/COLOMBIA-6.edit_.jpg?w=3000",
+      "alt": "Image from source article for The Download: a donor conception cap and world models for AI",
+      "caption": "The Download: a donor conception cap and world models for AI",
+      "sourceTitle": "The Download: a donor conception cap and world models for AI",
+      "sourceUrl": "https://www.technologyreview.com/2026/07/13/1140339/the-download-sperm-donor-limits-ai-world-models/"
+    },
+    {
+      "type": "heading",
+      "text": "Executive Sentiment: The Cooling Winds of AI Spending"
+    },
+    {
+      "type": "paragraph",
+      "text": "While PsiQuantum pushes forward with its photonic vision, the broader technology sector is experiencing a palpable shift in sentiment regarding artificial intelligence. Recent reports indicate that sticker shock has caused executives to rethink the whole AI thing, particularly the massive capital expenditures required to train and deploy large language models. This sentiment is not merely rhetorical; it is reflected in a recalibration of budgets and a more pragmatic approach to AI integration, focusing on incremental value rather than speculative leaps."
+    },
+    {
+      "type": "paragraph",
+      "text": "The implications for quantum computing are twofold. First, the hesitation around AI spending may spill over into quantum investments, as boards become more risk-averse and demand clearer return-on-investment timelines. Second, the shift toward pragmatic AI deployment suggests that quantum computing will be evaluated not as a standalone miracle technology but as a specialized accelerator for specific high-value problems, such as materials discovery or optimization tasks where classical solvers have hit diminishing returns."
+    },
+    {
+      "type": "image",
+      "src": "https://wp.technologyreview.com/wp-content/uploads/2025/08/PigeonIntoMissile.edit_.jpg?w=3000",
+      "alt": "Image from source article for The Download: Claude’s inner workings and OpenAI’s “super app”",
+      "caption": "The Download: Claude’s inner workings and OpenAI’s “super app”",
+      "sourceTitle": "The Download: Claude’s inner workings and OpenAI’s “super app”",
+      "sourceUrl": "https://www.technologyreview.com/2026/07/10/1140316/the-download-anthropic-claude-hidden-space-openai-super-app/"
+    },
+    {
+      "type": "heading",
+      "text": "Regulatory Frontiers: World Models and Donor Cap"
+    },
+    {
+      "type": "paragraph",
+      "text": "The regulatory landscape is also evolving in ways that will shape the operational environment for quantum and AI technologies. The introduction of donor conception caps and restrictions on world models for AI suggests a broader trend toward limiting the scope of synthetic data generation and biological modeling. For quantum computing, this regulatory attention may extend to the use of synthetic data for training quantum algorithms or the modeling of complex chemical systems, potentially requiring new compliance frameworks."
+    },
+    {
+      "type": "paragraph",
+      "text": "These regulatory shifts also intersect with the security considerations of quantum hardware. As quantum computers gain the ability to break classical encryption, the demand for quantum-safe cryptography will accelerate. However, the same regulatory scrutiny that applies to AI world models may also apply to the development of quantum-resistant algorithms, creating a complex interplay between innovation and compliance."
+    },
+    {
+      "type": "heading",
+      "text": "Local Resistance: The Data Center Pause"
+    },
+    {
+      "type": "paragraph",
+      "text": "On the ground, communities like Mount Airy are joining a growing list of locales pausing data center development. This resistance is driven by concerns over water usage, energy consumption, and local infrastructure strain. For quantum computing, which may require less water than classical data centers but still demands significant energy, these local concerns will influence site selection and the design of quantum facilities."
+    },
+    {
+      "type": "paragraph",
+      "text": "The pause in data center development also signals a broader skepticism toward the narrative of inevitable technological expansion. This skepticism is relevant to PsiQuantum's long-term timeline, which assumes a steady progression of manufacturing and deployment. If local communities and regulators continue to push back, the path to scaling quantum hardware may become more circuitous, requiring partnerships with existing industrial sites rather than greenfield developments."
+    },
+    {
+      "type": "heading",
+      "text": "Product Strategy and the Anthropic/OpenAI Landscape"
+    },
+    {
+      "type": "paragraph",
+      "text": "The product strategy of major AI players like Anthropic and OpenAI is shifting, with Anthropic focusing on the hidden workings of its models and OpenAI exploring a super app approach. These developments suggest a convergence of AI and quantum computing in the near term, as both fields seek to optimize for efficiency and scalability. Quantum computing could provide the computational backbone for certain AI tasks, while AI could assist in optimizing quantum circuit designs and error correction protocols."
+    },
+    {
+      "type": "paragraph",
+      "text": "This convergence raises questions about the future of cloud services. As AI models become more complex and quantum computers more powerful, cloud providers will need to offer integrated solutions that combine classical and quantum resources. The economics of such hybrid clouds will depend on the ability to seamlessly orchestrate workloads across different hardware types, a challenge that is currently being addressed by emerging orchestration frameworks."
+    },
+    {
+      "type": "list",
+      "items": [
+        "PsiQuantum's photonic architecture offers a fundamentally different cost structure compared to superconducting qubits, with lower cooling overhead but higher optical component costs.",
+        "Executive sentiment around AI spending is cooling, which may translate into more cautious investment in quantum hardware until clear use cases emerge.",
+        "Regulatory attention on world models and donor conception caps suggests a broader trend toward limiting synthetic data generation, which could impact quantum algorithm training.",
+        "Local resistance to data center development will likely influence site selection for quantum facilities, pushing toward industrial partnerships rather than greenfield builds.",
+        "The convergence of AI and quantum computing in cloud services will require new orchestration frameworks to manage hybrid workloads efficiently."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "In the final analysis, PsiQuantum's plan to build a massive quantum computer out of light represents a significant pivot in the quantum hardware landscape. The technology is promising, but its success will depend not only on the physics of photons but also on the economics of scaling, the regulatory environment, and the broader shifts in corporate sentiment toward high-cost, high-uncertainty technologies. For investors and enterprise buyers, the message is clear: watch the margins, the regulatory filings, and the local zoning boards as closely as the qubit counts."
+    },
+    {
+      "type": "heading",
+      "text": "Why it matters for builders"
+    },
+    {
+      "type": "paragraph",
+      "text": "For technology operators, the important question is whether the news changes platform leverage, infrastructure cost, security posture, developer behavior, or the tradeoff between control and speed. Those mechanisms determine whether a headline becomes a real operating constraint."
+    },
+    {
+      "type": "paragraph",
+      "text": "The lead signal is PsiQuantum has a plan to make a massive quantum computer out of light. Leo would not read it as a standalone item. He would place it beside the rest of the source set and ask which assumption is being tested: demand, cost, trust, policy, infrastructure capacity, or the willingness of customers and investors to keep paying for the current narrative."
+    },
+    {
+      "type": "paragraph",
+      "text": "The current source mix points to several connected signals rather than one isolated story: PsiQuantum has a plan to make a massive quantum computer out of light; Sticker shock has execs rethinking this whole AI thing; The Download: a donor conception cap and world models for AI; The Download: Claude’s inner workings and OpenAI’s “super app”; Mount Airy joins growing list of communities pausing data center development - WUNC News (WUNC News). Read together, they give Leo a broader map of where attention is moving and which assumptions deserve a second look."
+    },
+    {
+      "type": "heading",
+      "text": "Second-order effects"
+    },
+    {
+      "type": "paragraph",
+      "text": "The second-order question is where complexity moves. A tool can make one team faster while pushing cost, governance, or operational risk onto another team. The useful analysis follows that transfer instead of stopping at the vendor's preferred story."
+    },
+    {
+      "type": "paragraph",
+      "text": "Leo's operating lens is to ask what a careful builder would do differently on Monday morning. If the answer is a clearer dependency map, a different vendor boundary, a security review, or a more conservative architecture choice, the headline has practical weight."
+    },
+    {
+      "type": "heading",
+      "text": "What to watch next"
+    },
+    {
+      "type": "paragraph",
+      "text": "The next useful check is where the pressure shows up first: procurement, architecture reviews, incident response, margins, or product roadmaps. That is usually where the strategic meaning becomes visible before it appears in a polished executive narrative."
+    },
+    {
+      "type": "paragraph",
+      "text": "The practical discipline is to avoid treating the freshest headline as the whole story. The stronger read is slower and more mechanical: identify the constraint, watch whether it spreads, and keep revising the map as better evidence arrives."
+    }
+  ],
+  "sources": [
+    {
+      "title": "PsiQuantum has a plan to make a massive quantum computer out of light",
+      "url": "https://www.technologyreview.com/2026/07/14/1140356/psiquantum-plan-massive-quantum-computer-out-of-light/"
+    },
+    {
+      "title": "Sticker shock has execs rethinking this whole AI thing",
+      "url": "https://www.theregister.com/ai-and-ml/2026/07/13/sticker-shock-has-execs-rethinking-this-whole-ai-thing-1/5270073"
+    },
+    {
+      "title": "The Download: a donor conception cap and world models for AI",
+      "url": "https://www.technologyreview.com/2026/07/13/1140339/the-download-sperm-donor-limits-ai-world-models/"
+    },
+    {
+      "title": "The Download: Claude’s inner workings and OpenAI’s “super app”",
+      "url": "https://www.technologyreview.com/2026/07/10/1140316/the-download-anthropic-claude-hidden-space-openai-super-app/"
+    },
+    {
+      "title": "Mount Airy joins growing list of communities pausing data center development - WUNC News",
+      "url": "https://news.google.com/articles/CBMirAFBVV95cUxOaEtBaWNwOTMtVERPRy1xeE9yUERxMHVPcDNnVFplbWlzV1AxLVFBelNmcWxfaHhkcjYyaDFmUS0wdmdLNklzVXBKcUJwWmtQXzB3azB1SVlmVTJ1LUxFNTdtZldhYTZZQ1d2RGJIbmY1S0pDU3pOck1CM3NIMDNObDFMMk93TENrTEpPZktSMUJadVVtQTNSTlo3ak1lTkJFOGlCY3lJUEJWLThz?oc=5"
+    }
+  ],
+  "audioUrl": "content/audio/technology-2026071704-psiquantum-has-a-plan-to-make-a-massive-quantum-computer-out-of-light.mp3",
+  "audioProvider": "kokoro",
+  "audioVoice": "am_michael",
+  "audioScript": "polished",
+  "audioZhUrl": "content/audio/technology-2026071704-psiquantum-has-a-plan-to-make-a-massive-quantum-computer-out-of-light.zh.mp3",
+  "audioZhProvider": "kokoro",
+  "audioZhVoice": "zm_yunyang",
+  "audioZhScript": "polished-zh"
+}
