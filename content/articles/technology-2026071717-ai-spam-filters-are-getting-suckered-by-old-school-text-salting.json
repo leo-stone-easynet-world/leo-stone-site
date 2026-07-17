@@ -1,0 +1,242 @@
+{
+  "slug": "technology-2026071717-ai-spam-filters-are-getting-suckered-by-old-school-text-salting",
+  "category": "technology",
+  "title": "Technology Briefing: AI spam filters are getting suckered by old-school text salting",
+  "summary": "Recent shifts in spam detection infrastructure reveal that adversarial text salting, a technique from the early internet era, is once again undermining modern AI-driven content moderation. Simultaneously, regulatory pressure in San Francisco targets AI-generated nudity apps, while industry leaders warn of geopolitical",
+  "publishedAt": "2026-07-17T17:07:21.241Z",
+  "readingMinutes": 11,
+  "image": "https://image.theregister.com/?imageId=5268977&width=800",
+  "imageAlt": "Image from source article for AI spam filters are getting suckered by old-school text salting",
+  "imageCaption": "AI spam filters are getting suckered by old-school text salting",
+  "imageSourceTitle": "AI spam filters are getting suckered by old-school text salting",
+  "imageSourceUrl": "https://www.theregister.com/security/2026/07/17/ai-spam-filters-are-getting-suckered-by-old-school-text-salting/5274434",
+  "inlineImages": [
+    {
+      "src": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+      "alt": "Image from Axios for David Sacks warns U.S. could lose AI race after Chinese model's breakout - Axios",
+      "caption": "David Sacks warns U.S. could lose AI race after Chinese model's breakout - Axios (Axios)",
+      "sourceTitle": "Axios",
+      "sourceUrl": "https://news.google.com/articles/CBMieEFVX3lxTFB2UVdFZUVhUVdBb3hGY0h0aWRfaUU3V2hDSHJac0lsNzZVQ3d1QjNjTzk0ZUdYclNhdzJXc3ZXN2x5UEphN3hBSEttVGVJYjRDSDU0Q244RmsxZnNaakJKbmFkWi1XVzdtNlc0ZmZfRndBY3NwOU5USg?oc=5"
+    },
+    {
+      "src": "https://repository-images.githubusercontent.com/129936360/29563eb2-8d6a-487e-aaf6-6288fcc730e2",
+      "alt": "Image from source article for PennyLane is an open-source quantum software platform for quantum",
+      "caption": "PennyLane is an open-source quantum software platform for quantum",
+      "sourceTitle": "PennyLane is an open-source quantum software platform for quantum",
+      "sourceUrl": "https://github.com/PennyLaneAI/pennylane"
+    },
+    {
+      "src": "https://bookface-images.s3.amazonaws.com/logos/82493096f003f1a5800031161c10f95f365688b2.png?1770087728",
+      "alt": "Image from source article for Manufact (YC S25) Is Hiring a Senior infra engineer to build the MCP cloud",
+      "caption": "Manufact (YC S25) Is Hiring a Senior infra engineer to build the MCP cloud",
+      "sourceTitle": "Manufact (YC S25) Is Hiring a Senior infra engineer to build the MCP cloud",
+      "sourceUrl": "https://www.ycombinator.com/companies/manufact/jobs/Dh6PYP5-senior-infrastructure-engineer"
+    }
+  ],
+  "body": [
+    {
+      "type": "heading",
+      "text": "The Resurgence of Text Salting Against AI Moderation"
+    },
+    {
+      "type": "paragraph",
+      "text": "Spam filters have long relied on heuristics: checking sender reputation, analyzing header fields, and scanning payloads for known malicious signatures. With the advent of large language models, the industry hoped to move beyond brittle rule sets toward semantic understanding—systems that could distinguish between legitimate promotional content and unsolicited bulk mail by evaluating intent, tone, and contextual relevance. However, a recent report from The Register highlights a troubling regression: sophisticated spam campaigns are now employing old-school text salting to defeat these AI-based detectors."
+    },
+    {
+      "type": "paragraph",
+      "text": "Text salting involves embedding innocuous, high-volume filler content into spam messages—often thousands of words of neutral text such as blog excerpts, dictionary entries, or generated prose—to artificially inflate the message length and dilute the proportion of spammy tokens. In the early 2000s, this tactic was effective because simple length-based filters would discard short spam but retain long, seemingly legitimate messages. Modern AI filters, however, are trained to recognize patterns in token distributions and can often ignore filler content if it appears randomly interspersed. The salting technique has evolved: attackers now use algorithmically generated filler that mimics natural language statistics, making it harder for models to distinguish signal from noise without explicit length thresholds."
+    },
+    {
+      "type": "image",
+      "src": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+      "alt": "Image from Axios for David Sacks warns U.S. could lose AI race after Chinese model's breakout - Axios",
+      "caption": "David Sacks warns U.S. could lose AI race after Chinese model's breakout - Axios (Axios)",
+      "sourceTitle": "Axios",
+      "sourceUrl": "https://news.google.com/articles/CBMieEFVX3lxTFB2UVdFZUVhUVdBb3hGY0h0aWRfaUU3V2hDSHJac0lsNzZVQ3d1QjNjTzk0ZUdYclNhdzJXc3ZXN2x5UEphN3hBSEttVGVJYjRDSDU0Q244RmsxZnNaakJKbmFkWi1XVzdtNlc0ZmZfRndBY3NwOU5USg?oc=5"
+    },
+    {
+      "type": "paragraph",
+      "text": "The core vulnerability lies in the training data and evaluation metrics used to build these models. If a model is optimized for accuracy on short, clean spam samples, it may underperform on long, salted messages because the loss function does not penalize false negatives proportionally to message length. Moreover, many systems assume that spam is short and that legitimate emails are long, a heuristic that breaks down when attackers deliberately violate this assumption. The result is a platform shift: spam is no longer a binary classification problem but a continuous optimization task where the attacker can trade off message length against detection probability."
+    },
+    {
+      "type": "heading",
+      "text": "Regulatory Pressure on AI-Generated Nudity Apps"
+    },
+    {
+      "type": "paragraph",
+      "text": "While spam filters face technical challenges, another front of AI misuse is attracting regulatory attention. San Francisco has formally ordered Apple and Google to remove applications that use generative AI to create or enhance nudity from user-uploaded photos. The city’s Attorney General argues that these apps profit from user data without consent and contribute to a broader ecosystem of non-consensual deepfake pornography."
+    },
+    {
+      "type": "image",
+      "src": "https://repository-images.githubusercontent.com/129936360/29563eb2-8d6a-487e-aaf6-6288fcc730e2",
+      "alt": "Image from source article for PennyLane is an open-source quantum software platform for quantum",
+      "caption": "PennyLane is an open-source quantum software platform for quantum",
+      "sourceTitle": "PennyLane is an open-source quantum software platform for quantum",
+      "sourceUrl": "https://github.com/PennyLaneAI/pennylane"
+    },
+    {
+      "type": "paragraph",
+      "text": "The order represents a significant departure from the typical hands-off approach of app store operators. It signals that regulators are increasingly willing to intervene directly in product design decisions, particularly when those decisions involve AI models that process personal imagery. For platform operators, this creates a new category of compliance risk: not just data privacy, but also the ethical deployment of generative models. The technical implications are non-trivial; removing such apps may require changes to the underlying model architectures, prompting a reevaluation of how AI capabilities are exposed to end users."
+    },
+    {
+      "type": "heading",
+      "text": "Geopolitical Risks to the U.S. AI Ecosystem"
+    },
+    {
+      "type": "paragraph",
+      "text": "David Sacks, former CEO of Coinbase and a prominent voice in Silicon Valley, has warned that the United States could lose its lead in artificial intelligence if Chinese models achieve a breakout. His concern centers on the speed of model development and the availability of compute resources abroad. If Chinese entities can train and deploy models that outperform Western counterparts in cost and speed, the competitive landscape will shift dramatically."
+    },
+    {
+      "type": "image",
+      "src": "https://bookface-images.s3.amazonaws.com/logos/82493096f003f1a5800031161c10f95f365688b2.png?1770087728",
+      "alt": "Image from source article for Manufact (YC S25) Is Hiring a Senior infra engineer to build the MCP cloud",
+      "caption": "Manufact (YC S25) Is Hiring a Senior infra engineer to build the MCP cloud",
+      "sourceTitle": "Manufact (YC S25) Is Hiring a Senior infra engineer to build the MCP cloud",
+      "sourceUrl": "https://www.ycombinator.com/companies/manufact/jobs/Dh6PYP5-senior-infrastructure-engineer"
+    },
+    {
+      "type": "paragraph",
+      "text": "The underlying issue is not merely a race to the bottom in model quality but a structural imbalance in the global AI supply chain. Western firms have invested heavily in proprietary hardware and software stacks, but Chinese firms are rapidly catching up, particularly in the realm of open-weight models and inference optimization. This dynamic suggests that the U.S. must consider not only defensive measures like export controls but also offensive strategies to maintain technological parity."
+    },
+    {
+      "type": "heading",
+      "text": "Infrastructure Shifts: Quantum Software and Cloud Engineering"
+    },
+    {
+      "type": "paragraph",
+      "text": "Beyond spam and regulation, the technology sector is undergoing profound infrastructure changes. PennyLane, an open-source quantum software platform, is gaining traction as researchers and enterprises seek to harness quantum computing for optimization problems that classical systems cannot solve efficiently. The platform provides a high-level API for defining and running quantum circuits, making it easier for developers to experiment with quantum algorithms without needing deep hardware knowledge."
+    },
+    {
+      "type": "paragraph",
+      "text": "Simultaneously, the cloud ecosystem is evolving to support these new workloads. Manufact, a Y Combinator S25 company, is hiring senior infrastructure engineers to build the MCP cloud, a platform designed to orchestrate heterogeneous compute resources including classical and quantum processors. This role underscores a growing demand for engineers who can manage complex, multi-paradigm systems where traditional cloud abstractions no longer suffice."
+    },
+    {
+      "type": "list",
+      "items": [
+        "PennyLane enables rapid prototyping of quantum algorithms for optimization and machine learning tasks.",
+        "The MCP cloud architecture must handle heterogeneous workloads across classical CPUs, GPUs, and quantum processors.",
+        "Senior infrastructure engineers are needed to design scalable control planes for these hybrid environments.",
+        "Open-source quantum software reduces entry barriers for academic and industrial research.",
+        "Cloud providers are expanding their offerings to include quantum-ready infrastructure as a service."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "These infrastructure trends are not isolated; they intersect with the spam and regulation issues. For example, the ability to run large AI models efficiently on hybrid quantum-classical hardware could change the economics of spam generation, potentially making it cheaper to produce high-volume, high-quality spam. Similarly, regulatory orders may affect how companies deploy AI models, influencing the design of cloud services that host them."
+    },
+    {
+      "type": "heading",
+      "text": "Economic and Strategic Implications"
+    },
+    {
+      "type": "paragraph",
+      "text": "From an economic perspective, the resurgence of text salting highlights the importance of cost-effective spam generation. If attackers can use cheap compute to generate massive volumes of salted spam, the marginal cost of spam approaches zero, making traditional filtering based on cost-benefit analysis less effective. Platforms must therefore invest in more sophisticated detection mechanisms, such as length-aware models and adversarial training, which may increase operational costs."
+    },
+    {
+      "type": "paragraph",
+      "text": "Regulatory interventions, like the San Francisco order, introduce new compliance costs for app stores. While these costs may be modest compared to the broader economic impact of spam, they signal a shift toward proactive governance. Companies must factor these regulatory risks into their product roadmaps, potentially leading to a bifurcation in app store ecosystems where some regions enforce stricter rules than others."
+    },
+    {
+      "type": "paragraph",
+      "text": "The geopolitical warning from Sacks points to a more existential risk: if the U.S. loses its AI lead, the competitive advantage it has enjoyed for decades could evaporate. This would have far-reaching consequences for American innovation, productivity, and national security. The response must be multifaceted, involving both public policy and private sector investment in foundational research and infrastructure."
+    },
+    {
+      "type": "paragraph",
+      "text": "In the realm of quantum computing, the emergence of platforms like PennyLane and the need for specialized infrastructure engineers suggest that quantum capabilities will become a standard part of the tech stack, much like GPUs were a decade ago. However, the timeline for widespread adoption remains uncertain, and the economic returns may be long-term rather than immediate."
+    },
+    {
+      "type": "heading",
+      "text": "Operational Consequences for Platform Operators"
+    },
+    {
+      "type": "paragraph",
+      "text": "For platform operators, the convergence of these issues creates a complex operational landscape. Spam detection systems must now account for adversarial salting, which may require retraining models with length-aware loss functions and incorporating explicit length thresholds. Regulatory compliance demands that operators monitor and respond to orders from various jurisdictions, potentially leading to a patchwork of rules that differ across regions."
+    },
+    {
+      "type": "paragraph",
+      "text": "Infrastructure teams must prepare for hybrid compute environments that include quantum processors, requiring new tooling and expertise. This shift may necessitate hiring engineers with backgrounds in both classical and quantum computing, as well as in cloud orchestration. The cost of these hires will be significant, but the alternative—falling behind in capabilities—could be even more costly."
+    },
+    {
+      "type": "paragraph",
+      "text": "Strategically, operators must decide whether to invest in proprietary solutions or to rely on open-source ecosystems. The rise of open quantum software suggests that the latter may be the more sustainable path, but proprietary solutions may offer performance advantages in the short term. This decision will influence not only product offerings but also the broader ecosystem around the platform."
+    },
+    {
+      "type": "paragraph",
+      "text": "Finally, the geopolitical dimension adds a layer of uncertainty. If the U.S. loses its AI lead, the competitive landscape will shift, potentially forcing operators to adapt their strategies to global markets where Chinese models dominate. This may involve forming partnerships with non-U.S. entities, which could raise new compliance and trust issues."
+    },
+    {
+      "type": "paragraph",
+      "text": "In sum, the technology sector is navigating a period of rapid change driven by both technical innovation and external pressures. Spam filters are being outmaneuvered by old-school tricks, regulators are targeting new forms of AI misuse, geopolitical dynamics are reshaping the AI race, and infrastructure is evolving to include quantum computing. Platform operators must respond with a blend of technical ingenuity, regulatory compliance, and strategic foresight to maintain their competitive edge."
+    },
+    {
+      "type": "heading",
+      "text": "Why it matters for builders"
+    },
+    {
+      "type": "paragraph",
+      "text": "For technology operators, the important question is whether the news changes platform leverage, infrastructure cost, security posture, developer behavior, or the tradeoff between control and speed. Those mechanisms determine whether a headline becomes a real operating constraint."
+    },
+    {
+      "type": "paragraph",
+      "text": "The lead signal is AI spam filters are getting suckered by old-school text salting. Leo would not read it as a standalone item. He would place it beside the rest of the source set and ask which assumption is being tested: demand, cost, trust, policy, infrastructure capacity, or the willingness of customers and investors to keep paying for the current narrative."
+    },
+    {
+      "type": "paragraph",
+      "text": "The current source mix points to several connected signals rather than one isolated story: AI spam filters are getting suckered by old-school text salting; San Francisco orders Apple, Google to remove nudify apps from app stores; David Sacks warns U.S. could lose AI race after Chinese model's breakout - Axios (Axios); PennyLane is an open-source quantum software platform for quantum; Manufact (YC S25) Is Hiring a Senior infra engineer to build the MCP cloud. Read together, they give Leo a broader map of where attention is moving and which assumptions deserve a second look."
+    },
+    {
+      "type": "heading",
+      "text": "Second-order effects"
+    },
+    {
+      "type": "paragraph",
+      "text": "The second-order question is where complexity moves. A tool can make one team faster while pushing cost, governance, or operational risk onto another team. The useful analysis follows that transfer instead of stopping at the vendor's preferred story."
+    },
+    {
+      "type": "paragraph",
+      "text": "Leo's operating lens is to ask what a careful builder would do differently on Monday morning. If the answer is a clearer dependency map, a different vendor boundary, a security review, or a more conservative architecture choice, the headline has practical weight."
+    },
+    {
+      "type": "heading",
+      "text": "What to watch next"
+    },
+    {
+      "type": "paragraph",
+      "text": "The next useful check is where the pressure shows up first: procurement, architecture reviews, incident response, margins, or product roadmaps. That is usually where the strategic meaning becomes visible before it appears in a polished executive narrative."
+    },
+    {
+      "type": "paragraph",
+      "text": "The practical discipline is to avoid treating the freshest headline as the whole story. The stronger read is slower and more mechanical: identify the constraint, watch whether it spreads, and keep revising the map as better evidence arrives."
+    }
+  ],
+  "sources": [
+    {
+      "title": "AI spam filters are getting suckered by old-school text salting",
+      "url": "https://www.theregister.com/security/2026/07/17/ai-spam-filters-are-getting-suckered-by-old-school-text-salting/5274434"
+    },
+    {
+      "title": "San Francisco orders Apple, Google to remove nudify apps from app stores",
+      "url": "https://arstechnica.com/tech-policy/2026/07/apple-google-must-stop-profiting-off-ai-nudify-apps-san-francisco-ag-says/"
+    },
+    {
+      "title": "David Sacks warns U.S. could lose AI race after Chinese model's breakout - Axios",
+      "url": "https://news.google.com/articles/CBMieEFVX3lxTFB2UVdFZUVhUVdBb3hGY0h0aWRfaUU3V2hDSHJac0lsNzZVQ3d1QjNjTzk0ZUdYclNhdzJXc3ZXN2x5UEphN3hBSEttVGVJYjRDSDU0Q244RmsxZnNaakJKbmFkWi1XVzdtNlc0ZmZfRndBY3NwOU5USg?oc=5"
+    },
+    {
+      "title": "PennyLane is an open-source quantum software platform for quantum",
+      "url": "https://github.com/PennyLaneAI/pennylane"
+    },
+    {
+      "title": "Manufact (YC S25) Is Hiring a Senior infra engineer to build the MCP cloud",
+      "url": "https://www.ycombinator.com/companies/manufact/jobs/Dh6PYP5-senior-infrastructure-engineer"
+    }
+  ],
+  "audioUrl": "content/audio/technology-2026071717-ai-spam-filters-are-getting-suckered-by-old-school-text-salting.mp3",
+  "audioProvider": "kokoro",
+  "audioVoice": "am_michael",
+  "audioScript": "polished",
+  "audioZhUrl": "content/audio/technology-2026071717-ai-spam-filters-are-getting-suckered-by-old-school-text-salting.zh.mp3",
+  "audioZhProvider": "kokoro",
+  "audioZhVoice": "zm_yunyang",
+  "audioZhScript": "polished-zh"
+}
