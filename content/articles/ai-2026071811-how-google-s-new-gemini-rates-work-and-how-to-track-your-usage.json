@@ -1,0 +1,210 @@
+{
+  "slug": "ai-2026071811-how-google-s-new-gemini-rates-work-and-how-to-track-your-usage",
+  "category": "ai",
+  "title": "AI Briefing: How Google’s New Gemini Rates Work and How to Track Your Usage",
+  "summary": "Google has shifted its Gemini pricing architecture to a tiered model that separates raw inference costs from value-added features like AI Mode and Notebook integration. This article dissects the mechanics of the new rates, outlines how to monitor usage across the platform, and contextualizes these moves against broader",
+  "publishedAt": "2026-07-18T11:07:13.693Z",
+  "readingMinutes": 9,
+  "image": "https://media.wired.com/photos/6a57867336e98c56882c9e64/master/pass/GeminiStorage.jpg",
+  "imageAlt": "Image from source article for How Google’s New Gemini Rates Work and How to Track Your Usage",
+  "imageCaption": "How Google’s New Gemini Rates Work and How to Track Your Usage",
+  "imageSourceTitle": "How Google’s New Gemini Rates Work and How to Track Your Usage",
+  "imageSourceUrl": "https://www.wired.com/story/how-googles-new-gemini-rates-work-and-how-to-track-your-usage/",
+  "inlineImages": [
+    {
+      "src": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/07/gemininotebook.png?quality=90&strip=all&crop=0,0,100,100",
+      "alt": "Image from theverge.com for Google is renaming NotebookLM to Gemini Notebook",
+      "caption": "Google is renaming NotebookLM to Gemini Notebook (theverge.com)",
+      "sourceTitle": "theverge.com",
+      "sourceUrl": "https://www.theverge.com/tech/966112/google-gemini-notebook-notebooklm"
+    },
+    {
+      "src": "https://techcrunch.com/wp-content/uploads/2026/07/chatgpt-basketball.jpg?resize=1200,675",
+      "alt": "Image from source article for Why is OpenAI selling a ChatGPT basketball?",
+      "caption": "Why is OpenAI selling a ChatGPT basketball?",
+      "sourceTitle": "Why is OpenAI selling a ChatGPT basketball?",
+      "sourceUrl": "https://techcrunch.com/2026/07/16/why-is-openai-selling-a-chatgpt-basketball/"
+    },
+    {
+      "src": "https://techcrunch.com/wp-content/uploads/2026/01/ai-mode-google.jpg?resize=1200,800",
+      "alt": "Image from source article for Google’s AI Mode now lets you link and interact with select apps",
+      "caption": "Google’s AI Mode now lets you link and interact with select apps",
+      "sourceTitle": "Google’s AI Mode now lets you link and interact with select apps",
+      "sourceUrl": "https://techcrunch.com/2026/07/16/googles-ai-mode-now-lets-you-link-and-interact-with-select-apps/"
+    }
+  ],
+  "body": [
+    {
+      "type": "heading",
+      "text": "The Architecture of the New Gemini Pricing Model"
+    },
+    {
+      "type": "paragraph",
+      "text": "Google has moved away from the opaque, flat-rate structures that characterized earlier API offerings. The new Gemini rates operate on a tiered basis, distinguishing between the computational cost of generating tokens and the marginal cost of accessing premium capabilities. This bifurcation is significant because it forces developers and enterprises to account for two distinct variables: the volume of output they require and the specific features they intend to leverage. The pricing sheet reflects a granular approach where high-volume inference is discounted, while access to AI Mode—which allows the model to link and interact with select applications—carries a separate premium. This suggests that Google is treating the model not merely as a generative engine but as a distributed intelligence layer that can be bolted onto existing software stacks."
+    },
+    {
+      "type": "paragraph",
+      "text": "The distinction between raw inference and feature access has profound implications for inference economics. When a company integrates Gemini into a workflow, the marginal cost of adding AI Mode capabilities is not simply a linear addition to the token cost; it involves maintaining state across applications, managing latency budgets, and ensuring that the model’s context window can span disparate data sources. The new rates likely incorporate these overheads into the premium tier, effectively pricing the orchestration layer rather than just the computation. This shift aligns with the broader industry trend of moving from pure model-as-a-service to model-as-a-platform, where the value proposition includes the ability to connect to enterprise systems, a capability that Google is now explicitly monetizing."
+    },
+    {
+      "type": "image",
+      "src": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/07/gemininotebook.png?quality=90&strip=all&crop=0,0,100,100",
+      "alt": "Image from theverge.com for Google is renaming NotebookLM to Gemini Notebook",
+      "caption": "Google is renaming NotebookLM to Gemini Notebook (theverge.com)",
+      "sourceTitle": "theverge.com",
+      "sourceUrl": "https://www.theverge.com/tech/966112/google-gemini-notebook-notebooklm"
+    },
+    {
+      "type": "heading",
+      "text": "Tracking Usage: Beyond the Token Count"
+    },
+    {
+      "type": "paragraph",
+      "text": "Monitoring usage under the new Gemini rates requires a more sophisticated approach than simply tallying token consumption. Because the pricing model separates inference from feature access, a naive tracking system that only counts tokens will underreport the actual cost of utilizing AI Mode or interacting with linked apps. Developers must implement telemetry that captures both the volume of tokens processed and the frequency of feature calls. This dual-layer tracking is essential for budgeting, as the cost of a single interaction with a linked application can be comparable to a burst of token generation. Furthermore, the telemetry must account for the latency introduced by these interactions, ensuring that performance metrics are not skewed by the additional processing time required for AI Mode."
+    },
+    {
+      "type": "paragraph",
+      "text": "Google’s documentation indicates that the tracking dashboard has been updated to reflect these new dimensions. The interface now provides granular breakdowns of usage by feature tier, allowing users to see exactly where their budget is being consumed. This granularity is critical for optimizing costs, as it enables users to identify whether they are over-relying on premium features or if they can migrate certain workloads to the standard inference tier without sacrificing functionality. The ability to track usage in this manner also supports better capacity planning, as organizations can forecast their needs based on historical data that now includes feature-specific consumption patterns."
+    },
+    {
+      "type": "image",
+      "src": "https://techcrunch.com/wp-content/uploads/2026/07/chatgpt-basketball.jpg?resize=1200,675",
+      "alt": "Image from source article for Why is OpenAI selling a ChatGPT basketball?",
+      "caption": "Why is OpenAI selling a ChatGPT basketball?",
+      "sourceTitle": "Why is OpenAI selling a ChatGPT basketball?",
+      "sourceUrl": "https://techcrunch.com/2026/07/16/why-is-openai-selling-a-chatgpt-basketball/"
+    },
+    {
+      "type": "heading",
+      "text": "Product Strategy: NotebookLM Becomes Gemini Notebook"
+    },
+    {
+      "type": "paragraph",
+      "text": "In a significant rebranding move, Google has renamed NotebookLM to Gemini Notebook. This change is not merely cosmetic; it signals a strategic consolidation of Google’s AI portfolio. By aligning the notebook product with the Gemini brand, Google is reinforcing the narrative that Gemini is the central intelligence engine powering its suite of AI tools. The renaming also suggests that the underlying architecture of NotebookLM has been updated to leverage Gemini’s capabilities more directly, potentially offering improved context handling and faster response times. This product strategy reflects a broader trend in the industry where companies are streamlining their offerings to reduce cognitive load for users and to create a unified ecosystem around their flagship models."
+    },
+    {
+      "type": "paragraph",
+      "text": "The integration of NotebookLM into the Gemini ecosystem has implications for data boundaries and safety. As a notebook product, it likely processes user data in a way that is distinct from the raw API calls, raising questions about how data is stored, retrieved, and used for model training. Google’s approach to these data boundaries is critical, as it affects both privacy compliance and the trust users place in the platform. The renaming to Gemini Notebook suggests that Google is taking steps to ensure that the data handling practices are consistent with the broader Gemini brand’s commitments to security and transparency."
+    },
+    {
+      "type": "image",
+      "src": "https://techcrunch.com/wp-content/uploads/2026/01/ai-mode-google.jpg?resize=1200,800",
+      "alt": "Image from source article for Google’s AI Mode now lets you link and interact with select apps",
+      "caption": "Google’s AI Mode now lets you link and interact with select apps",
+      "sourceTitle": "Google’s AI Mode now lets you link and interact with select apps",
+      "sourceUrl": "https://techcrunch.com/2026/07/16/googles-ai-mode-now-lets-you-link-and-interact-with-select-apps/"
+    },
+    {
+      "type": "heading",
+      "text": "Industry Context: OpenAI’s Merchandise and Scaling Strategies"
+    },
+    {
+      "type": "paragraph",
+      "text": "While Google refines its pricing and product strategy, OpenAI has taken a markedly different approach by selling a ChatGPT basketball. This move, though seemingly whimsical, reflects a broader trend of AI companies exploring non-traditional revenue streams. The sale of merchandise indicates that OpenAI is looking to diversify its income beyond subscription fees and API usage, potentially tapping into brand loyalty and community engagement. This strategy contrasts sharply with Google’s focus on optimizing inference economics and feature access, highlighting the divergent paths that major AI players are taking to monetize their technology."
+    },
+    {
+      "type": "paragraph",
+      "text": "Meanwhile, Cars24 has scaled its conversations and built faster with OpenAI, demonstrating how automotive companies are leveraging AI to enhance customer interactions. This partnership underscores the growing importance of AI in operational efficiency, as companies seek to automate and optimize their workflows. The success of Cars24’s integration with OpenAI suggests that the industry is moving towards a model where AI is not just a feature but a core component of business operations. This trend has implications for labor design, as companies must rethink their workforce strategies to accommodate the increasing role of AI in decision-making and customer service."
+    },
+    {
+      "type": "heading",
+      "text": "Operational Consequences and Safety Considerations"
+    },
+    {
+      "type": "paragraph",
+      "text": "The operational consequences of these shifts are far-reaching. For Google, the new pricing model and product consolidation require a careful balance between maintaining user trust and maximizing revenue. The ability to track usage accurately is crucial for ensuring that users are not being overcharged for premium features, which could erode confidence in the platform. Similarly, the renaming of NotebookLM to Gemini Notebook necessitates a seamless migration path for users, ensuring that data is not lost and that the transition is as smooth as possible."
+    },
+    {
+      "type": "paragraph",
+      "text": "Safety and security considerations are paramount in this evolving landscape. As AI models become more integrated into critical business processes, the risk of data breaches and misuse increases. Google’s approach to data boundaries and the emphasis on security in the Gemini Notebook rebranding suggest that the company is taking these risks seriously. OpenAI’s merchandise sales, while less directly related to safety, still raise questions about how brand identity is managed and protected in the face of potential misuse. The industry must collectively address these safety concerns to ensure that AI remains a force for good."
+    },
+    {
+      "type": "heading",
+      "text": "Conclusion: A Landscape of Divergent Strategies"
+    },
+    {
+      "type": "paragraph",
+      "text": "The AI landscape is characterized by a divergence in strategies, with Google focusing on refining its pricing and product ecosystem, OpenAI exploring unconventional revenue streams, and automotive companies like Cars24 leveraging AI for operational efficiency. These divergent paths reflect the broader challenges and opportunities that the industry faces as it matures. For users and developers, understanding these shifts is essential for making informed decisions about which platforms to adopt and how to optimize their usage. The new Gemini rates and the renaming of NotebookLM are just the latest developments in a rapidly evolving field, and staying ahead of these changes will be critical for anyone working with AI technologies."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Google's tiered pricing separates inference costs from feature access.",
+        "Tracking usage now requires dual-layer telemetry for tokens and feature calls.",
+        "NotebookLM has been rebranded as Gemini Notebook, consolidating Google's AI portfolio.",
+        "OpenAI's merchandise sales highlight non-traditional revenue diversification.",
+        "Cars24's partnership with OpenAI demonstrates AI's role in operational scaling."
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "What changes in practice"
+    },
+    {
+      "type": "paragraph",
+      "text": "For AI, the operational question is whether the news changes how products are built, deployed, governed, or paid for. A model announcement matters most when it shifts inference cost, reliability, data boundaries, security exposure, or the amount of work a team can safely delegate to automation."
+    },
+    {
+      "type": "paragraph",
+      "text": "The lead signal is How Google’s New Gemini Rates Work and How to Track Your Usage. Leo would not read it as a standalone item. He would place it beside the rest of the source set and ask which assumption is being tested: demand, cost, trust, policy, infrastructure capacity, or the willingness of customers and investors to keep paying for the current narrative."
+    },
+    {
+      "type": "paragraph",
+      "text": "The current source mix points to several connected signals rather than one isolated story: How Google’s New Gemini Rates Work and How to Track Your Usage; Google is renaming NotebookLM to Gemini Notebook (theverge.com); Why is OpenAI selling a ChatGPT basketball?; How Cars24 scales conversations and builds faster with OpenAI; Google’s AI Mode now lets you link and interact with select apps. Read together, they give Leo a broader map of where attention is moving and which assumptions deserve a second look."
+    },
+    {
+      "type": "heading",
+      "text": "Second-order effects"
+    },
+    {
+      "type": "paragraph",
+      "text": "The second-order question is trust. Teams do not adopt artificial intelligence because a demo is impressive; they adopt it when the workflow is observable, the failure mode is bounded, and the economics still make sense after compliance, support, latency, and human review are counted."
+    },
+    {
+      "type": "paragraph",
+      "text": "Leo's operating lens is to look for the control point. Sometimes it is the model, sometimes the distribution channel, sometimes the data contract, and sometimes the boring integration layer that decides whether a capability becomes a dependable product."
+    },
+    {
+      "type": "heading",
+      "text": "What to watch next"
+    },
+    {
+      "type": "paragraph",
+      "text": "The next useful check is adoption quality. Pilots, demos, and benchmark claims are weaker signals than durable workflows, clear ownership, measured costs, and evidence that customers trust the system enough to use it in consequential work."
+    },
+    {
+      "type": "paragraph",
+      "text": "The practical discipline is to avoid treating the freshest headline as the whole story. The stronger read is slower and more mechanical: identify the constraint, watch whether it spreads, and keep revising the map as better evidence arrives."
+    }
+  ],
+  "sources": [
+    {
+      "title": "How Google’s New Gemini Rates Work and How to Track Your Usage",
+      "url": "https://www.wired.com/story/how-googles-new-gemini-rates-work-and-how-to-track-your-usage/"
+    },
+    {
+      "title": "Google is renaming NotebookLM to Gemini Notebook",
+      "url": "https://www.theverge.com/tech/966112/google-gemini-notebook-notebooklm"
+    },
+    {
+      "title": "Why is OpenAI selling a ChatGPT basketball?",
+      "url": "https://techcrunch.com/2026/07/16/why-is-openai-selling-a-chatgpt-basketball/"
+    },
+    {
+      "title": "How Cars24 scales conversations and builds faster with OpenAI",
+      "url": "https://openai.com/index/cars24"
+    },
+    {
+      "title": "Google’s AI Mode now lets you link and interact with select apps",
+      "url": "https://techcrunch.com/2026/07/16/googles-ai-mode-now-lets-you-link-and-interact-with-select-apps/"
+    }
+  ],
+  "audioUrl": "content/audio/ai-2026071811-how-google-s-new-gemini-rates-work-and-how-to-track-your-usage.mp3",
+  "audioProvider": "kokoro",
+  "audioVoice": "am_michael",
+  "audioScript": "polished",
+  "audioZhUrl": "content/audio/ai-2026071811-how-google-s-new-gemini-rates-work-and-how-to-track-your-usage.zh.mp3",
+  "audioZhProvider": "kokoro",
+  "audioZhVoice": "zm_yunyang",
+  "audioZhScript": "polished-zh"
+}
