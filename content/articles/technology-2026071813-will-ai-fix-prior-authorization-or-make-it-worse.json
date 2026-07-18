@@ -1,0 +1,206 @@
+{
+  "slug": "technology-2026071813-will-ai-fix-prior-authorization-or-make-it-worse",
+  "category": "technology",
+  "title": "Technology Briefing: Will AI fix prior authorization—or make it worse?",
+  "summary": "As artificial intelligence models proliferate, the healthcare industry faces a critical juncture regarding prior authorization workflows. Simultaneously, regulatory shifts in Europe are forcing major tech giants to open their proprietary models, while the economics of AI infrastructure are being reshaped by new payment",
+  "publishedAt": "2026-07-18T13:07:13.525Z",
+  "readingMinutes": 9,
+  "image": "https://cdn.arstechnica.net/wp-content/uploads/2026/07/GettyImages-2264310821-1152x648.jpg",
+  "imageAlt": "Image from source article for Will AI fix prior authorization—or make it worse?",
+  "imageCaption": "Will AI fix prior authorization—or make it worse?",
+  "imageSourceTitle": "Will AI fix prior authorization—or make it worse?",
+  "imageSourceUrl": "https://arstechnica.com/ai/2026/07/will-ai-fix-prior-authorization-or-make-it-worse/",
+  "inlineImages": [
+    {
+      "src": "https://image.theregister.com/?imageId=239084&width=800",
+      "alt": "Image from source article for EU forces Google to share its toys with the other AI and search kids",
+      "caption": "EU forces Google to share its toys with the other AI and search kids",
+      "sourceTitle": "EU forces Google to share its toys with the other AI and search kids",
+      "sourceUrl": "https://www.theregister.com/software/2026/07/16/eu-forces-google-to-share-its-toys-with-the-other-ai-and-search-kids/5273819"
+    },
+    {
+      "src": "https://image.theregister.com/?imageId=1683560&width=800",
+      "alt": "Image from source article for AI vendors have found someone to pay their infrastructure bills: You",
+      "caption": "AI vendors have found someone to pay their infrastructure bills: You",
+      "sourceTitle": "AI vendors have found someone to pay their infrastructure bills: You",
+      "sourceUrl": "https://www.theregister.com/software/2026/07/16/ai-vendors-have-found-someone-to-pay-their-infrastructure-bills-you/5273712"
+    },
+    {
+      "src": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/07/ss_6b1b99a0b8d64dcb24c61bc4ccea9233935ae1fc.1920x1080.jpg?quality=90&strip=all&crop=0,0,100,100",
+      "alt": "Image from theverge.com for More games should be on rails (literally)",
+      "caption": "More games should be on rails (literally) (theverge.com)",
+      "sourceTitle": "theverge.com",
+      "sourceUrl": "https://www.theverge.com/games/961152/denshattack-review"
+    }
+  ],
+  "body": [
+    {
+      "type": "heading",
+      "text": "The Prior Authorization Dilemma: Efficiency vs. Opacity"
+    },
+    {
+      "type": "paragraph",
+      "text": "The debate surrounding AI's role in prior authorization has intensified as healthcare providers seek to reduce administrative burdens. Proponents argue that generative AI models can streamline the review process by rapidly ingesting clinical documentation, cross-referencing policy rules, and generating justification narratives. This potential for speed is undeniable; however, the mechanism by which these models operate introduces a new layer of complexity that cannot be overlooked. Unlike traditional rule-based engines where logic is transparent and auditable, large language models function as black boxes. Their outputs are probabilistic, derived from patterns learned during training rather than deterministic logic gates. This fundamental difference means that while an AI might correctly approve a claim 99% of the time, the path to that decision is often opaque to the human reviewers who must ultimately validate it."
+    },
+    {
+      "type": "paragraph",
+      "text": "The concern is not merely about accuracy, but about the nature of the error. When a traditional system fails, it usually does so due to a missing rule or a bug in the logic, both of which are traceable. When an AI fails, it may do so because it hallucinated a relevant policy or misinterpreted a clinical nuance in a way that is statistically probable but logically unsound. This shifts the burden of proof. Providers are now asking: if we delegate the initial triage to an AI, do we lose the ability to audit the decision-making process? The answer, as the recent discourse suggests, is that we may indeed make the system worse by introducing a layer of unexplainable variance that complicates appeals. The risk is that the very efficiency gained by speed is offset by the difficulty of defending against denials that originate from a model whose internal reasoning cannot be easily reconstructed."
+    },
+    {
+      "type": "image",
+      "src": "https://image.theregister.com/?imageId=239084&width=800",
+      "alt": "Image from source article for EU forces Google to share its toys with the other AI and search kids",
+      "caption": "EU forces Google to share its toys with the other AI and search kids",
+      "sourceTitle": "EU forces Google to share its toys with the other AI and search kids",
+      "sourceUrl": "https://www.theregister.com/software/2026/07/16/eu-forces-google-to-share-its-toys-with-the-other-ai-and-search-kids/5273819"
+    },
+    {
+      "type": "heading",
+      "text": "The European Regulatory Shift: Forced Openness"
+    },
+    {
+      "type": "paragraph",
+      "text": "Parallel to the healthcare debate, a significant structural change is occurring in the AI ecosystem itself, driven by the European Union. Recent regulatory pressure has compelled major technology firms, including Google, to share their proprietary AI models and search algorithms with smaller competitors and educational institutions. This mandate represents a profound platform shift. For years, the dominant strategy in AI has been vertical integration, where companies build closed ecosystems to capture value and lock in users. The EU's intervention effectively breaks this lock-in, forcing a move toward a more open, collaborative, yet potentially fragmented architecture."
+    },
+    {
+      "type": "paragraph",
+      "text": "The implications for cloud economics are immediate. If the leading models must be shared, the competitive moat of owning the best intelligence evaporates. Smaller vendors can now access high-quality foundational models, but they must still differentiate themselves through fine-tuning, domain-specific adaptation, and distribution networks. This creates a bifurcated market: a layer of open-source or licensed foundational models, and a layer of specialized applications built on top of them. For the healthcare sector, this could mean a flood of new AI tools that are not proprietary to a single vendor but are instead built upon shared infrastructure. However, it also raises security concerns. If the foundational models are widely distributed, the attack surface for data poisoning or prompt injection increases. Security teams will need to shift from protecting a single proprietary model to managing a supply chain of shared intellectual property."
+    },
+    {
+      "type": "image",
+      "src": "https://image.theregister.com/?imageId=1683560&width=800",
+      "alt": "Image from source article for AI vendors have found someone to pay their infrastructure bills: You",
+      "caption": "AI vendors have found someone to pay their infrastructure bills: You",
+      "sourceTitle": "AI vendors have found someone to pay their infrastructure bills: You",
+      "sourceUrl": "https://www.theregister.com/software/2026/07/16/ai-vendors-have-found-someone-to-pay-their-infrastructure-bills-you/5273712"
+    },
+    {
+      "type": "heading",
+      "text": "Infrastructure Economics: The New Payment Model"
+    },
+    {
+      "type": "paragraph",
+      "text": "The economics of running these models has undergone a dramatic transformation. In the past, the primary cost driver was the training of massive models, which required immense capital expenditure on GPUs and data centers. Today, the focus has shifted to inference costs and the operational expenses of serving models at scale. A recent development in the market has introduced a novel payment mechanism where end-users or enterprises are increasingly expected to directly fund the infrastructure bills of the AI vendors. This is a departure from the traditional SaaS subscription model, where a flat fee covers usage. Instead, we are seeing a move toward usage-based or even pay-per-inference models, where the cost of the compute is passed directly to the consumer."
+    },
+    {
+      "type": "paragraph",
+      "text": "This shift has profound consequences for product strategy. Vendors can no longer rely on economies of scale alone to subsidize the cost of intelligence. They must optimize their models for efficiency, reducing the compute required per token generated. This drives a race toward smaller, more efficient architectures, such as distilled models or parameter-efficient fine-tuning techniques. For healthcare IT, this means that the cost of integrating AI into electronic health records (EHRs) could become a variable cost rather than a fixed one. Hospitals might find themselves paying per query or per document processed, fundamentally altering their budgeting models. The security implications are also significant, as higher usage volumes increase the likelihood of data exfiltration or model theft, necessitating stricter governance frameworks."
+    },
+    {
+      "type": "image",
+      "src": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/07/ss_6b1b99a0b8d64dcb24c61bc4ccea9233935ae1fc.1920x1080.jpg?quality=90&strip=all&crop=0,0,100,100",
+      "alt": "Image from theverge.com for More games should be on rails (literally)",
+      "caption": "More games should be on rails (literally) (theverge.com)",
+      "sourceTitle": "theverge.com",
+      "sourceUrl": "https://www.theverge.com/games/961152/denshattack-review"
+    },
+    {
+      "type": "heading",
+      "text": "The Great Split: Open-Weight Insurgency"
+    },
+    {
+      "type": "paragraph",
+      "text": "The global AI landscape is fracturing into two distinct camps, a phenomenon described as an open-weight insurgency. On one side, the traditional Western model continues to push for closed ecosystems, proprietary data, and guarded intellectual property. On the other side, particularly driven by developments in China and other regions, there is a movement toward releasing model weights openly, allowing anyone to inspect, modify, and redistribute the models. This insurgency challenges the very definition of proprietary software in the age of AI."
+    },
+    {
+      "type": "paragraph",
+      "text": "For the analyst, this split creates a strategic dilemma. If a healthcare organization adopts an AI system, they must decide whether to align with the closed, proprietary approach or the open-weight insurgency. The closed approach offers better guarantees on data privacy and liability, but it risks obsolescence if the open models outperform them in efficiency or capability. The open-weight approach offers flexibility and potentially superior performance, but it introduces significant legal and security risks, as the model weights are not protected by traditional copyright. This is a classic trade-off between security and capability, a theme that will define the next decade of AI deployment."
+    },
+    {
+      "type": "heading",
+      "text": "Operational Consequences and the Future of Work"
+    },
+    {
+      "type": "paragraph",
+      "text": "As these forces converge, the operational reality for technology teams is one of constant adaptation. The workforce in Silicon Valley and beyond is seeing a shift from building proprietary models to curating and fine-tuning open ones. This requires a new skill set: not just deep learning expertise, but also legal acumen regarding open-source licenses and security protocols for distributed systems. The pace of change is rapid, and the margin for error is shrinking. Organizations that fail to adapt their infrastructure to handle shared models and variable pricing will find themselves at a severe disadvantage."
+    },
+    {
+      "type": "paragraph",
+      "text": "The healthcare sector, with its complex regulatory environment, is particularly vulnerable to these shifts. Prior authorization, already a bottleneck, could become even more fragile if the AI tools used to assist in it are subject to open-weight distribution. The transparency required by regulators might clash with the opacity of the models, creating a compliance nightmare. However, the open movement also offers the potential for democratized access to high-quality intelligence, which could level the playing field for smaller healthcare providers who currently cannot afford proprietary AI solutions."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ultimately, the question of whether AI will fix prior authorization is not a simple yes or no. It depends on how the industry navigates the tension between efficiency and auditability, between closed and open ecosystems, and between fixed and variable costs. The mechanisms at play—platform shifts, infrastructure economics, and security trade-offs—are too complex to resolve with a single policy. Instead, we will likely see a hybrid model emerge, where proprietary and open-weight systems coexist, each serving different niches based on their respective strengths and weaknesses."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Increased reliance on audit trails and explainability metrics for AI-driven prior authorization decisions.",
+        "A bifurcated market for AI models, with proprietary systems for high-liability environments and open-weight systems for cost-sensitive applications.",
+        "Shift in cloud economics from fixed subscription fees to variable usage-based pricing for inference.",
+        "New security requirements for managing distributed model weights and protecting against data poisoning in open ecosystems.",
+        "Rapid evolution of workforce skills, moving from model training to model curation and legal compliance."
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Why it matters for builders"
+    },
+    {
+      "type": "paragraph",
+      "text": "For technology operators, the important question is whether the news changes platform leverage, infrastructure cost, security posture, developer behavior, or the tradeoff between control and speed. Those mechanisms determine whether a headline becomes a real operating constraint."
+    },
+    {
+      "type": "paragraph",
+      "text": "The lead signal is Will AI fix prior authorization—or make it worse?. Leo would not read it as a standalone item. He would place it beside the rest of the source set and ask which assumption is being tested: demand, cost, trust, policy, infrastructure capacity, or the willingness of customers and investors to keep paying for the current narrative."
+    },
+    {
+      "type": "paragraph",
+      "text": "The current source mix points to several connected signals rather than one isolated story: Will AI fix prior authorization—or make it worse?; EU forces Google to share its toys with the other AI and search kids; AI vendors have found someone to pay their infrastructure bills: You; More games should be on rails (literally) (theverge.com); AI race splits in two as China wages open-weight insurgency - Axios (Axios). Read together, they give Leo a broader map of where attention is moving and which assumptions deserve a second look."
+    },
+    {
+      "type": "heading",
+      "text": "Second-order effects"
+    },
+    {
+      "type": "paragraph",
+      "text": "The second-order question is where complexity moves. A tool can make one team faster while pushing cost, governance, or operational risk onto another team. The useful analysis follows that transfer instead of stopping at the vendor's preferred story."
+    },
+    {
+      "type": "paragraph",
+      "text": "Leo's operating lens is to ask what a careful builder would do differently on Monday morning. If the answer is a clearer dependency map, a different vendor boundary, a security review, or a more conservative architecture choice, the headline has practical weight."
+    },
+    {
+      "type": "heading",
+      "text": "What to watch next"
+    },
+    {
+      "type": "paragraph",
+      "text": "The next useful check is where the pressure shows up first: procurement, architecture reviews, incident response, margins, or product roadmaps. That is usually where the strategic meaning becomes visible before it appears in a polished executive narrative."
+    },
+    {
+      "type": "paragraph",
+      "text": "The practical discipline is to avoid treating the freshest headline as the whole story. The stronger read is slower and more mechanical: identify the constraint, watch whether it spreads, and keep revising the map as better evidence arrives."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Will AI fix prior authorization—or make it worse?",
+      "url": "https://arstechnica.com/ai/2026/07/will-ai-fix-prior-authorization-or-make-it-worse/"
+    },
+    {
+      "title": "EU forces Google to share its toys with the other AI and search kids",
+      "url": "https://www.theregister.com/software/2026/07/16/eu-forces-google-to-share-its-toys-with-the-other-ai-and-search-kids/5273819"
+    },
+    {
+      "title": "AI vendors have found someone to pay their infrastructure bills: You",
+      "url": "https://www.theregister.com/software/2026/07/16/ai-vendors-have-found-someone-to-pay-their-infrastructure-bills-you/5273712"
+    },
+    {
+      "title": "More games should be on rails (literally)",
+      "url": "https://www.theverge.com/games/961152/denshattack-review"
+    },
+    {
+      "title": "AI race splits in two as China wages open-weight insurgency - Axios",
+      "url": "https://news.google.com/articles/CBMigAFBVV95cUxQTU1GSXFEb1NUS21rRXFCa2ZvaTh5dnhxUHpFRWpUakVzdW5ydmZKTVVSUF82VGJxX0Mzc01zQlc0alBBdGRYNnItSGhxR0RuRVp5TTI3ZnByMU5IenVNdWZ3OWY3Zk5QbW9MUVFzSnJwbmxYU1RXVXZoUU40NXBlNw?oc=5"
+    }
+  ],
+  "audioUrl": "content/audio/technology-2026071813-will-ai-fix-prior-authorization-or-make-it-worse.mp3",
+  "audioProvider": "kokoro",
+  "audioVoice": "am_michael",
+  "audioScript": "polished",
+  "audioZhUrl": "content/audio/technology-2026071813-will-ai-fix-prior-authorization-or-make-it-worse.zh.mp3",
+  "audioZhProvider": "kokoro",
+  "audioZhVoice": "zm_yunyang",
+  "audioZhScript": "polished-zh"
+}
