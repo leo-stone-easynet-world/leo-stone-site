@@ -1,0 +1,172 @@
+{
+  "slug": "technology-2026071815-ai-spam-filters-are-getting-suckered-by-old-school-text-salting",
+  "category": "technology",
+  "title": "Technology Briefing: AI spam filters are getting suckered by old-school text salting",
+  "summary": "Recent shifts in spam mitigation strategies reveal vulnerabilities in AI-driven filters, while regulatory actions against 'nudify' apps and emerging Chinese models signal a complex landscape for Silicon Valley. Meanwhile, infrastructure costs and data center protests highlight the operational friction of scaling AI. Th",
+  "publishedAt": "2026-07-18T15:07:12.853Z",
+  "readingMinutes": 11,
+  "image": "https://image.theregister.com/?imageId=5268977&width=800",
+  "imageAlt": "Image from source article for AI spam filters are getting suckered by old-school text salting",
+  "imageCaption": "AI spam filters are getting suckered by old-school text salting",
+  "imageSourceTitle": "AI spam filters are getting suckered by old-school text salting",
+  "imageSourceUrl": "https://www.theregister.com/security/2026/07/17/ai-spam-filters-are-getting-suckered-by-old-school-text-salting/5274434",
+  "inlineImages": [
+    {
+      "src": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+      "alt": "Image from Axios for Kimi K3 shocked the world. These other AI models could be next - Axios",
+      "caption": "Kimi K3 shocked the world. These other AI models could be next - Axios (Axios)",
+      "sourceTitle": "Axios",
+      "sourceUrl": "https://news.google.com/articles/CBMic0FVX3lxTE12ZUdLRUs0TlF2Vk8waUtVN3Zobm0ybGVIcGdkVHY3MGFzZV84dm5iM0R5cG9TNnctOHdSTzlfRzhyUElxMEt5YUpFR0RMbmJ6d1BCSDZYalM1dHQ4TEhyaDVBSDktRm5xMy1sa3d4MVlOUzg?oc=5"
+    }
+  ],
+  "body": [
+    {
+      "type": "heading",
+      "text": "The Return of Text Salting: Why AI Filters Are Failing"
+    },
+    {
+      "type": "paragraph",
+      "text": "Security researchers have documented a resurgence of a technique known as text salting, where spammers insert innocuous, high-frequency words into emails to dilute the density of malicious keywords. This old-school method is proving effective against modern AI spam filters. These filters, trained on vast datasets to recognize patterns, often struggle when the signal-to-noise ratio is artificially manipulated. The mechanism relies on the probabilistic nature of language models; by flooding the text with benign content, the model's confidence in flagging the message drops below its threshold, allowing spam to slip through undetected."
+    },
+    {
+      "type": "paragraph",
+      "text": "The implications for platform strategy are significant. Email providers and cloud infrastructure vendors are under pressure to update their detection algorithms. However, the cost of retraining models and the latency introduced by more sophisticated filtering create a trade-off between security and user experience. If filters become too aggressive, they risk flagging legitimate correspondence, leading to user churn. The operational consequence is a shift toward hybrid approaches, combining rule-based heuristics with AI, though this reintroduces the brittleness of older systems."
+    },
+    {
+      "type": "image",
+      "src": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+      "alt": "Image from Axios for Kimi K3 shocked the world. These other AI models could be next - Axios",
+      "caption": "Kimi K3 shocked the world. These other AI models could be next - Axios (Axios)",
+      "sourceTitle": "Axios",
+      "sourceUrl": "https://news.google.com/articles/CBMic0FVX3lxTE12ZUdLRUs0TlF2Vk8waUtVN3Zobm0ybGVIcGdkVHY3MGFzZV84dm5iM0R5cG9TNnctOHdSTzlfRzhyUElxMEt5YUpFR0RMbmJ6d1BCSDZYalM1dHQ4TEhyaDVBSDktRm5xMy1sa3d4MVlOUzg?oc=5"
+    },
+    {
+      "type": "heading",
+      "text": "Regulatory Pressure on Generative AI Applications"
+    },
+    {
+      "type": "paragraph",
+      "text": "In San Francisco, city officials have issued an order requiring Apple and Google to remove applications that utilize AI to generate nudity from photographs, colloquially referred to as 'nudify' apps. This action stems from concerns over the exploitation of deepfake technology and the lack of informed consent. The regulatory environment in California is tightening, setting a precedent that could ripple across the United States. For Silicon Valley, this represents a pivot from pure innovation to compliance-driven product strategy. Apps that rely on generative models for content creation must now navigate a minefield of ethical guidelines and potential bans."
+    },
+    {
+      "type": "paragraph",
+      "text": "The financial impact on these tech giants is not immediately quantifiable but is likely to manifest in reduced ad revenue from such applications and increased costs associated with compliance teams. The broader market sentiment suggests that investors are becoming wary of AI startups that lack robust governance frameworks. This regulatory headwind forces a reevaluation of the business models built around unregulated generative AI, particularly in the consumer-facing sector."
+    },
+    {
+      "type": "heading",
+      "text": "The Kimi K3 Surprise and the Horizon of Chinese Models"
+    },
+    {
+      "type": "paragraph",
+      "text": "The launch of Kimi K3 has sent shockwaves through the AI community, demonstrating capabilities that rival or exceed current Western models. Analysts are now scrutinizing the trajectory of other Chinese-developed models, wondering if they will follow suit. The competitive landscape is shifting from a monopoly dominated by a few US-based players to a more fragmented global market. For US tech firms, this introduces a new layer of geopolitical risk into their product roadmaps. Supply chains, data sovereignty regulations, and the potential for intellectual property disputes are becoming central to strategic planning."
+    },
+    {
+      "type": "paragraph",
+      "text": "David Sacks, a prominent figure in Silicon Valley, has warned that the United States risks losing the AI race if it does not address the breakout success of Chinese models. This sentiment underscores the urgency of the situation. The mechanism of this loss is not merely technical but economic; if Chinese models become the standard for certain applications, US companies may face a loss of market share and a decline in the valuation of their own AI ventures. The operational response involves accelerating R&D investment and potentially forming alliances to counter the Chinese technological surge."
+    },
+    {
+      "type": "heading",
+      "text": "Infrastructure Friction: Data Center Protests and Cloud Economics"
+    },
+    {
+      "type": "paragraph",
+      "text": "The rapid expansion of data centers required to support the AI boom has led to a wave of protests across the United States. Communities near these facilities are voicing concerns over environmental impact, energy consumption, and property values. This backlash is growing into a national issue, challenging the infrastructure assumptions that underpin the AI industry. The cloud economics model, which relies on the seamless availability of massive computing power, is being tested by these physical constraints."
+    },
+    {
+      "type": "paragraph",
+      "text": "From an operational standpoint, these protests introduce significant uncertainty. Construction timelines are delayed, and securing new land for data centers becomes more difficult and expensive. The cost of power, already a contentious issue, is likely to rise further as communities push back against the energy demands of AI training and inference. This friction forces a rethinking of the deployment strategies for AI models; perhaps a more distributed approach or a greater reliance on edge computing could mitigate some of these infrastructure risks."
+    },
+    {
+      "type": "heading",
+      "text": "Synthesis: Navigating a Fragmented Landscape"
+    },
+    {
+      "type": "paragraph",
+      "text": "The convergence of these developments paints a picture of a technology sector in flux. AI spam filters are being outmaneuvered by simple, old-school tricks, signaling that the arms race in detection and evasion is far from over. Regulatory actions against specific AI applications suggest that the line between innovation and nuisance is blurring, with governments stepping in to draw new boundaries. The emergence of powerful Chinese models like Kimi K3 indicates that the global AI ecosystem is diversifying, challenging the hegemony of current US leaders. Finally, the physical reality of data centers is clashing with the digital ambitions of the industry, creating a tangible friction that cannot be ignored."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Spam filters require continuous adaptation to counter evolving evasion techniques like text salting.",
+        "Regulatory bodies are increasingly targeting specific AI applications, demanding higher standards of accountability.",
+        "Chinese AI models are gaining traction, necessitating a reassessment of competitive positioning.",
+        "Infrastructure constraints and community backlash are introducing new cost and timeline variables into AI deployment.",
+        "The future of AI will likely depend on balancing technical prowess with geopolitical and physical realities."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "For the analysts and investors watching Silicon Valley, the takeaway is clear: the environment is becoming more complex and less predictable. The era of rapid, unimpeded scaling is giving way to an era of strategic navigation. Companies must now be agile not just in their code, but in their understanding of the regulatory, geopolitical, and physical landscapes that surround their products. The technology is advancing, but the context in which it operates is shifting just as rapidly."
+    },
+    {
+      "type": "heading",
+      "text": "Why it matters for builders"
+    },
+    {
+      "type": "paragraph",
+      "text": "For technology operators, the important question is whether the news changes platform leverage, infrastructure cost, security posture, developer behavior, or the tradeoff between control and speed. Those mechanisms determine whether a headline becomes a real operating constraint."
+    },
+    {
+      "type": "paragraph",
+      "text": "The lead signal is AI spam filters are getting suckered by old-school text salting. Leo would not read it as a standalone item. He would place it beside the rest of the source set and ask which assumption is being tested: demand, cost, trust, policy, infrastructure capacity, or the willingness of customers and investors to keep paying for the current narrative."
+    },
+    {
+      "type": "paragraph",
+      "text": "The current source mix points to several connected signals rather than one isolated story: AI spam filters are getting suckered by old-school text salting; San Francisco orders Apple, Google to remove nudify apps from app stores; Kimi K3 shocked the world. These other AI models could be next - Axios (Axios); US data center protests go national as backlash grows - Reuters (Reuters); David Sacks warns U.S. could lose AI race after Chinese model's breakout - Axios (Axios). Read together, they give Leo a broader map of where attention is moving and which assumptions deserve a second look."
+    },
+    {
+      "type": "heading",
+      "text": "Second-order effects"
+    },
+    {
+      "type": "paragraph",
+      "text": "The second-order question is where complexity moves. A tool can make one team faster while pushing cost, governance, or operational risk onto another team. The useful analysis follows that transfer instead of stopping at the vendor's preferred story."
+    },
+    {
+      "type": "paragraph",
+      "text": "Leo's operating lens is to ask what a careful builder would do differently on Monday morning. If the answer is a clearer dependency map, a different vendor boundary, a security review, or a more conservative architecture choice, the headline has practical weight."
+    },
+    {
+      "type": "heading",
+      "text": "What to watch next"
+    },
+    {
+      "type": "paragraph",
+      "text": "The next useful check is where the pressure shows up first: procurement, architecture reviews, incident response, margins, or product roadmaps. That is usually where the strategic meaning becomes visible before it appears in a polished executive narrative."
+    },
+    {
+      "type": "paragraph",
+      "text": "The practical discipline is to avoid treating the freshest headline as the whole story. The stronger read is slower and more mechanical: identify the constraint, watch whether it spreads, and keep revising the map as better evidence arrives."
+    }
+  ],
+  "sources": [
+    {
+      "title": "AI spam filters are getting suckered by old-school text salting",
+      "url": "https://www.theregister.com/security/2026/07/17/ai-spam-filters-are-getting-suckered-by-old-school-text-salting/5274434"
+    },
+    {
+      "title": "San Francisco orders Apple, Google to remove nudify apps from app stores",
+      "url": "https://arstechnica.com/tech-policy/2026/07/apple-google-must-stop-profiting-off-ai-nudify-apps-san-francisco-ag-says/"
+    },
+    {
+      "title": "Kimi K3 shocked the world. These other AI models could be next - Axios",
+      "url": "https://news.google.com/articles/CBMic0FVX3lxTE12ZUdLRUs0TlF2Vk8waUtVN3Zobm0ybGVIcGdkVHY3MGFzZV84dm5iM0R5cG9TNnctOHdSTzlfRzhyUElxMEt5YUpFR0RMbmJ6d1BCSDZYalM1dHQ4TEhyaDVBSDktRm5xMy1sa3d4MVlOUzg?oc=5"
+    },
+    {
+      "title": "US data center protests go national as backlash grows - Reuters",
+      "url": "https://news.google.com/articles/CBMisAFBVV95cUxPYk5QUVhhdHdNUVZKT0xJVURINmc1UzZORTZpdGtnaGwxemxTSWZNUTR6MkE3SHY5RjYwSUlQSWFUSlV3RHJGSXJLcjBUWXRlNzBuREwzblp5aEtIdVFRZjJlZmt2dUF6QzNxY2hackV2NDlQbnVGbFBrRnlXOUdycTh1ck5RdUd6WndGOExPN2h5dkVuVUFEVnYzeHdxT1ViWElDZjRpNzFncVFmMEltNg?oc=5"
+    },
+    {
+      "title": "David Sacks warns U.S. could lose AI race after Chinese model's breakout - Axios",
+      "url": "https://news.google.com/articles/CBMieEFVX3lxTFB2UVdFZUVhUVdBb3hGY0h0aWRfaUU3V2hDSHJac0lsNzZVQ3d1QjNjTzk0ZUdYclNhdzJXc3ZXN2x5UEphN3hBSEttVGVJYjRDSDU0Q244RmsxZnNaakJKbmFkWi1XVzdtNlc0ZmZfRndBY3NwOU5USg?oc=5"
+    }
+  ],
+  "audioUrl": "content/audio/technology-2026071815-ai-spam-filters-are-getting-suckered-by-old-school-text-salting.mp3",
+  "audioProvider": "kokoro",
+  "audioVoice": "am_michael",
+  "audioScript": "polished",
+  "audioZhUrl": "content/audio/technology-2026071815-ai-spam-filters-are-getting-suckered-by-old-school-text-salting.zh.mp3",
+  "audioZhProvider": "kokoro",
+  "audioZhVoice": "zm_yunyang",
+  "audioZhScript": "polished-zh"
+}
