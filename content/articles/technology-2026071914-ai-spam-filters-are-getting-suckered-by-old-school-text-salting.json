@@ -1,0 +1,179 @@
+{
+  "slug": "technology-2026071914-ai-spam-filters-are-getting-suckered-by-old-school-text-salting",
+  "category": "technology",
+  "title": "Technology Briefing: AI spam filters are getting suckered by old-school text salting",
+  "summary": "Recent developments in Silicon Valley reveal a disturbing trend: advanced AI spam filters are falling victim to archaic techniques like text salting. Meanwhile, regulatory bodies in San Francisco are cracking down on 'nudify' apps, investors are showing signs of fatigue with the AI trade, and the competitive landscape",
+  "publishedAt": "2026-07-19T14:07:14.037Z",
+  "readingMinutes": 8,
+  "image": "https://image.theregister.com/?imageId=5268977&width=800",
+  "imageAlt": "Image from source article for AI spam filters are getting suckered by old-school text salting",
+  "imageCaption": "AI spam filters are getting suckered by old-school text salting",
+  "imageSourceTitle": "AI spam filters are getting suckered by old-school text salting",
+  "imageSourceUrl": "https://www.theregister.com/security/2026/07/17/ai-spam-filters-are-getting-suckered-by-old-school-text-salting/5274434",
+  "inlineImages": [
+    {
+      "src": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+      "alt": "Image from Axios for Investors blink on the AI trade - Axios",
+      "caption": "Investors blink on the AI trade - Axios (Axios)",
+      "sourceTitle": "Axios",
+      "sourceUrl": "https://news.google.com/articles/CBMiZEFVX3lxTE0tZjZwdUlQcEtIdF92RmNaRFdCSDJWY2FvMlRwNHJQVHhjLXpid1h5ZnI3eXNobEVxaXMwN2F5TmVRTnc4TkhVYi1rMTJmMkZVTzFFZ0FyZVc5eXI4Tk5mTmJTa2I?oc=5"
+    }
+  ],
+  "body": [
+    {
+      "type": "heading",
+      "text": "The Regression in Spam Detection: Old Tricks, New Targets"
+    },
+    {
+      "type": "paragraph",
+      "text": "The recent findings from The Register highlight a critical vulnerability in the current architecture of AI-driven spam filters. These systems, trained on vast datasets of modern phishing attempts and synthetic content, are unexpectedly susceptible to a technique known as 'text salting.' This method, a relic from the early days of email spam, involves embedding innocuous text within malicious payloads to dilute keyword density and evade signature-based detection."
+    },
+    {
+      "type": "paragraph",
+      "text": "The mechanism works because current spam filters often rely heavily on semantic analysis and pattern recognition rather than strict character-level hashing. By inserting random phrases or padding text, attackers effectively alter the statistical profile of the message without changing its core intent. The AI model, interpreting the altered text as a benign variation, fails to flag the underlying threat. This regression suggests that the rapid deployment of generative AI in security tools has not been matched by a corresponding evolution in adversarial defense strategies. We are seeing a classic case of an arms race where the offense has outpaced the defense, forcing a re-evaluation of the infrastructure supporting these filters."
+    },
+    {
+      "type": "image",
+      "src": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+      "alt": "Image from Axios for Investors blink on the AI trade - Axios",
+      "caption": "Investors blink on the AI trade - Axios (Axios)",
+      "sourceTitle": "Axios",
+      "sourceUrl": "https://news.google.com/articles/CBMiZEFVX3lxTE0tZjZwdUlQcEtIdF92RmNaRFdCSDJWY2FvMlRwNHJQVHhjLXpid1h5ZnI3eXNobEVxaXMwN2F5TmVRTnc4TkhVYi1rMTJmMkZVTzFFZ0FyZVc5eXI4Tk5mTmJTa2I?oc=5"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Text salting reduces the signal-to-noise ratio in spam detection models.",
+        "AI filters trained on synthetic data may lack robustness against stochastic perturbations.",
+        "Legacy techniques continue to be viable due to the computational cost of retraining massive models.",
+        "Hybrid approaches combining traditional rule-based filtering with AI are likely the path forward."
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Policy Interventions: The San Francisco Crackdown on 'Nudify' Apps"
+    },
+    {
+      "type": "paragraph",
+      "text": "While technical regressions occur in the background, the public face of AI regulation is taking a sharp turn. San Francisco has issued an order requiring Apple and Google to remove applications that utilize AI to generate explicit imagery, colloquially referred to as 'nudify' apps. This directive stems from the realization that the infrastructure powering these apps—often leveraging open-source models like Stable Diffusion and various image-to-image translation pipelines—is being monetized in ways that many consumers and regulators find ethically repugnant."
+    },
+    {
+      "type": "paragraph",
+      "text": "The operational consequence for the tech giants is significant. They must now audit their app stores, potentially requiring developers to restructure their product strategies to comply with local ordinances. This is not merely a legal hurdle but a product differentiation challenge. In a market where features are increasingly commoditized, ethical compliance is becoming a key value proposition. For Apple and Google, the cost of removals is negligible compared to the reputational damage and potential loss of consumer trust if they ignore such orders. This sets a precedent for other jurisdictions, suggesting that the cloud economics of the future will be heavily influenced by the intersection of AI capabilities and local regulatory frameworks."
+    },
+    {
+      "type": "heading",
+      "text": "Market Dynamics: Investors Blink on the AI Trade"
+    },
+    {
+      "type": "paragraph",
+      "text": "The financial sector is reacting to these technological and regulatory shifts with caution. Axios reports that investors are blinking on the AI trade, signaling a cooling off of the euphoria that characterized the previous year. The narrative is shifting from 'AI will solve everything' to 'AI is a commodity with diminishing marginal returns.' This sentiment is driven by the realization that the initial wave of AI applications—often built on generic large language models—has saturated the market. The infrastructure costs, particularly in compute and energy, are no longer sustainable for the average startup."
+    },
+    {
+      "type": "paragraph",
+      "text": "We are witnessing a platform shift where capital is moving toward companies that can demonstrate genuine product differentiation rather than just model access. The 'AI-as-a-service' model is under pressure, as enterprises demand more control over their data and inference costs. This is a natural correction in a market that has been overly optimistic. The operational consequence is a consolidation of resources, where only the most efficient players will survive. Investors are now looking for companies with proprietary data moats and specialized model architectures, rather than those merely reselling generic APIs."
+    },
+    {
+      "type": "heading",
+      "text": "The Competitive Landscape: Kimi K3 and the Global Race"
+    },
+    {
+      "type": "paragraph",
+      "text": "In the midst of market correction, new players are disrupting the status quo. The emergence of Kimi K3, a model that has reportedly shocked the world with its performance, suggests that the competitive landscape is far more dynamic than previously assumed. K3's success indicates that the barrier to entry for high-performance AI models is lower than the industry consensus suggested. This has profound implications for the product strategy of established players like OpenAI, Anthropic, and the big tech firms."
+    },
+    {
+      "type": "paragraph",
+      "text": "If K3 can achieve such results, it implies that the underlying research in model architecture and training efficiency has advanced significantly, perhaps even surpassing the capabilities of the models currently deployed in commercial products. This forces a re-examination of the infrastructure investments made by the major players. Are they over-investing in compute for models that are being rendered obsolete by smaller, more efficient architectures? The cloud economics of the future will likely favor models that are not only powerful but also cost-effective to run at scale."
+    },
+    {
+      "type": "heading",
+      "text": "Geopolitical Implications: David Sacks' Warning"
+    },
+    {
+      "type": "paragraph",
+      "text": "Adding to the sense of urgency, David Sacks has warned that the United States could lose the AI race following the breakout of a Chinese model. This is not merely a geopolitical statement but a technical one. It suggests that the Chinese ecosystem has achieved a level of model capability that rivals or exceeds Western counterparts. The operational consequence for US companies is the need to accelerate their own R&D cycles and potentially invest in domestic supply chains to ensure they are not reliant on foreign hardware or software stacks."
+    },
+    {
+      "type": "paragraph",
+      "text": "The loss of the AI race would not just be a matter of prestige; it would fundamentally alter the global economic landscape. If China leads in AI, it will likely lead in the industries that depend on AI, from manufacturing to logistics to finance. This creates a powerful incentive for US policymakers and corporate leaders to act decisively. The mechanisms at play here involve a complex interplay of innovation, capital allocation, and geopolitical strategy. The US must ensure that its AI infrastructure is robust, its talent pool is cultivated, and its regulatory environment is conducive to innovation without stifling it."
+    },
+    {
+      "type": "heading",
+      "text": "Conclusion: A Call for Sober Analysis"
+    },
+    {
+      "type": "paragraph",
+      "text": "As we look at these converging trends—the regression in spam detection, the policy crackdowns, the market cooling, the rise of Kimi K3, and the geopolitical warnings—we must resist the urge to sensationalize. The technology industry is not a movie plot where everything happens simultaneously for dramatic effect. These are real, measurable shifts in the underlying fabric of our digital economy. They require a calm, analytical approach to understand the mechanisms at play and to anticipate the operational consequences."
+    },
+    {
+      "type": "heading",
+      "text": "Why it matters for builders"
+    },
+    {
+      "type": "paragraph",
+      "text": "For technology operators, the important question is whether the news changes platform leverage, infrastructure cost, security posture, developer behavior, or the tradeoff between control and speed. Those mechanisms determine whether a headline becomes a real operating constraint."
+    },
+    {
+      "type": "paragraph",
+      "text": "The lead signal is AI spam filters are getting suckered by old-school text salting. Leo would not read it as a standalone item. He would place it beside the rest of the source set and ask which assumption is being tested: demand, cost, trust, policy, infrastructure capacity, or the willingness of customers and investors to keep paying for the current narrative."
+    },
+    {
+      "type": "paragraph",
+      "text": "The current source mix points to several connected signals rather than one isolated story: AI spam filters are getting suckered by old-school text salting; San Francisco orders Apple, Google to remove nudify apps from app stores; Investors blink on the AI trade - Axios (Axios); Kimi K3 shocked the world. These other AI models could be next - Axios (Axios); David Sacks warns U.S. could lose AI race after Chinese model's breakout - Axios (Axios). Read together, they give Leo a broader map of where attention is moving and which assumptions deserve a second look."
+    },
+    {
+      "type": "heading",
+      "text": "Second-order effects"
+    },
+    {
+      "type": "paragraph",
+      "text": "The second-order question is where complexity moves. A tool can make one team faster while pushing cost, governance, or operational risk onto another team. The useful analysis follows that transfer instead of stopping at the vendor's preferred story."
+    },
+    {
+      "type": "paragraph",
+      "text": "Leo's operating lens is to ask what a careful builder would do differently on Monday morning. If the answer is a clearer dependency map, a different vendor boundary, a security review, or a more conservative architecture choice, the headline has practical weight."
+    },
+    {
+      "type": "heading",
+      "text": "What to watch next"
+    },
+    {
+      "type": "paragraph",
+      "text": "The next useful check is where the pressure shows up first: procurement, architecture reviews, incident response, margins, or product roadmaps. That is usually where the strategic meaning becomes visible before it appears in a polished executive narrative."
+    },
+    {
+      "type": "paragraph",
+      "text": "The practical discipline is to avoid treating the freshest headline as the whole story. The stronger read is slower and more mechanical: identify the constraint, watch whether it spreads, and keep revising the map as better evidence arrives."
+    }
+  ],
+  "sources": [
+    {
+      "title": "AI spam filters are getting suckered by old-school text salting",
+      "url": "https://www.theregister.com/security/2026/07/17/ai-spam-filters-are-getting-suckered-by-old-school-text-salting/5274434"
+    },
+    {
+      "title": "San Francisco orders Apple, Google to remove nudify apps from app stores",
+      "url": "https://arstechnica.com/tech-policy/2026/07/apple-google-must-stop-profiting-off-ai-nudify-apps-san-francisco-ag-says/"
+    },
+    {
+      "title": "Investors blink on the AI trade - Axios",
+      "url": "https://news.google.com/articles/CBMiZEFVX3lxTE0tZjZwdUlQcEtIdF92RmNaRFdCSDJWY2FvMlRwNHJQVHhjLXpid1h5ZnI3eXNobEVxaXMwN2F5TmVRTnc4TkhVYi1rMTJmMkZVTzFFZ0FyZVc5eXI4Tk5mTmJTa2I?oc=5"
+    },
+    {
+      "title": "Kimi K3 shocked the world. These other AI models could be next - Axios",
+      "url": "https://news.google.com/articles/CBMic0FVX3lxTE12ZUdLRUs0TlF2Vk8waUtVN3Zobm0ybGVIcGdkVHY3MGFzZV84dm5iM0R5cG9TNnctOHdSTzlfRzhyUElxMEt5YUpFR0RMbmJ6d1BCSDZYalM1dHQ4TEhyaDVBSDktRm5xMy1sa3d4MVlOUzg?oc=5"
+    },
+    {
+      "title": "David Sacks warns U.S. could lose AI race after Chinese model's breakout - Axios",
+      "url": "https://news.google.com/articles/CBMieEFVX3lxTFB2UVdFZUVhUVdBb3hGY0h0aWRfaUU3V2hDSHJac0lsNzZVQ3d1QjNjTzk0ZUdYclNhdzJXc3ZXN2x5UEphN3hBSEttVGVJYjRDSDU0Q244RmsxZnNaakJKbmFkWi1XVzdtNlc0ZmZfRndBY3NwOU5USg?oc=5"
+    }
+  ],
+  "audioUrl": "content/audio/technology-2026071914-ai-spam-filters-are-getting-suckered-by-old-school-text-salting.mp3",
+  "audioProvider": "kokoro",
+  "audioVoice": "am_michael",
+  "audioScript": "polished",
+  "audioZhUrl": "content/audio/technology-2026071914-ai-spam-filters-are-getting-suckered-by-old-school-text-salting.zh.mp3",
+  "audioZhProvider": "kokoro",
+  "audioZhVoice": "zm_yunyang",
+  "audioZhScript": "polished-zh"
+}
