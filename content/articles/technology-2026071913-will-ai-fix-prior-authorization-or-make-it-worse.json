@@ -1,0 +1,234 @@
+{
+  "slug": "technology-2026071913-will-ai-fix-prior-authorization-or-make-it-worse",
+  "category": "technology",
+  "title": "Technology Briefing: Will AI fix prior authorization—or make it worse?",
+  "summary": "As healthcare providers grapple with the crushing administrative burden of prior authorization, artificial intelligence is being touted as the savior. Yet, the mechanics of the problem—deeply embedded in legacy billing systems, opaque payer algorithms, and the sheer volume of clinical documentation—suggest that a simpl",
+  "publishedAt": "2026-07-19T13:07:18.210Z",
+  "readingMinutes": 10,
+  "image": "https://cdn.arstechnica.net/wp-content/uploads/2026/07/GettyImages-2264310821-1152x648.jpg",
+  "imageAlt": "Image from source article for Will AI fix prior authorization—or make it worse?",
+  "imageCaption": "Will AI fix prior authorization—or make it worse?",
+  "imageSourceTitle": "Will AI fix prior authorization—or make it worse?",
+  "imageSourceUrl": "https://arstechnica.com/ai/2026/07/will-ai-fix-prior-authorization-or-make-it-worse/",
+  "inlineImages": [
+    {
+      "src": "https://image.theregister.com/?imageId=239084&width=800",
+      "alt": "Image from source article for EU forces Google to share its toys with the other AI and search kids",
+      "caption": "EU forces Google to share its toys with the other AI and search kids",
+      "sourceTitle": "EU forces Google to share its toys with the other AI and search kids",
+      "sourceUrl": "https://www.theregister.com/software/2026/07/16/eu-forces-google-to-share-its-toys-with-the-other-ai-and-search-kids/5273819"
+    },
+    {
+      "src": "https://image.theregister.com/?imageId=1683560&width=800",
+      "alt": "Image from source article for AI vendors have found someone to pay their infrastructure bills: You",
+      "caption": "AI vendors have found someone to pay their infrastructure bills: You",
+      "sourceTitle": "AI vendors have found someone to pay their infrastructure bills: You",
+      "sourceUrl": "https://www.theregister.com/software/2026/07/16/ai-vendors-have-found-someone-to-pay-their-infrastructure-bills-you/5273712"
+    },
+    {
+      "src": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/07/ss_6b1b99a0b8d64dcb24c61bc4ccea9233935ae1fc.1920x1080.jpg?quality=90&strip=all&crop=0,0,100,100",
+      "alt": "Image from theverge.com for More games should be on rails (literally)",
+      "caption": "More games should be on rails (literally) (theverge.com)",
+      "sourceTitle": "theverge.com",
+      "sourceUrl": "https://www.theverge.com/games/961152/denshattack-review"
+    }
+  ],
+  "body": [
+    {
+      "type": "heading",
+      "text": "The Prior Authorization Paradox: Why AI is a Double-Edged Sword"
+    },
+    {
+      "type": "paragraph",
+      "text": "For decades, the prior authorization process has been a source of immense friction in the US healthcare system. Providers must submit detailed clinical documentation to payers, who then rely on opaque, often contradictory algorithms to approve or deny coverage. The result is a system that is slow, expensive, and prone to arbitrary denials. Enter artificial intelligence. Vendors are marketing AI as the solution, promising to automate the generation of clinical notes and predict payer decisions with high accuracy. On the surface, this seems like a straightforward optimization problem: use machine learning to parse unstructured clinical text and map it to payer rules."
+    },
+    {
+      "type": "paragraph",
+      "text": "However, the reality is far more complicated. The core issue is not just the lack of AI, but the lack of a unified, transparent data layer. Payers operate in silos, each with their own proprietary rules and data models that are rarely shared. Even if an AI model could perfectly predict the outcome of a specific submission, the provider would still face the administrative nightmare of integrating that prediction into their existing Electronic Health Record (EHR) workflows. The EHRs themselves are notoriously difficult to modify, often requiring costly customizations that are not scalable. Furthermore, the training data for these models is scarce and biased; most models are trained on historical claims data, which reflects past denials rather than optimal clinical care pathways. This creates a feedback loop where AI reinforces existing inefficiencies rather than solving them."
+    },
+    {
+      "type": "image",
+      "src": "https://image.theregister.com/?imageId=239084&width=800",
+      "alt": "Image from source article for EU forces Google to share its toys with the other AI and search kids",
+      "caption": "EU forces Google to share its toys with the other AI and search kids",
+      "sourceTitle": "EU forces Google to share its toys with the other AI and search kids",
+      "sourceUrl": "https://www.theregister.com/software/2026/07/16/eu-forces-google-to-share-its-toys-with-the-other-ai-and-search-kids/5273819"
+    },
+    {
+      "type": "paragraph",
+      "text": "There is also the question of liability and explainability. If an AI model denies a procedure that a clinician believes is necessary, who is responsible? The vendor, the provider, or the payer? Current regulations and insurance policies are ill-equipped to handle such scenarios. Moreover, the 'black box' nature of many deep learning models makes it difficult to explain to clinicians why a specific decision was made, which is a critical requirement for clinical adoption. The prospect of using AI for prior authorization is not merely a technical challenge; it is a systemic one that requires a fundamental restructuring of how healthcare data is collected, shared, and utilized."
+    },
+    {
+      "type": "heading",
+      "text": "Infrastructure Economics: The Rise of the User-Subsidized Compute Layer"
+    },
+    {
+      "type": "paragraph",
+      "text": "While the healthcare sector struggles with the implications of AI, the broader technology industry is witnessing a dramatic shift in the economics of compute. AI vendors, which have traditionally been the primary consumers of massive GPU clusters, are now facing a new reality: the cost of training and running large models is becoming prohibitive. In response, a new business model has emerged where end-users—companies and individuals—are increasingly asked to subsidize the infrastructure costs of AI development. This is not a new concept, but the scale and speed at which it is happening are unprecedented."
+    },
+    {
+      "type": "image",
+      "src": "https://image.theregister.com/?imageId=1683560&width=800",
+      "alt": "Image from source article for AI vendors have found someone to pay their infrastructure bills: You",
+      "caption": "AI vendors have found someone to pay their infrastructure bills: You",
+      "sourceTitle": "AI vendors have found someone to pay their infrastructure bills: You",
+      "sourceUrl": "https://www.theregister.com/software/2026/07/16/ai-vendors-have-found-someone-to-pay-their-infrastructure-bills-you/5273712"
+    },
+    {
+      "type": "paragraph",
+      "text": "This shift is driven by a combination of factors. First, the availability of cheap, high-performance hardware from cloud providers has allowed for rapid scaling of compute. Second, the proliferation of open-source models and the democratization of AI research have lowered the barrier to entry, but also increased the demand for compute. Third, regulatory pressures, such as the EU's recent decision to force Google to share its proprietary AI models and search datasets with other developers, are reshaping the competitive landscape. By mandating interoperability, regulators are effectively forcing the largest players to open their proprietary layers, which in turn creates a more competitive market for compute resources."
+    },
+    {
+      "type": "paragraph",
+      "text": "The consequence of this shift is a new class of 'compute brokers' and 'model-as-a-service' providers who can aggregate user demand and offer it to AI vendors at a lower cost. This creates a two-tiered economy: one tier where vendors build the models, and another tier where users pay for the compute to run them. This dynamic is particularly relevant for the healthcare sector, where the cost of implementing AI solutions is a major barrier to entry. If the infrastructure layer becomes more affordable and accessible, it could enable smaller providers to adopt AI tools without bearing the full brunt of the compute costs."
+    },
+    {
+      "type": "image",
+      "src": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/07/ss_6b1b99a0b8d64dcb24c61bc4ccea9233935ae1fc.1920x1080.jpg?quality=90&strip=all&crop=0,0,100,100",
+      "alt": "Image from theverge.com for More games should be on rails (literally)",
+      "caption": "More games should be on rails (literally) (theverge.com)",
+      "sourceTitle": "theverge.com",
+      "sourceUrl": "https://www.theverge.com/games/961152/denshattack-review"
+    },
+    {
+      "type": "heading",
+      "text": "Market Dynamics: The EU's Openness and the China Insurgency"
+    },
+    {
+      "type": "paragraph",
+      "text": "The regulatory environment is also playing a crucial role in shaping the future of AI. The European Union has taken a bold step by requiring Google to open its toys—its proprietary AI models and search datasets—to other developers. This move is significant because it challenges the notion that proprietary data is the only way to build competitive AI systems. By forcing openness, the EU is effectively creating a new standard for interoperability that could influence global markets."
+    },
+    {
+      "type": "paragraph",
+      "text": "In contrast, China is pursuing a different strategy, often described as an 'open-weight insurgency'. While the US and EU focus on closed, proprietary ecosystems, China is pushing for the widespread adoption of open-weight models that can be trained and fine-tuned on local data. This approach is driven by a desire to reduce reliance on foreign technology and to build a self-sustaining AI infrastructure. The implications of this strategy are profound, as it could lead to a bifurcation of the global AI market, with different standards and ecosystems emerging in different regions."
+    },
+    {
+      "type": "paragraph",
+      "text": "For the healthcare sector, these geopolitical shifts have direct consequences. If the global AI market becomes fragmented, it could become more difficult to develop and deploy AI solutions that work seamlessly across borders. Providers may find themselves locked into specific ecosystems, limiting their ability to choose the best tools for their needs. Conversely, the openness mandated by the EU could provide a pathway for more collaborative and transparent AI development, potentially leading to better outcomes for patients."
+    },
+    {
+      "type": "heading",
+      "text": "The Gaming Sector: A Shift to Rail-Based Physics"
+    },
+    {
+      "type": "paragraph",
+      "text": "While the focus of this briefing is primarily on AI and healthcare, it is worth noting a significant shift in the gaming industry that could have broader implications for technology adoption. Games are increasingly being built on 'rails', a term that refers to the use of rigid, physics-based simulations to create immersive experiences. This shift is driven by the desire to create more realistic and engaging environments, which requires a deep understanding of physics and simulation."
+    },
+    {
+      "type": "paragraph",
+      "text": "The adoption of rail-based physics in games is not just a niche trend; it is a fundamental change in how developers approach game design. This shift has implications for the broader technology industry, as it demonstrates the power of simulation and physics-based modeling in creating compelling user experiences. For healthcare, this could be a source of inspiration, as similar techniques could be applied to create more realistic patient simulations and training environments."
+    },
+    {
+      "type": "heading",
+      "text": "Operational Consequences and the Path Forward"
+    },
+    {
+      "type": "paragraph",
+      "text": "The operational consequences of these shifts are significant. For healthcare providers, the challenge is to navigate a rapidly evolving landscape where the tools and infrastructure they rely on are changing at an unprecedented pace. The integration of AI into prior authorization workflows is not a simple plug-and-play solution; it requires a deep understanding of the underlying data models, regulatory requirements, and technical constraints."
+    },
+    {
+      "type": "paragraph",
+      "text": "One potential path forward is to leverage the openness mandated by the EU to create a more collaborative ecosystem. By working with open-source models and shared data standards, providers could develop AI solutions that are more interoperable and transparent. This would not only address the technical challenges but also the regulatory and liability concerns."
+    },
+    {
+      "type": "paragraph",
+      "text": "Another approach is to focus on the infrastructure layer, where the economics of compute are shifting. By partnering with new compute brokers and model-as-a-service providers, providers could access the latest AI capabilities without bearing the full cost of infrastructure. This could democratize access to AI and enable smaller providers to compete more effectively."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ultimately, the future of AI in healthcare will depend on a combination of technical innovation, regulatory alignment, and economic adaptability. The prior authorization problem is not just a technical issue; it is a systemic one that requires a holistic approach. By understanding the broader market dynamics and infrastructure shifts, providers can position themselves to take advantage of the opportunities that AI brings while mitigating the risks."
+    },
+    {
+      "type": "paragraph",
+      "text": "The signals from the EU, China, and the gaming sector all point to a future where technology is becoming more open, collaborative, and simulation-driven. For healthcare, this means that the next generation of AI solutions will likely be built on open standards and shared data, rather than proprietary silos. This shift could revolutionize the way prior authorization is handled, making it faster, more accurate, and more equitable for patients and providers alike."
+    },
+    {
+      "type": "paragraph",
+      "text": "However, the path to this future is not without its challenges. The legacy systems that underpin healthcare operations are deeply entrenched and resistant to change. Overcoming these barriers will require significant investment, both in terms of capital and human resources. It will also require a willingness to embrace new paradigms and to collaborate across traditional boundaries."
+    },
+    {
+      "type": "paragraph",
+      "text": "In the end, the question of whether AI will fix prior authorization or make it worse is not a binary one. The answer lies in how the industry chooses to evolve. If providers and payers work together to build open, collaborative ecosystems, AI has the potential to be a transformative force. But if they cling to proprietary models and resist change, AI could simply add another layer of complexity to an already burdensome system. The choice is theirs, and the stakes are high."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Prioritize interoperability and open standards over proprietary solutions.",
+        "Leverage new compute brokers to democratize access to AI infrastructure.",
+        "Collaborate across payer and provider lines to share data and models.",
+        "Invest in legacy system modernization to enable AI integration.",
+        "Develop clear regulatory frameworks for AI liability and explainability."
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Why it matters for builders"
+    },
+    {
+      "type": "paragraph",
+      "text": "For technology operators, the important question is whether the news changes platform leverage, infrastructure cost, security posture, developer behavior, or the tradeoff between control and speed. Those mechanisms determine whether a headline becomes a real operating constraint."
+    },
+    {
+      "type": "paragraph",
+      "text": "The lead signal is Will AI fix prior authorization—or make it worse?. Leo would not read it as a standalone item. He would place it beside the rest of the source set and ask which assumption is being tested: demand, cost, trust, policy, infrastructure capacity, or the willingness of customers and investors to keep paying for the current narrative."
+    },
+    {
+      "type": "paragraph",
+      "text": "The current source mix points to several connected signals rather than one isolated story: Will AI fix prior authorization—or make it worse?; EU forces Google to share its toys with the other AI and search kids; AI vendors have found someone to pay their infrastructure bills: You; More games should be on rails (literally) (theverge.com); AI race splits in two as China wages open-weight insurgency - Axios (Axios). Read together, they give Leo a broader map of where attention is moving and which assumptions deserve a second look."
+    },
+    {
+      "type": "heading",
+      "text": "Second-order effects"
+    },
+    {
+      "type": "paragraph",
+      "text": "The second-order question is where complexity moves. A tool can make one team faster while pushing cost, governance, or operational risk onto another team. The useful analysis follows that transfer instead of stopping at the vendor's preferred story."
+    },
+    {
+      "type": "paragraph",
+      "text": "Leo's operating lens is to ask what a careful builder would do differently on Monday morning. If the answer is a clearer dependency map, a different vendor boundary, a security review, or a more conservative architecture choice, the headline has practical weight."
+    },
+    {
+      "type": "heading",
+      "text": "What to watch next"
+    },
+    {
+      "type": "paragraph",
+      "text": "The next useful check is where the pressure shows up first: procurement, architecture reviews, incident response, margins, or product roadmaps. That is usually where the strategic meaning becomes visible before it appears in a polished executive narrative."
+    },
+    {
+      "type": "paragraph",
+      "text": "The practical discipline is to avoid treating the freshest headline as the whole story. The stronger read is slower and more mechanical: identify the constraint, watch whether it spreads, and keep revising the map as better evidence arrives."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Will AI fix prior authorization—or make it worse?",
+      "url": "https://arstechnica.com/ai/2026/07/will-ai-fix-prior-authorization-or-make-it-worse/"
+    },
+    {
+      "title": "EU forces Google to share its toys with the other AI and search kids",
+      "url": "https://www.theregister.com/software/2026/07/16/eu-forces-google-to-share-its-toys-with-the-other-ai-and-search-kids/5273819"
+    },
+    {
+      "title": "AI vendors have found someone to pay their infrastructure bills: You",
+      "url": "https://www.theregister.com/software/2026/07/16/ai-vendors-have-found-someone-to-pay-their-infrastructure-bills-you/5273712"
+    },
+    {
+      "title": "More games should be on rails (literally)",
+      "url": "https://www.theverge.com/games/961152/denshattack-review"
+    },
+    {
+      "title": "AI race splits in two as China wages open-weight insurgency - Axios",
+      "url": "https://news.google.com/articles/CBMigAFBVV95cUxQTU1GSXFEb1NUS21rRXFCa2ZvaTh5dnhxUHpFRWpUakVzdW5ydmZKTVVSUF82VGJxX0Mzc01zQlc0alBBdGRYNnItSGhxR0RuRVp5TTI3ZnByMU5IenVNdWZ3OWY3Zk5QbW9MUVFzSnJwbmxYU1RXVXZoUU40NXBlNw?oc=5"
+    }
+  ],
+  "audioUrl": "content/audio/technology-2026071913-will-ai-fix-prior-authorization-or-make-it-worse.mp3",
+  "audioProvider": "kokoro",
+  "audioVoice": "am_michael",
+  "audioScript": "polished",
+  "audioZhUrl": "content/audio/technology-2026071913-will-ai-fix-prior-authorization-or-make-it-worse.zh.mp3",
+  "audioZhProvider": "kokoro",
+  "audioZhVoice": "zm_yunyang",
+  "audioZhScript": "polished-zh"
+}
