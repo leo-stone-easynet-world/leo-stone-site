@@ -1,0 +1,204 @@
+{
+  "slug": "ai-2026072002-please-stop-making-me-opt-out-of-ai",
+  "category": "ai",
+  "title": "AI Briefing: Please Stop Making Me Opt Out of AI",
+  "summary": "The convergence of generative models, autonomous agents, and embedded inference is reshaping the economics of software, data, and labor. This briefing examines the friction between user expectations for opt-out controls and the reality of platform shifts toward always-on intelligence. It also covers recent community in",
+  "publishedAt": "2026-07-20T02:07:13.689Z",
+  "readingMinutes": 11,
+  "image": "https://media.wired.com/photos/6a581a11a304459a2f2ac833/master/pass/Stop-Making-Me-Opt-Out-Gear.gif",
+  "imageAlt": "Image from source article for Please Stop Making Me Opt Out of AI",
+  "imageCaption": "Please Stop Making Me Opt Out of AI",
+  "imageSourceTitle": "Please Stop Making Me Opt Out of AI",
+  "imageSourceUrl": "https://www.wired.com/story/please-stop-making-me-opt-out-of-ai/",
+  "inlineImages": [
+    {
+      "src": "https://media.wired.com/photos/6a56a73aa8c3319e5ecf8c80/master/pass/AI-Lab-AI-Still-Isnt-Smarter-Than-a-Baby-Business.jpg",
+      "alt": "Image from source article for AI Isn’t Smarter Than a Baby—Yet",
+      "caption": "AI Isn’t Smarter Than a Baby—Yet",
+      "sourceTitle": "AI Isn’t Smarter Than a Baby—Yet",
+      "sourceUrl": "https://www.wired.com/story/ai-isnt-smarter-than-a-baby-yet/"
+    },
+    {
+      "src": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+      "alt": "Image from Axios for Retailers embrace AI as bots become buyers - Axios",
+      "caption": "Retailers embrace AI as bots become buyers - Axios (Axios)",
+      "sourceTitle": "Axios",
+      "sourceUrl": "https://news.google.com/articles/CBMiigFBVV95cUxNU2F3eE5NX0lSdnVzejNtcUFLeXpXMGNCajRPRmYtQ29RZG5KLVhpaGNYS3Rva2lwd0p4akxTRHRJcHhkZDl2MkxzOFZMSjAxRE9rWGQ0dWljNmhzZUVMTTZYTXhCZkVYZTVWeU9ocXVlQ2dXRzNGWXRKcmdzVklRNktMdnliemJYMXc?oc=5"
+    }
+  ],
+  "body": [
+    {
+      "type": "heading",
+      "text": "The Opt-Out Paradox: When Friction Becomes Obsolescence"
+    },
+    {
+      "type": "paragraph",
+      "text": "The recent discourse around user control in AI systems highlights a fundamental tension: the desire for granular opt-out mechanisms versus the architectural reality of modern platforms. Early AI deployments relied on explicit user consent flows—checkboxes, privacy policies, and clear data boundaries. As models have grown more capable and inference costs have dropped, the industry has moved toward 'always-on' intelligence, where AI agents operate in the background, curating content, managing workflows, and making micro-decisions without explicit user intervention at every step. This shift is not merely a product feature change; it is an inference economics transformation. When the marginal cost of running a model drops below the marginal value of user attention, the optimal product strategy is to embed inference directly into the user interface and backend services, effectively removing the opt-out as a viable design choice."
+    },
+    {
+      "type": "paragraph",
+      "text": "From a data boundaries perspective, this evolution blurs the line between user data and model training data. In the past, companies could compartmentalize user inputs, ensuring they were not used to improve the model without consent. Today, the feedback loops are so tight—particularly in large language models—that every interaction implicitly contributes to the model's next iteration. The security implications are profound: if a model is always active, the attack surface expands. Adversaries can exploit the inference pipeline to inject prompts, manipulate outputs, or extract sensitive information through side-channel analysis. Safety teams are now tasked with designing 'containment' protocols that operate alongside the always-on architecture, a difficult balancing act between usability and risk mitigation."
+    },
+    {
+      "type": "image",
+      "src": "https://media.wired.com/photos/6a56a73aa8c3319e5ecf8c80/master/pass/AI-Lab-AI-Still-Isnt-Smarter-Than-a-Baby-Business.jpg",
+      "alt": "Image from source article for AI Isn’t Smarter Than a Baby—Yet",
+      "caption": "AI Isn’t Smarter Than a Baby—Yet",
+      "sourceTitle": "AI Isn’t Smarter Than a Baby—Yet",
+      "sourceUrl": "https://www.wired.com/story/ai-isnt-smarter-than-a-baby-yet/"
+    },
+    {
+      "type": "heading",
+      "text": "Inference Economics and the Rise of Autonomous Agents"
+    },
+    {
+      "type": "paragraph",
+      "text": "The economic calculus of AI has shifted dramatically. Inference costs, once a prohibitive barrier to widespread adoption, have plummeted due to hardware advancements, model distillation, and the proliferation of specialized accelerators. This cost reduction has enabled a new class of applications: autonomous agents. Unlike traditional chatbots that respond to prompts, agents can plan, execute multi-step workflows, and interact with external systems—such as APIs, databases, and even other agents. Retailers are already experimenting with these agents as 'bots that become buyers,' where AI-driven purchasing decisions are made on behalf of users or enterprises, optimizing for cost, speed, and personalization. This represents a labor design overhaul: the human role shifts from direct task execution to oversight and exception handling. The operational consequence is a need for new monitoring stacks that can track agent behavior, detect hallucinations or drift, and intervene when necessary."
+    },
+    {
+      "type": "paragraph",
+      "text": "However, the intelligence of these agents is not yet on par with human cognition in complex domains. Recent analyses suggest that while AI can outperform humans in specific, well-defined tasks, it still struggles with the nuanced, creative, and contextual reasoning that characterizes human intelligence. This gap is not a failure of the technology per se, but a reflection of the data boundaries and training regimes that define current models. As a result, product strategy must account for this limitation. Overpromising AI capabilities can lead to user frustration and loss of trust, while underutilizing the technology can result in competitive disadvantage. The sweet spot lies in hybrid systems where AI handles the repetitive, data-intensive portions of work, and humans provide the strategic direction and ethical judgment."
+    },
+    {
+      "type": "image",
+      "src": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+      "alt": "Image from Axios for Retailers embrace AI as bots become buyers - Axios",
+      "caption": "Retailers embrace AI as bots become buyers - Axios (Axios)",
+      "sourceTitle": "Axios",
+      "sourceUrl": "https://news.google.com/articles/CBMiigFBVV95cUxNU2F3eE5NX0lSdnVzejNtcUFLeXpXMGNCajRPRmYtQ29RZG5KLVhpaGNYS3Rva2lwd0p4akxTRHRJcHhkZDl2MkxzOFZMSjAxRE9rWGQ0dWljNmhzZUVMTTZYTXhCZkVYZTVWeU9ocXVlQ2dXRzNGWXRKcmdzVklRNktMdnliemJYMXc?oc=5"
+    },
+    {
+      "type": "heading",
+      "text": "Community Investment and Infrastructure Expansion in Virginia"
+    },
+    {
+      "type": "paragraph",
+      "text": "On the infrastructure side, recent community investments in Virginia illustrate a broader trend: tech giants are expanding their cloud and AI footprints in regions with strong educational and workforce pipelines. These investments are not just about building data centers; they are about supporting local jobs and expanding energy affordability. The AI model requires significant compute power, which in turn demands reliable, affordable energy. Virginia's approach combines public-private partnerships to upgrade the grid, invest in renewable energy sources, and provide tax incentives for companies that bring AI infrastructure to the state. This has operational consequences for the companies involved: they must now factor energy costs and grid reliability into their deployment strategies, which may influence where they choose to host their models and how they design their inference pipelines."
+    },
+    {
+      "type": "paragraph",
+      "text": "The data boundaries of these investments also extend beyond the physical infrastructure. By supporting local universities and research institutions, companies are creating a pipeline of talent that is both technically skilled and culturally aligned with the region. This reduces the risk of brain drain and ensures a steady supply of engineers who understand the nuances of local industries. For the companies, this is a strategic move to secure a competitive advantage in the AI race, as access to top-tier talent is often more critical than raw compute power. The financial implications are significant: these investments are viewed as long-term bets on the ecosystem, with returns measured not just in immediate revenue but in the sustained growth of the local economy and the company's brand presence."
+    },
+    {
+      "type": "heading",
+      "text": "Retailers Embrace AI: Bots as Buyers"
+    },
+    {
+      "type": "paragraph",
+      "text": "The retail sector is witnessing a paradigm shift as AI agents begin to function as autonomous buyers. These bots are not merely recommendation engines; they are making purchasing decisions based on real-time data, optimizing for price, availability, and user preferences. This development forces retailers to rethink their affiliate commerce models. Traditional affiliate marketing relies on human-driven clicks and conversions, but AI agents can bypass these intermediaries, directly engaging with product catalogs and negotiating terms. This has profound implications for publishers and content creators who have long relied on affiliate revenue streams. The data boundaries of these interactions are expanding, as AI agents can access and process vast amounts of product data, user behavior, and market trends without human oversight."
+    },
+    {
+      "type": "paragraph",
+      "text": "From a safety and security standpoint, the rise of AI buyers introduces new risks. These agents can be manipulated by bad actors, leading to fraudulent purchases or the exploitation of vulnerabilities in e-commerce platforms. Retailers must now implement robust authentication and authorization protocols for their AI systems, ensuring that only trusted agents can make purchases. This is a significant operational challenge, requiring collaboration between security teams, product teams, and external partners. The financial impact of these risks is substantial, as breaches can lead to direct losses, reputational damage, and regulatory fines. Consequently, product strategy in retail is increasingly focused on building 'trust layers' that allow AI agents to operate safely and transparently, with mechanisms for auditing and reversing decisions."
+    },
+    {
+      "type": "heading",
+      "text": "AI Forces Publishers to Rethink Affiliate Commerce"
+    },
+    {
+      "type": "paragraph",
+      "text": "The disruption to affiliate commerce is perhaps the most immediate and visible consequence of AI's integration into retail. Publishers who have traditionally monetized content through affiliate links are now facing a reality where AI agents can bypass these links entirely, making direct purchases or negotiating better terms with suppliers. This forces publishers to reconsider their business models. Some are pivoting toward content that is specifically designed to engage AI agents, such as structured data formats that are easily parsed and acted upon. Others are exploring new revenue streams, such as selling access to their curated datasets or offering premium content that provides insights beyond what AI agents can derive on their own."
+    },
+    {
+      "type": "paragraph",
+      "text": "The data boundaries of this shift are also changing. Publishers now need to think about how their content is being consumed by AI agents, which may require different metadata, formatting, and even tone. This is a significant product strategy challenge, as the audience for content is expanding beyond humans to include machines. Safety and security considerations are also paramount, as AI agents can be used to scrape and aggregate content at scale, potentially leading to copyright issues or the spread of misinformation. Publishers must therefore invest in new tools and processes to protect their intellectual property and maintain the integrity of their content."
+    },
+    {
+      "type": "list",
+      "items": [
+        "AI agents can optimize purchasing decisions without human intervention, reducing reliance on traditional affiliate models.",
+        "Publishers must adapt content formats to be AI-friendly, potentially involving structured data and metadata.",
+        "Security protocols for AI buyers require robust authentication and authorization mechanisms.",
+        "New revenue streams may emerge from selling curated datasets or offering premium content.",
+        "Data boundaries are expanding as AI agents access and process vast amounts of information.",
+        "Trust layers are being built to ensure safe and transparent operation of AI agents in retail environments."
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Safety, Security, and the Future of Human-AI Collaboration"
+    },
+    {
+      "type": "paragraph",
+      "text": "As AI becomes more pervasive, the safety and security challenges it introduces are becoming increasingly complex. The always-on nature of AI systems means that they are constantly interacting with the world, which opens up new avenues for attacks and errors. Safety teams are now tasked with designing systems that can detect and respond to these threats in real time, often requiring a blend of traditional security practices and new AI-specific techniques. This is a significant operational challenge, as it requires continuous monitoring and adaptation to the evolving threat landscape."
+    },
+    {
+      "type": "paragraph",
+      "text": "The future of human-AI collaboration will likely involve a hybrid model where AI handles the repetitive, data-intensive tasks, and humans provide the strategic direction and ethical judgment. This model requires new tools and processes to facilitate seamless interaction between humans and AI, such as interfaces that allow users to understand and control AI decisions, and systems that can explain their reasoning in human terms. Safety and security considerations are also paramount, as AI agents can be used to manipulate or deceive humans, leading to ethical and legal challenges."
+    },
+    {
+      "type": "paragraph",
+      "text": "In conclusion, the integration of AI into various sectors is reshaping the economics of software, data, and labor. The opt-out paradox highlights the tension between user control and the architectural reality of always-on intelligence. Inference economics and the rise of autonomous agents are driving new product strategies and operational challenges. Community investments in Virginia illustrate the broader trend of expanding AI infrastructure and supporting local ecosystems. Retailers embracing AI as bots become buyers and publishers rethinking affiliate commerce are just two examples of the profound changes underway. Safety and security considerations are becoming increasingly complex, requiring new approaches to protect against threats and errors. The future of human-AI collaboration will likely involve a hybrid model where AI handles the repetitive, data-intensive tasks, and humans provide the strategic direction and ethical judgment. This briefing aims to provide a comprehensive overview of these developments, offering insights and analysis for stakeholders in the AI space."
+    },
+    {
+      "type": "heading",
+      "text": "What changes in practice"
+    },
+    {
+      "type": "paragraph",
+      "text": "For AI, the operational question is whether the news changes how products are built, deployed, governed, or paid for. A model announcement matters most when it shifts inference cost, reliability, data boundaries, security exposure, or the amount of work a team can safely delegate to automation."
+    },
+    {
+      "type": "paragraph",
+      "text": "The lead signal is Please Stop Making Me Opt Out of AI. Leo would not read it as a standalone item. He would place it beside the rest of the source set and ask which assumption is being tested: demand, cost, trust, policy, infrastructure capacity, or the willingness of customers and investors to keep paying for the current narrative."
+    },
+    {
+      "type": "paragraph",
+      "text": "The current source mix points to several connected signals rather than one isolated story: Please Stop Making Me Opt Out of AI; AI Isn’t Smarter Than a Baby—Yet; Our new community investments in Virginia support local jobs and expand energy affordability.; Retailers embrace AI as bots become buyers - Axios (Axios); AI forces publishers to rethink affiliate commerce - Axios (Axios). Read together, they give Leo a broader map of where attention is moving and which assumptions deserve a second look."
+    },
+    {
+      "type": "heading",
+      "text": "Second-order effects"
+    },
+    {
+      "type": "paragraph",
+      "text": "The second-order question is trust. Teams do not adopt artificial intelligence because a demo is impressive; they adopt it when the workflow is observable, the failure mode is bounded, and the economics still make sense after compliance, support, latency, and human review are counted."
+    },
+    {
+      "type": "paragraph",
+      "text": "Leo's operating lens is to look for the control point. Sometimes it is the model, sometimes the distribution channel, sometimes the data contract, and sometimes the boring integration layer that decides whether a capability becomes a dependable product."
+    },
+    {
+      "type": "heading",
+      "text": "What to watch next"
+    },
+    {
+      "type": "paragraph",
+      "text": "The next useful check is adoption quality. Pilots, demos, and benchmark claims are weaker signals than durable workflows, clear ownership, measured costs, and evidence that customers trust the system enough to use it in consequential work."
+    },
+    {
+      "type": "paragraph",
+      "text": "The practical discipline is to avoid treating the freshest headline as the whole story. The stronger read is slower and more mechanical: identify the constraint, watch whether it spreads, and keep revising the map as better evidence arrives."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Please Stop Making Me Opt Out of AI",
+      "url": "https://www.wired.com/story/please-stop-making-me-opt-out-of-ai/"
+    },
+    {
+      "title": "AI Isn’t Smarter Than a Baby—Yet",
+      "url": "https://www.wired.com/story/ai-isnt-smarter-than-a-baby-yet/"
+    },
+    {
+      "title": "Our new community investments in Virginia support local jobs and expand energy affordability.",
+      "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/virginia-community-investments/"
+    },
+    {
+      "title": "Retailers embrace AI as bots become buyers - Axios",
+      "url": "https://news.google.com/articles/CBMiigFBVV95cUxNU2F3eE5NX0lSdnVzejNtcUFLeXpXMGNCajRPRmYtQ29RZG5KLVhpaGNYS3Rva2lwd0p4akxTRHRJcHhkZDl2MkxzOFZMSjAxRE9rWGQ0dWljNmhzZUVMTTZYTXhCZkVYZTVWeU9ocXVlQ2dXRzNGWXRKcmdzVklRNktMdnliemJYMXc?oc=5"
+    },
+    {
+      "title": "AI forces publishers to rethink affiliate commerce - Axios",
+      "url": "https://news.google.com/articles/CBMilwFBVV95cUxPZnVGa1Y3RUkzTUI4RXc4aWgxdHNFVG45Znd5R3FoMXpGR280NjJQSjg4a3NQQVhqMmx4M0RuT1dwUFZUTHlmMWdHQjVmTVdlNFVOSXZDc0lwd1otUFNhT1hZREpqUk1SZXJIcXN6MThSelUzRkxBXy1xX0o2X2VWR2ZzNW9RMW54aGJKMVhNNjdqblZ2UDFv?oc=5"
+    }
+  ],
+  "audioUrl": "content/audio/ai-2026072002-please-stop-making-me-opt-out-of-ai.mp3",
+  "audioProvider": "kokoro",
+  "audioVoice": "am_michael",
+  "audioScript": "polished",
+  "audioZhUrl": "content/audio/ai-2026072002-please-stop-making-me-opt-out-of-ai.zh.mp3",
+  "audioZhProvider": "kokoro",
+  "audioZhVoice": "zm_yunyang",
+  "audioZhScript": "polished-zh"
+}
