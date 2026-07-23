@@ -1,0 +1,219 @@
+{
+  "slug": "technology-2026072312-how-ai-helps-scientists-design-the-next-generation-of-medicines",
+  "category": "technology",
+  "title": "Technology Briefing: How AI helps scientists design the next generation of medicines",
+  "summary": "A deep dive into the computational shifts reshaping pharmaceutical R&D, alongside a roundup of broader industry signals ranging from ransomware tactics in Swiss rail manufacturing to the nuanced impact of generative AI on enterprise software procurement. This piece examines the infrastructure underpinning these changes",
+  "publishedAt": "2026-07-23T12:07:23.212Z",
+  "readingMinutes": 11,
+  "image": "https://wp.technologyreview.com/wp-content/uploads/2026/07/AI_in_Biologics_Draft_4_no_Captions-1.jpg",
+  "imageAlt": "Image from source article for How AI helps scientists design the next generation of medicines",
+  "imageCaption": "How AI helps scientists design the next generation of medicines",
+  "imageSourceTitle": "How AI helps scientists design the next generation of medicines",
+  "imageSourceUrl": "https://www.technologyreview.com/2026/07/23/1140346/how-ai-helps-scientists-design-the-next-generation-of-medicines/",
+  "inlineImages": [
+    {
+      "src": "https://image.theregister.com/?imageId=5244900&width=800",
+      "alt": "Image from source article for Swiss train maker tells ransomware crooks to get off at the next stop",
+      "caption": "Swiss train maker tells ransomware crooks to get off at the next stop",
+      "sourceTitle": "Swiss train maker tells ransomware crooks to get off at the next stop",
+      "sourceUrl": "https://www.theregister.com/security/2026/07/23/stadler-rail-scoffs-at-eversts-123m-extortion-attempts/5276922"
+    },
+    {
+      "src": "https://image.theregister.com/?imageId=241548&width=800",
+      "alt": "Image from source article for IBM insists AI didn't kill software deals, just delayed them",
+      "caption": "IBM insists AI didn't kill software deals, just delayed them",
+      "sourceTitle": "IBM insists AI didn't kill software deals, just delayed them",
+      "sourceUrl": "https://www.theregister.com/software/2026/07/23/ibm-insists-ai-didnt-kill-software-deals-just-delayed-them/5276977"
+    },
+    {
+      "src": "https://media.wired.com/photos/6a6107290a9d805c13df3d74/master/pass/The-Best-Vacuums-for-Pet-Hair.jpg",
+      "alt": "Image from source article for The Best Vacuum for Pet Hair—We Tested Many to Find Which Ones Work Best (2026)",
+      "caption": "The Best Vacuum for Pet Hair—We Tested Many to Find Which Ones Work Best (2026)",
+      "sourceTitle": "The Best Vacuum for Pet Hair—We Tested Many to Find Which Ones Work Best (2026)",
+      "sourceUrl": "https://www.wired.com/gallery/best-pet-hair-vacuums/"
+    }
+  ],
+  "body": [
+    {
+      "type": "heading",
+      "text": "The Computational Shift in Pharmaceutical R&D"
+    },
+    {
+      "type": "paragraph",
+      "text": "The landscape of drug discovery is undergoing a fundamental transition, moving away from the brute-force computational methods that dominated the mid-2010s toward systems that leverage large-scale generative models and protein language models. This shift is not merely a change in tools; it represents a restructuring of the entire value chain, from the initial identification of molecular candidates to the optimization of their binding affinity and solubility profiles. The traditional approach relied heavily on molecular docking simulations, which, while computationally intensive, were often limited by the accuracy of force fields and the inability to adequately model the dynamic nature of protein-ligand interactions. These methods struggled to predict off-target effects with any reasonable confidence, leading to high attrition rates in later clinical stages."
+    },
+    {
+      "type": "paragraph",
+      "text": "Modern approaches, however, treat the protein as a sequence of tokens, similar to how natural language models process text. By training on vast datasets of known protein structures and sequences, these models learn the underlying grammar of biology. They can generate novel sequences that fold into stable structures and predict the binding affinity of small molecules with high precision. This capability allows researchers to navigate the vast chemical space more efficiently, identifying promising candidates that might have been missed by traditional screening methods. The integration of these models into the R&D workflow is accelerating the pace of discovery, enabling the design of therapies for previously intractable diseases."
+    },
+    {
+      "type": "image",
+      "src": "https://image.theregister.com/?imageId=5244900&width=800",
+      "alt": "Image from source article for Swiss train maker tells ransomware crooks to get off at the next stop",
+      "caption": "Swiss train maker tells ransomware crooks to get off at the next stop",
+      "sourceTitle": "Swiss train maker tells ransomware crooks to get off at the next stop",
+      "sourceUrl": "https://www.theregister.com/security/2026/07/23/stadler-rail-scoffs-at-eversts-123m-extortion-attempts/5276922"
+    },
+    {
+      "type": "heading",
+      "text": "Infrastructure and Cloud Economics in Biotech"
+    },
+    {
+      "type": "paragraph",
+      "text": "The computational demands of these advanced models have necessitated a significant shift in infrastructure. Where once a high-performance computing cluster might suffice for docking studies, the training and inference of large-scale protein models now require the massive scale of modern cloud infrastructure. This has led to a convergence between the biotech and cloud sectors, with major hyperscalers offering specialized instances and optimized software stacks tailored for scientific workloads. The economics of this shift are profound: the cost of compute is no longer the primary barrier to entry, but rather the availability of talent capable of navigating these complex environments. This has created a new class of hybrid professionals—bioinformaticians who are also proficient in distributed systems and cloud architecture."
+    },
+    {
+      "type": "paragraph",
+      "text": "Furthermore, the cloud model has introduced new considerations regarding data sovereignty and regulatory compliance. Clinical trial data and proprietary molecular structures are sensitive assets, and their migration to public cloud environments requires robust governance frameworks. Companies are increasingly adopting private cloud or hybrid cloud architectures to balance the need for scale with the requirements of data privacy. This infrastructure evolution is not just a technical challenge; it is a strategic imperative that shapes how biotech firms allocate capital and manage risk."
+    },
+    {
+      "type": "image",
+      "src": "https://image.theregister.com/?imageId=241548&width=800",
+      "alt": "Image from source article for IBM insists AI didn't kill software deals, just delayed them",
+      "caption": "IBM insists AI didn't kill software deals, just delayed them",
+      "sourceTitle": "IBM insists AI didn't kill software deals, just delayed them",
+      "sourceUrl": "https://www.theregister.com/software/2026/07/23/ibm-insists-ai-didnt-kill-software-deals-just-delayed-them/5276977"
+    },
+    {
+      "type": "heading",
+      "text": "Security Implications of Autonomous Model Behavior"
+    },
+    {
+      "type": "paragraph",
+      "text": "As AI models become more autonomous, the security landscape changes in ways that are difficult to predict. In the realm of drug discovery, the models themselves are the assets being protected, but they also introduce new vectors for attack. Adversarial examples—subtle perturbations to input data that cause the model to generate incorrect or harmful outputs—are a genuine concern. If a model designed to generate a therapeutic compound produces a toxic one due to an adversarial attack, the consequences could be catastrophic. This has led to a surge in research into model robustness and verification techniques, drawing parallels to the security challenges faced in other high-stakes domains like autonomous vehicles and financial trading algorithms."
+    },
+    {
+      "type": "paragraph",
+      "text": "The security implications extend beyond the models themselves. The data pipelines feeding these models, from the collection of genomic data to the integration of clinical records, are increasingly complex and distributed. Each node in this pipeline presents a potential point of failure or compromise. Moreover, the use of generative AI in the creation of synthetic data for training has raised questions about the provenance and integrity of the data used in regulatory submissions. Regulators are beginning to grapple with these issues, seeking to establish standards for data provenance and model auditing."
+    },
+    {
+      "type": "image",
+      "src": "https://media.wired.com/photos/6a6107290a9d805c13df3d74/master/pass/The-Best-Vacuums-for-Pet-Hair.jpg",
+      "alt": "Image from source article for The Best Vacuum for Pet Hair—We Tested Many to Find Which Ones Work Best (2026)",
+      "caption": "The Best Vacuum for Pet Hair—We Tested Many to Find Which Ones Work Best (2026)",
+      "sourceTitle": "The Best Vacuum for Pet Hair—We Tested Many to Find Which Ones Work Best (2026)",
+      "sourceUrl": "https://www.wired.com/gallery/best-pet-hair-vacuums/"
+    },
+    {
+      "type": "heading",
+      "text": "Product Strategy and the Software Deal Ecosystem"
+    },
+    {
+      "type": "paragraph",
+      "text": "The impact of AI on the broader software ecosystem is a critical component of the product strategy for any company relying on these technologies. IBM, for instance, has noted that while AI has not killed software deals, it has delayed them. This observation highlights a subtle but important shift in procurement behavior. Decision-makers are increasingly cautious about adopting new AI-driven solutions without a clear understanding of their integration with existing workflows. This caution is not unique to the software sector; it is a general phenomenon in industries where the cost of failure is high, such as pharmaceuticals and finance."
+    },
+    {
+      "type": "paragraph",
+      "text": "For biotech companies, this means that the product strategy must account for the time and resources required to validate AI tools before full-scale adoption. The validation process involves not just testing the models on known datasets but also assessing their performance on novel, real-world scenarios. This validation step adds a layer of complexity to the product lifecycle, requiring close collaboration between data scientists and domain experts. The outcome is a more robust but slower adoption curve, which has implications for competitive positioning and investment timelines."
+    },
+    {
+      "type": "heading",
+      "text": "Operational Consequences and Cross-Industry Signals"
+    },
+    {
+      "type": "paragraph",
+      "text": "The operational consequences of these shifts are felt across the entire organization. In the realm of security, the Swiss train maker Stadler Rail's recent experience with ransomware extortion attempts serves as a stark reminder of the vulnerabilities inherent in complex, interconnected systems. While the specific details of the attack are not directly relevant to drug discovery, the broader lesson is one of vigilance. The same threat actors that target industrial control systems are increasingly looking at software and data infrastructure as high-value targets. For biotech firms, this underscores the importance of a holistic security posture that extends beyond the laboratory to the cloud and the supply chain."
+    },
+    {
+      "type": "paragraph",
+      "text": "Similarly, the software industry's own evolution offers relevant operational insights. Firefox 153's self-containment and Thunderbird 153's comprehensive fixes illustrate the ongoing efforts to improve reliability and reduce dependencies in software ecosystems. These efforts are not just about fixing bugs; they are about creating more resilient systems that can withstand the pressures of modern computing environments. For biotech, this translates to a need for software that is not only powerful but also maintainable and secure over the long term."
+    },
+    {
+      "type": "paragraph",
+      "text": "The consumer tech sector also provides a window into user expectations and product differentiation. The market for pet hair vacuums, for example, has seen significant innovation in recent years, with companies competing on features like suction power, filtration efficiency, and ease of cleaning. While seemingly unrelated to drug discovery, this trend highlights the importance of user-centric design and continuous iteration. In biotech, the end-users are clinicians and researchers, and their expectations for tools are equally high. The ability to iterate quickly and respond to user feedback is a key differentiator in the competitive landscape."
+    },
+    {
+      "type": "paragraph",
+      "text": "Finally, the broader economic context cannot be ignored. The cost of computing, the availability of talent, and the regulatory environment all shape the operational reality for biotech firms. These factors are interconnected and evolve rapidly, requiring a dynamic approach to strategy and execution. The convergence of these forces is creating a new paradigm in which the boundaries between biology, computing, and business are increasingly blurred."
+    },
+    {
+      "type": "heading",
+      "text": "Conclusion"
+    },
+    {
+      "type": "paragraph",
+      "text": "The integration of AI into drug discovery is not a simple replacement of old methods with new ones; it is a fundamental reimagining of the scientific process. It requires a deep understanding of both biology and computing, as well as the ability to navigate the complex infrastructure and security challenges that come with it. As we look to the future, the companies that succeed will be those that can effectively combine these disparate domains, leveraging the power of AI to accelerate discovery while maintaining the highest standards of safety and reliability. The path ahead is fraught with challenges, but the potential rewards are immense."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Adopting hybrid cloud architectures to balance scale with data sovereignty",
+        "Investing in model robustness and verification to mitigate adversarial risks",
+        "Building cross-functional teams that bridge biology and distributed systems",
+        "Designing user-centric tools that iterate quickly based on clinician feedback",
+        "Establishing comprehensive security postures that extend beyond the lab",
+        "Developing dynamic strategies that adapt to rapidly evolving economic and regulatory conditions"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Why it matters for builders"
+    },
+    {
+      "type": "paragraph",
+      "text": "For technology operators, the important question is whether the news changes platform leverage, infrastructure cost, security posture, developer behavior, or the tradeoff between control and speed. Those mechanisms determine whether a headline becomes a real operating constraint."
+    },
+    {
+      "type": "paragraph",
+      "text": "The lead signal is How AI helps scientists design the next generation of medicines. Leo would not read it as a standalone item. He would place it beside the rest of the source set and ask which assumption is being tested: demand, cost, trust, policy, infrastructure capacity, or the willingness of customers and investors to keep paying for the current narrative."
+    },
+    {
+      "type": "paragraph",
+      "text": "The current source mix points to several connected signals rather than one isolated story: How AI helps scientists design the next generation of medicines; Swiss train maker tells ransomware crooks to get off at the next stop; IBM insists AI didn't kill software deals, just delayed them; The Best Vacuum for Pet Hair—We Tested Many to Find Which Ones Work Best (2026); Firefox 153 contains itself while Thunderbird 153 fixes almost everything. Read together, they give Leo a broader map of where attention is moving and which assumptions deserve a second look."
+    },
+    {
+      "type": "heading",
+      "text": "Second-order effects"
+    },
+    {
+      "type": "paragraph",
+      "text": "The second-order question is where complexity moves. A tool can make one team faster while pushing cost, governance, or operational risk onto another team. The useful analysis follows that transfer instead of stopping at the vendor's preferred story."
+    },
+    {
+      "type": "paragraph",
+      "text": "Leo's operating lens is to ask what a careful builder would do differently on Monday morning. If the answer is a clearer dependency map, a different vendor boundary, a security review, or a more conservative architecture choice, the headline has practical weight."
+    },
+    {
+      "type": "heading",
+      "text": "What to watch next"
+    },
+    {
+      "type": "paragraph",
+      "text": "The next useful check is where the pressure shows up first: procurement, architecture reviews, incident response, margins, or product roadmaps. That is usually where the strategic meaning becomes visible before it appears in a polished executive narrative."
+    },
+    {
+      "type": "paragraph",
+      "text": "The practical discipline is to avoid treating the freshest headline as the whole story. The stronger read is slower and more mechanical: identify the constraint, watch whether it spreads, and keep revising the map as better evidence arrives."
+    }
+  ],
+  "sources": [
+    {
+      "title": "How AI helps scientists design the next generation of medicines",
+      "url": "https://www.technologyreview.com/2026/07/23/1140346/how-ai-helps-scientists-design-the-next-generation-of-medicines/"
+    },
+    {
+      "title": "Swiss train maker tells ransomware crooks to get off at the next stop",
+      "url": "https://www.theregister.com/security/2026/07/23/stadler-rail-scoffs-at-eversts-123m-extortion-attempts/5276922"
+    },
+    {
+      "title": "IBM insists AI didn't kill software deals, just delayed them",
+      "url": "https://www.theregister.com/software/2026/07/23/ibm-insists-ai-didnt-kill-software-deals-just-delayed-them/5276977"
+    },
+    {
+      "title": "The Best Vacuum for Pet Hair—We Tested Many to Find Which Ones Work Best (2026)",
+      "url": "https://www.wired.com/gallery/best-pet-hair-vacuums/"
+    },
+    {
+      "title": "Firefox 153 contains itself while Thunderbird 153 fixes almost everything",
+      "url": "https://www.theregister.com/software/2026/07/23/firefox-153-contains-itself-while-thunderbird-153-fixes-almost-everything/5276390"
+    }
+  ],
+  "audioUrl": "content/audio/technology-2026072312-how-ai-helps-scientists-design-the-next-generation-of-medicines.mp3",
+  "audioProvider": "kokoro",
+  "audioVoice": "am_michael",
+  "audioScript": "polished",
+  "audioZhUrl": "content/audio/technology-2026072312-how-ai-helps-scientists-design-the-next-generation-of-medicines.zh.mp3",
+  "audioZhProvider": "kokoro",
+  "audioZhVoice": "zm_yunyang",
+  "audioZhScript": "polished-zh"
+}
