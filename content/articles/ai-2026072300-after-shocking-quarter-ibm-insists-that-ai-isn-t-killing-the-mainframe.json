@@ -1,0 +1,220 @@
+{
+  "slug": "ai-2026072300-after-shocking-quarter-ibm-insists-that-ai-isn-t-killing-the-mainframe",
+  "category": "ai",
+  "title": "AI Briefing: After shocking quarter, IBM insists that AI isn’t killing the mainframe",
+  "summary": "IBM's recent earnings miss has reignited debate over the future of enterprise computing. While generative models dominate headlines, the mainframe remains a critical infrastructure pillar for global banking and logistics. Meanwhile, NTT DATA leverages Codex to compress incident analysis windows, and the broader ecosyst",
+  "publishedAt": "2026-07-23T00:07:15.766Z",
+  "readingMinutes": 9,
+  "image": "https://techcrunch.com/wp-content/uploads/2022/05/Arvind-at-Think.jpeg?resize=1200,674",
+  "imageAlt": "Image from source article for After shocking quarter, IBM insists that AI isn’t killing the mainframe",
+  "imageCaption": "After shocking quarter, IBM insists that AI isn’t killing the mainframe",
+  "imageSourceTitle": "After shocking quarter, IBM insists that AI isn’t killing the mainframe",
+  "imageSourceUrl": "https://techcrunch.com/2026/07/22/after-shocking-quarter-ibm-insists-that-ai-isnt-killing-the-mainframe/",
+  "inlineImages": [
+    {
+      "src": "https://spectrum.ieee.org/media-library/a-small-human-silhouette-against-a-video-installation-wall-displaying-an-abstract-jumble-of-textures-inside-of-a-rectangular-box.jpg?id=67103138&width=980",
+      "alt": "Image from source article for What Makes AI Art Worth Collecting?",
+      "caption": "What Makes AI Art Worth Collecting?",
+      "sourceTitle": "What Makes AI Art Worth Collecting?",
+      "sourceUrl": "https://spectrum.ieee.org/ai-art-market"
+    },
+    {
+      "src": "https://spectrum.ieee.org/media-library/aerial-view-of-a-large-industrial-complex-near-housing-and-power-lines-in-autumn.jpg?id=67080460&width=980",
+      "alt": "Image from source article for AI’s Volatile Power Use Quietly Tests Grid Limits",
+      "caption": "AI’s Volatile Power Use Quietly Tests Grid Limits",
+      "sourceTitle": "AI’s Volatile Power Use Quietly Tests Grid Limits",
+      "sourceUrl": "https://spectrum.ieee.org/data-centers-grid-instability"
+    }
+  ],
+  "body": [
+    {
+      "type": "heading",
+      "text": "The Mainframe Misconception: Revenue vs. Strategic Value"
+    },
+    {
+      "type": "paragraph",
+      "text": "IBM's latest quarterly report delivered a stark reminder that legacy hardware cycles are not linear. The company's core mainframe segment posted a decline in revenue, a move that has been interpreted by some market observers as a death knell for the zSeries architecture. However, a closer examination of the financial disclosures and executive commentary reveals a more nuanced reality. The decline in reported revenue is not necessarily indicative of a failure in the mainframe market, but rather a reflection of shifting accounting practices and the nature of IBM's hybrid cloud offerings. The mainframe remains the backbone for high-volume, low-latency transaction processing in global banking, insurance, and logistics sectors where downtime is not an option."
+    },
+    {
+      "type": "paragraph",
+      "text": "The mechanism here is one of platform consolidation. IBM has been aggressively migrating workloads from on-premise mainframes to its Cloud Pak for Business Automation (CP4BA) and other hybrid cloud solutions. This migration does not eliminate the mainframe; instead, it offloads the physical hardware maintenance to IBM's managed services while retaining the logical processing power. The revenue decline is partially due to the recognition of these services as separate line items, which can appear as a drop in traditional hardware revenue. This is a classic case of model shifts: the underlying compute remains, but the delivery mechanism changes, and the financial reporting reflects that change."
+    },
+    {
+      "type": "image",
+      "src": "https://spectrum.ieee.org/media-library/a-small-human-silhouette-against-a-video-installation-wall-displaying-an-abstract-jumble-of-textures-inside-of-a-rectangular-box.jpg?id=67103138&width=980",
+      "alt": "Image from source article for What Makes AI Art Worth Collecting?",
+      "caption": "What Makes AI Art Worth Collecting?",
+      "sourceTitle": "What Makes AI Art Worth Collecting?",
+      "sourceUrl": "https://spectrum.ieee.org/ai-art-market"
+    },
+    {
+      "type": "paragraph",
+      "text": "Furthermore, the mainframe's role in AI is often misunderstood. While generative AI models are trained on massive datasets, the inference phase for real-time transactional processing still relies heavily on the deterministic nature of mainframe architectures. AI isn't replacing the mainframe; it is being integrated into the mainframe's ecosystem through specialized accelerators and software-defined storage. The strategic value of the mainframe lies in its ability to handle massive parallelism and complex state management, which are still critical for many enterprise applications."
+    },
+    {
+      "type": "heading",
+      "text": "NTT DATA's Codex Integration: Compressing Incident Analysis"
+    },
+    {
+      "type": "paragraph",
+      "text": "In a significant operational shift, NTT DATA Group has announced a reduction in incident analysis times to 30 minutes, a move enabled by the integration of OpenAI's Codex into their incident response workflows. This is not merely a speed-up; it represents a fundamental change in the labor design of IT operations. Traditionally, incident analysis required deep domain expertise and lengthy manual investigation, often taking hours or days. By leveraging Codex, NTT DATA is automating the initial triage and root cause identification phases, allowing human analysts to focus on complex resolution strategies rather than data gathering."
+    },
+    {
+      "type": "image",
+      "src": "https://spectrum.ieee.org/media-library/aerial-view-of-a-large-industrial-complex-near-housing-and-power-lines-in-autumn.jpg?id=67080460&width=980",
+      "alt": "Image from source article for AI’s Volatile Power Use Quietly Tests Grid Limits",
+      "caption": "AI’s Volatile Power Use Quietly Tests Grid Limits",
+      "sourceTitle": "AI’s Volatile Power Use Quietly Tests Grid Limits",
+      "sourceUrl": "https://spectrum.ieee.org/data-centers-grid-instability"
+    },
+    {
+      "type": "paragraph",
+      "text": "The inference economics here are compelling. Codex operates as a generative model that can produce code snippets, SQL queries, and diagnostic logs almost instantaneously. This reduces the cost per incident, but it also introduces new safety and security considerations. The model must be fine-tuned or constrained to avoid hallucinating incorrect diagnostics, which could lead to system instability. The data boundaries are also critical; NTT DATA must ensure that sensitive customer data is not inadvertently exposed during the model's inference process, requiring robust encryption and access controls."
+    },
+    {
+      "type": "paragraph",
+      "text": "This shift also impacts product strategy. By offering faster incident resolution, NTT DATA is positioning itself as a more attractive partner for enterprises with stringent SLAs. The operational consequence is a reorganization of the support team, where junior analysts can handle more complex incidents with AI assistance, effectively upskilling the workforce. This is a positive signal for the labor market, as it reduces the need for highly specialized, expensive talent while increasing overall throughput."
+    },
+    {
+      "type": "heading",
+      "text": "Embodied AI: Building a Foundation Stack for General-Purpose Robots"
+    },
+    {
+      "type": "paragraph",
+      "text": "The IEEE Spectrum article on building a foundation stack for general-purpose robots highlights a parallel evolution in the AI landscape. Just as mainframes are being reimagined for cloud-native workloads, robotics is moving from specialized, task-specific models to general-purpose embodied AI. This involves a significant shift in model architecture, where the model must not only process sensory input but also interact with the physical world through actuators and sensors."
+    },
+    {
+      "type": "paragraph",
+      "text": "The data boundaries for embodied AI are far more complex than for traditional software. Robots operate in unstructured environments, requiring models to handle a vast array of edge cases, from slippery floors to unexpected obstacles. This necessitates a foundation stack that includes not just the generative model, but also perception modules, planning algorithms, and control loops. The inference economics here are different; the cost is not just compute, but also energy and hardware wear and tear."
+    },
+    {
+      "type": "paragraph",
+      "text": "Safety and security are paramount in this domain. A malfunctioning robot can cause physical harm, unlike a software bug which primarily affects data integrity. This drives the need for rigorous testing frameworks and fail-safe mechanisms. The product strategy for embodied AI is likely to involve partnerships with hardware manufacturers, as the software must be tightly integrated with the physical form factor of the robot."
+    },
+    {
+      "type": "heading",
+      "text": "The Economics of AI Art: What Makes It Worth Collecting?"
+    },
+    {
+      "type": "paragraph",
+      "text": "The question of what makes AI art worth collecting is a fascinating exploration of the intersection between technology, aesthetics, and economics. Unlike traditional art, AI-generated works are often produced by models that can be fine-tuned or prompted to produce similar outputs, raising questions about scarcity and provenance. The market is still maturing, but early adopters are looking for unique stylistic signatures or provenance trails that can be verified via blockchain or other cryptographic methods."
+    },
+    {
+      "type": "paragraph",
+      "text": "From an inference economics perspective, generating AI art is relatively cheap, which means the value must come from the creative process or the uniqueness of the output. This has led to a shift in labor design, where human curators and prompt engineers are becoming the primary value drivers, rather than the artists themselves. The safety and security aspects are also relevant, as provenance tracking must ensure that the model used to generate the art was not trained on copyrighted works without permission."
+    },
+    {
+      "type": "heading",
+      "text": "Grid Instability: AI's Volatile Power Use"
+    },
+    {
+      "type": "paragraph",
+      "text": "Perhaps the most immediate operational consequence of the AI boom is the strain on the electrical grid. Data centers are consuming vast amounts of power, and the intermittent nature of renewable energy sources is making it increasingly difficult to meet these demands without causing instability. The IEEE Spectrum article on AI's volatile power use highlights the need for better grid management and energy storage solutions."
+    },
+    {
+      "type": "paragraph",
+      "text": "This is a critical safety issue for the broader infrastructure. If data centers are not powered reliably, the services they host, including the mainframe workloads and AI models, will suffer outages. This has led to a shift in product strategy, where companies are investing in on-site generation and energy storage to ensure power resilience. The inference economics are also affected, as the cost of power is becoming a significant portion of the total cost of running AI models."
+    },
+    {
+      "type": "paragraph",
+      "text": "Labor design in this context involves the need for specialized engineers who can manage the intersection of AI, grid management, and energy storage. This is a new field that combines knowledge of electrical engineering, data science, and policy. The operational consequence is a potential bottleneck in the supply of such talent, which could slow down the deployment of AI at scale."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Mainframe revenue decline reflects accounting shifts, not hardware obsolescence.",
+        "Codex integration reduces incident analysis time but introduces new safety and data boundary challenges.",
+        "Embodied AI requires a foundation stack that integrates perception, planning, and control.",
+        "AI art value is emerging through provenance tracking and unique stylistic signatures.",
+        "Grid instability is a critical safety issue that requires on-site generation and energy storage.",
+        "The labor market is shifting towards specialized roles in AI infrastructure and energy management."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "In the broader context, these signals suggest that AI is not a monolithic force that will simply replace all existing technologies. Instead, it is a set of tools that are being integrated into existing systems, often in ways that are not immediately obvious. The mainframe, for example, is not being killed by AI; it is being adapted to coexist with AI models in a hybrid architecture. Similarly, NTT DATA's use of Codex is not a replacement for human analysts, but an augmentation that allows them to focus on higher-value tasks."
+    },
+    {
+      "type": "paragraph",
+      "text": "The financial implications of these shifts are significant. Companies that can effectively integrate AI into their existing infrastructure will have a competitive advantage, while those that fail to adapt may find themselves left behind. The mainframe market, for instance, is likely to remain strong for the foreseeable future, but the revenue streams will change as companies migrate to hybrid cloud models. The same applies to the robotics and AI art markets, where the value proposition is evolving rapidly."
+    },
+    {
+      "type": "paragraph",
+      "text": "Safety and security are also paramount in all these areas. Whether it is the data boundaries of Codex, the physical safety of embodied AI, or the grid stability of data centers, the integration of AI introduces new risks that must be managed carefully. This requires a holistic approach to product strategy, where safety is not an afterthought but a core component of the design."
+    },
+    {
+      "type": "paragraph",
+      "text": "In conclusion, the signals from IBM, NTT DATA, and the broader AI ecosystem paint a picture of a technology that is deeply embedded in the fabric of enterprise computing. AI is not killing the mainframe; it is transforming it. It is not replacing human analysts; it is augmenting them. It is not just a software tool; it is a physical infrastructure challenge that requires careful management of energy and safety. The future of AI is not a sudden disruption, but a gradual evolution that will reshape industries in ways we are only beginning to understand."
+    },
+    {
+      "type": "heading",
+      "text": "What changes in practice"
+    },
+    {
+      "type": "paragraph",
+      "text": "For AI, the operational question is whether the news changes how products are built, deployed, governed, or paid for. A model announcement matters most when it shifts inference cost, reliability, data boundaries, security exposure, or the amount of work a team can safely delegate to automation."
+    },
+    {
+      "type": "paragraph",
+      "text": "The lead signal is After shocking quarter, IBM insists that AI isn’t killing the mainframe. Leo would not read it as a standalone item. He would place it beside the rest of the source set and ask which assumption is being tested: demand, cost, trust, policy, infrastructure capacity, or the willingness of customers and investors to keep paying for the current narrative."
+    },
+    {
+      "type": "paragraph",
+      "text": "The current source mix points to several connected signals rather than one isolated story: After shocking quarter, IBM insists that AI isn’t killing the mainframe; NTT DATA Group cuts incident analysis to 30 minutes with Codex; Building a Foundation Stack for General-Purpose Robots; What Makes AI Art Worth Collecting?; AI’s Volatile Power Use Quietly Tests Grid Limits. Read together, they give Leo a broader map of where attention is moving and which assumptions deserve a second look."
+    },
+    {
+      "type": "heading",
+      "text": "Second-order effects"
+    },
+    {
+      "type": "paragraph",
+      "text": "The second-order question is trust. Teams do not adopt artificial intelligence because a demo is impressive; they adopt it when the workflow is observable, the failure mode is bounded, and the economics still make sense after compliance, support, latency, and human review are counted."
+    },
+    {
+      "type": "paragraph",
+      "text": "Leo's operating lens is to look for the control point. Sometimes it is the model, sometimes the distribution channel, sometimes the data contract, and sometimes the boring integration layer that decides whether a capability becomes a dependable product."
+    },
+    {
+      "type": "heading",
+      "text": "What to watch next"
+    },
+    {
+      "type": "paragraph",
+      "text": "The next useful check is adoption quality. Pilots, demos, and benchmark claims are weaker signals than durable workflows, clear ownership, measured costs, and evidence that customers trust the system enough to use it in consequential work."
+    },
+    {
+      "type": "paragraph",
+      "text": "The practical discipline is to avoid treating the freshest headline as the whole story. The stronger read is slower and more mechanical: identify the constraint, watch whether it spreads, and keep revising the map as better evidence arrives."
+    }
+  ],
+  "sources": [
+    {
+      "title": "After shocking quarter, IBM insists that AI isn’t killing the mainframe",
+      "url": "https://techcrunch.com/2026/07/22/after-shocking-quarter-ibm-insists-that-ai-isnt-killing-the-mainframe/"
+    },
+    {
+      "title": "NTT DATA Group cuts incident analysis to 30 minutes with Codex",
+      "url": "https://openai.com/index/ntt-data"
+    },
+    {
+      "title": "Building a Foundation Stack for General-Purpose Robots",
+      "url": "https://spectrum.ieee.org/x-square-robot-embodied-ai-stack"
+    },
+    {
+      "title": "What Makes AI Art Worth Collecting?",
+      "url": "https://spectrum.ieee.org/ai-art-market"
+    },
+    {
+      "title": "AI’s Volatile Power Use Quietly Tests Grid Limits",
+      "url": "https://spectrum.ieee.org/data-centers-grid-instability"
+    }
+  ],
+  "audioUrl": "content/audio/ai-2026072300-after-shocking-quarter-ibm-insists-that-ai-isn-t-killing-the-mainframe.mp3",
+  "audioProvider": "kokoro",
+  "audioVoice": "am_michael",
+  "audioScript": "polished",
+  "audioZhUrl": "content/audio/ai-2026072300-after-shocking-quarter-ibm-insists-that-ai-isn-t-killing-the-mainframe.zh.mp3",
+  "audioZhProvider": "kokoro",
+  "audioZhVoice": "zm_yunyang",
+  "audioZhScript": "polished-zh"
+}
