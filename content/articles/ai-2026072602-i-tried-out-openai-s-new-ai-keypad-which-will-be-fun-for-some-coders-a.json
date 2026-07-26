@@ -1,0 +1,222 @@
+{
+  "slug": "ai-2026072602-i-tried-out-openai-s-new-ai-keypad-which-will-be-fun-for-some-coders-a",
+  "category": "ai",
+  "title": "AI Briefing: I tried out OpenAI’s new AI keypad — which will be fun for some coders and slightly mystifying to everyone else",
+  "summary": "OpenAI’s new AI keypad represents a shift from passive completion to active, stateful interaction, while Google expands managed agents in the Gemini API with background tasks and remote MCP. Across the industry, small models are gaining traction in specialized domains, and the labor market is adjusting as companies cit",
+  "publishedAt": "2026-07-26T02:07:15.639Z",
+  "readingMinutes": 9,
+  "image": "https://techcrunch.com/wp-content/uploads/2026/07/Micro.webp?resize=1200,800",
+  "imageAlt": "Image from source article for I tried out OpenAI’s new AI keypad — which will be fun for some coders and slightly mystifying to everyone else",
+  "imageCaption": "I tried out OpenAI’s new AI keypad — which will be fun for some coders and slightly mystifying to everyone else",
+  "imageSourceTitle": "I tried out OpenAI’s new AI keypad — which will be fun for some coders and slightly mystifying to everyone else",
+  "imageSourceUrl": "https://techcrunch.com/2026/07/24/i-tried-out-openais-new-ai-keypad-which-will-be-fun-for-coders-and-slightly-mystifying-to-everyone-else/",
+  "inlineImages": [
+    {
+      "src": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Managed_agents_feature_bundle_launch.width-1300.png",
+      "alt": "Image from source article for Expanding Managed Agents in Gemini API:  background tasks, remote MCP and more",
+      "caption": "Expanding Managed Agents in Gemini API:  background tasks, remote MCP and more",
+      "sourceTitle": "Expanding Managed Agents in Gemini API:  background tasks, remote MCP and more",
+      "sourceUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api/"
+    },
+    {
+      "src": "https://spectrum.ieee.org/media-library/a-middle-aged-man-monitors-his-younger-colleague-through-a-simulator-lab-window-as-he-conducts-heart-rhythm-experiments-on-a-med.jpg?id=67101131&width=980",
+      "alt": "Image from source article for Small AI Models Gain Traction Around the World",
+      "caption": "Small AI Models Gain Traction Around the World",
+      "sourceTitle": "Small AI Models Gain Traction Around the World",
+      "sourceUrl": "https://spectrum.ieee.org/small-language-models-ai-pharmaceuticals"
+    },
+    {
+      "src": "https://techcrunch.com/wp-content/uploads/2026/07/robot-at-desk.png?resize=1200,800",
+      "alt": "Image from source article for Monday.com is the latest tech company to blame AI for layoffs — here are 20 others",
+      "caption": "Monday.com is the latest tech company to blame AI for layoffs — here are 20 others",
+      "sourceTitle": "Monday.com is the latest tech company to blame AI for layoffs — here are 20 others",
+      "sourceUrl": "https://techcrunch.com/2026/07/25/the-running-list-major-tech-layoffs-in-2026-where-employers-cited-ai/"
+    }
+  ],
+  "body": [
+    {
+      "type": "heading",
+      "text": "The Keypad: From Completion to Interaction"
+    },
+    {
+      "type": "paragraph",
+      "text": "OpenAI has introduced an AI keypad that transforms the coding interface from a simple text completion engine into a stateful, interactive workspace. The device is not merely a hardware novelty; it is a product strategy pivot that targets developers who find traditional IDEs and chat interfaces insufficient for complex, multi-step reasoning tasks. By embedding a physical or virtual keypad directly into the development environment, OpenAI aims to capture a segment of the market that values tactile feedback and immediate context retention over the latency of token streaming."
+    },
+    {
+      "type": "paragraph",
+      "text": "The mechanism behind this shift relies on a change in inference economics. Traditional models operate on a request-response basis, where the system generates tokens sequentially and the user must wait for each chunk to be processed. The keypad introduces a persistent state that allows the model to maintain context across multiple interactions without re-prompting the entire history. This reduces the effective cost per task, as the model can operate in a more efficient mode, leveraging smaller, specialized models for routine operations while reserving larger models for complex reasoning."
+    },
+    {
+      "type": "image",
+      "src": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Managed_agents_feature_bundle_launch.width-1300.png",
+      "alt": "Image from source article for Expanding Managed Agents in Gemini API:  background tasks, remote MCP and more",
+      "caption": "Expanding Managed Agents in Gemini API:  background tasks, remote MCP and more",
+      "sourceTitle": "Expanding Managed Agents in Gemini API:  background tasks, remote MCP and more",
+      "sourceUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api/"
+    },
+    {
+      "type": "paragraph",
+      "text": "For the average user, the keypad may appear mystifying, but for coders accustomed to terminal-based workflows, it offers a familiar yet enhanced interface. The keypad allows users to issue commands, query the model, and receive feedback in a way that feels like a direct conversation with an assistant rather than a static code generator. This change in user experience is significant, as it alters the data boundaries of the interaction: the model now receives not just text prompts but also structured inputs from the keypad, which can include code snippets, file paths, and execution results."
+    },
+    {
+      "type": "heading",
+      "text": "Google’s Managed Agents: Background Tasks and Remote MCP"
+    },
+    {
+      "type": "paragraph",
+      "text": "Google has expanded its Managed Agents feature in the Gemini API, introducing capabilities such as background tasks and remote Model Context Protocol (MCP) connections. This move signals a broader industry trend toward agents that can operate autonomously, managing complex workflows without constant user intervention. The inclusion of background tasks allows agents to perform long-running operations, such as data processing or model training, while the user continues to work on other tasks. Remote MCP connections enable agents to interact with external tools and services, effectively extending the model’s reach beyond the immediate environment."
+    },
+    {
+      "type": "image",
+      "src": "https://spectrum.ieee.org/media-library/a-middle-aged-man-monitors-his-younger-colleague-through-a-simulator-lab-window-as-he-conducts-heart-rhythm-experiments-on-a-med.jpg?id=67101131&width=980",
+      "alt": "Image from source article for Small AI Models Gain Traction Around the World",
+      "caption": "Small AI Models Gain Traction Around the World",
+      "sourceTitle": "Small AI Models Gain Traction Around the World",
+      "sourceUrl": "https://spectrum.ieee.org/small-language-models-ai-pharmaceuticals"
+    },
+    {
+      "type": "paragraph",
+      "text": "The operational consequences of these features are profound. By offloading tasks to background processes, Google reduces the perceived latency of the user experience, even though the underlying model may still be processing data in the background. This shift also introduces new safety and security considerations, as agents now have the ability to execute arbitrary code and interact with external systems. Developers must carefully design their agents to ensure that they do not inadvertently access sensitive data or perform unauthorized actions. The expansion of managed agents thus represents a trade-off between convenience and control, a balance that will be critical as the industry moves toward more autonomous AI systems."
+    },
+    {
+      "type": "heading",
+      "text": "Small Models Gain Traction Around the World"
+    },
+    {
+      "type": "paragraph",
+      "text": "In parallel with these developments, small AI models are gaining traction in specialized domains such as pharmaceuticals and other industries where large models may be overkill or too costly to deploy. The spectrum of applications for small models is expanding, as companies seek more efficient solutions that can be run on edge devices or within constrained environments. This trend is driven by both economic and technical factors: small models require less computational power, making them more accessible to a wider range of users, while their specialized training allows them to outperform larger models in niche tasks."
+    },
+    {
+      "type": "image",
+      "src": "https://techcrunch.com/wp-content/uploads/2026/07/robot-at-desk.png?resize=1200,800",
+      "alt": "Image from source article for Monday.com is the latest tech company to blame AI for layoffs — here are 20 others",
+      "caption": "Monday.com is the latest tech company to blame AI for layoffs — here are 20 others",
+      "sourceTitle": "Monday.com is the latest tech company to blame AI for layoffs — here are 20 others",
+      "sourceUrl": "https://techcrunch.com/2026/07/25/the-running-list-major-tech-layoffs-in-2026-where-employers-cited-ai/"
+    },
+    {
+      "type": "paragraph",
+      "text": "The rise of small models also has implications for data boundaries and safety. Because small models are often trained on domain-specific data, they can provide more accurate and relevant outputs for their intended use cases. However, this specialization also means that they may be less robust to out-of-distribution inputs, requiring careful design of the models’ operating environments. Companies must therefore invest in robust testing and validation protocols to ensure that their small models perform reliably in real-world scenarios."
+    },
+    {
+      "type": "heading",
+      "text": "Labor Market Adjustments and the AI Arms Race"
+    },
+    {
+      "type": "paragraph",
+      "text": "The labor market is adjusting to these technological shifts, with companies increasingly citing AI as a factor in their layoff decisions. Monday.com is the latest tech company to blame AI for layoffs, joining a growing list of employers who have made similar announcements. This trend reflects a broader concern about the impact of AI on employment, as companies seek to optimize their operations and reduce costs in the face of rapid technological change. The AI arms race in technical interviews is also escalating, with candidates being expected to demonstrate proficiency in AI tools and techniques as a prerequisite for many roles."
+    },
+    {
+      "type": "paragraph",
+      "text": "The operational consequences of these labor market adjustments are significant. As companies adopt AI tools to automate tasks and reduce headcount, they must also invest in training their remaining workforce to work alongside these tools. This shift in labor design requires a rethinking of how companies approach hiring and retention, as well as how they structure their internal processes. The industry is thus moving toward a new equilibrium, where AI plays a central role in both productivity and workforce management."
+    },
+    {
+      "type": "heading",
+      "text": "Safety, Security, and the Future of AI Interfaces"
+    },
+    {
+      "type": "paragraph",
+      "text": "As AI interfaces become more sophisticated, the challenges of safety and security grow in complexity. The introduction of stateful interactions, background tasks, and remote MCP connections all introduce new attack surfaces that must be addressed. Developers must design their systems to be resilient to adversarial inputs, ensuring that the AI does not inadvertently expose sensitive data or perform unauthorized actions. This requires a combination of technical safeguards, such as input validation and output filtering, as well as organizational policies that govern how AI systems are deployed and monitored."
+    },
+    {
+      "type": "paragraph",
+      "text": "The future of AI interfaces will likely involve a blend of these different approaches, with companies choosing the tools and techniques that best suit their needs. OpenAI’s keypad, Google’s managed agents, and the rise of small models all represent different paths toward more effective and efficient AI systems. The industry must continue to innovate, balancing the benefits of these new technologies with the risks they introduce. As AI becomes more integrated into everyday workflows, the stakes for safety and security will only increase, requiring ongoing investment in research and development."
+    },
+    {
+      "type": "paragraph",
+      "text": "In the broader context of the industry, these developments suggest that the AI arms race is not just about raw computational power or model size, but about the ability to create interfaces and systems that are both powerful and safe. The keypad, managed agents, and small models all contribute to this race, each offering different advantages and trade-offs. The industry must navigate these trade-offs carefully, ensuring that the benefits of AI are realized without compromising safety or security."
+    },
+    {
+      "type": "heading",
+      "text": "A Final Observation on the State of AI"
+    },
+    {
+      "type": "paragraph",
+      "text": "The landscape of AI is rapidly evolving, with new tools and techniques emerging at an unprecedented pace. The keypad, managed agents, and small models are just a few of the many innovations that are reshaping the industry. As these tools become more widely adopted, they will influence everything from how developers write code to how companies manage their operations. The industry must remain vigilant, ensuring that these innovations are developed and deployed responsibly."
+    },
+    {
+      "type": "paragraph",
+      "text": "In the end, the future of AI will depend on our ability to balance the drive for innovation with the need for safety and security. The keypad, managed agents, and small models all represent different approaches to this balance, each with its own strengths and weaknesses. The industry must continue to explore these approaches, learning from both successes and failures. As AI becomes more integrated into our lives, the stakes for safety and security will only increase, requiring ongoing investment in research and development."
+    },
+    {
+      "type": "list",
+      "items": [
+        "OpenAI’s keypad introduces stateful interaction, shifting inference economics and expanding data boundaries.",
+        "Google’s managed agents enable background tasks and remote MCP, raising safety and security considerations.",
+        "Small models are gaining traction in specialized domains, offering efficiency and domain-specific accuracy.",
+        "Labor market adjustments are accelerating, with AI increasingly cited as a factor in layoff decisions.",
+        "The AI arms race is evolving beyond raw compute, focusing on interface design and robustness."
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "What changes in practice"
+    },
+    {
+      "type": "paragraph",
+      "text": "For AI, the operational question is whether the news changes how products are built, deployed, governed, or paid for. A model announcement matters most when it shifts inference cost, reliability, data boundaries, security exposure, or the amount of work a team can safely delegate to automation."
+    },
+    {
+      "type": "paragraph",
+      "text": "The lead signal is I tried out OpenAI’s new AI keypad — which will be fun for some coders and slightly mystifying to everyone else. Leo would not read it as a standalone item. He would place it beside the rest of the source set and ask which assumption is being tested: demand, cost, trust, policy, infrastructure capacity, or the willingness of customers and investors to keep paying for the current narrative."
+    },
+    {
+      "type": "paragraph",
+      "text": "The current source mix points to several connected signals rather than one isolated story: I tried out OpenAI’s new AI keypad — which will be fun for some coders and slightly mystifying to everyone else; Expanding Managed Agents in Gemini API:  background tasks, remote MCP and more; Small AI Models Gain Traction Around the World; Monday.com is the latest tech company to blame AI for layoffs — here are 20 others; The AI Arms Race in Technical Interviews Is Escalating. Read together, they give Leo a broader map of where attention is moving and which assumptions deserve a second look."
+    },
+    {
+      "type": "heading",
+      "text": "Second-order effects"
+    },
+    {
+      "type": "paragraph",
+      "text": "The second-order question is trust. Teams do not adopt artificial intelligence because a demo is impressive; they adopt it when the workflow is observable, the failure mode is bounded, and the economics still make sense after compliance, support, latency, and human review are counted."
+    },
+    {
+      "type": "paragraph",
+      "text": "Leo's operating lens is to look for the control point. Sometimes it is the model, sometimes the distribution channel, sometimes the data contract, and sometimes the boring integration layer that decides whether a capability becomes a dependable product."
+    },
+    {
+      "type": "heading",
+      "text": "What to watch next"
+    },
+    {
+      "type": "paragraph",
+      "text": "The next useful check is adoption quality. Pilots, demos, and benchmark claims are weaker signals than durable workflows, clear ownership, measured costs, and evidence that customers trust the system enough to use it in consequential work."
+    },
+    {
+      "type": "paragraph",
+      "text": "The practical discipline is to avoid treating the freshest headline as the whole story. The stronger read is slower and more mechanical: identify the constraint, watch whether it spreads, and keep revising the map as better evidence arrives."
+    }
+  ],
+  "sources": [
+    {
+      "title": "I tried out OpenAI’s new AI keypad — which will be fun for some coders and slightly mystifying to everyone else",
+      "url": "https://techcrunch.com/2026/07/24/i-tried-out-openais-new-ai-keypad-which-will-be-fun-for-coders-and-slightly-mystifying-to-everyone-else/"
+    },
+    {
+      "title": "Expanding Managed Agents in Gemini API:  background tasks, remote MCP and more",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api/"
+    },
+    {
+      "title": "Small AI Models Gain Traction Around the World",
+      "url": "https://spectrum.ieee.org/small-language-models-ai-pharmaceuticals"
+    },
+    {
+      "title": "Monday.com is the latest tech company to blame AI for layoffs — here are 20 others",
+      "url": "https://techcrunch.com/2026/07/25/the-running-list-major-tech-layoffs-in-2026-where-employers-cited-ai/"
+    },
+    {
+      "title": "The AI Arms Race in Technical Interviews Is Escalating",
+      "url": "https://spectrum.ieee.org/technical-interview-ai-arms-race"
+    }
+  ],
+  "audioUrl": "content/audio/ai-2026072602-i-tried-out-openai-s-new-ai-keypad-which-will-be-fun-for-some-coders-a.mp3",
+  "audioProvider": "kokoro",
+  "audioVoice": "am_michael",
+  "audioScript": "polished",
+  "audioZhUrl": "content/audio/ai-2026072602-i-tried-out-openai-s-new-ai-keypad-which-will-be-fun-for-some-coders-a.zh.mp3",
+  "audioZhProvider": "kokoro",
+  "audioZhVoice": "zm_yunyang",
+  "audioZhScript": "polished-zh"
+}
