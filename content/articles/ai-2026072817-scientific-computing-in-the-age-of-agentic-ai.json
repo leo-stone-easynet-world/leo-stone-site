@@ -1,0 +1,209 @@
+{
+  "slug": "ai-2026072817-scientific-computing-in-the-age-of-agentic-ai",
+  "category": "ai",
+  "title": "AI Briefing: Scientific Computing in the Age of Agentic AI",
+  "summary": "OpenAI's recent push into scientific computing with agentic AI marks a significant platform shift, moving beyond simple inference to autonomous problem-solving. Concurrently, the limitations of Large Language Models in handling structured data are being addressed by large tabular models, while overthinking risks introd",
+  "publishedAt": "2026-07-28T17:07:14.740Z",
+  "readingMinutes": 10,
+  "image": "https://spectrum.ieee.org/media-library/three-people-smiling-while-seated-on-a-couch-in-a-casual-office-environment.jpg?id=67114725&width=980",
+  "imageAlt": "Image from source article for Large Tabular Models Excel Where LLMs Fail",
+  "imageCaption": "Large Tabular Models Excel Where LLMs Fail",
+  "imageSourceTitle": "Large Tabular Models Excel Where LLMs Fail",
+  "imageSourceUrl": "https://spectrum.ieee.org/large-tabular-models-nexus",
+  "inlineImages": [
+    {
+      "src": "https://spectrum.ieee.org/media-library/conceptual-illustration-of-a-dozen-security-lasers-pointed-in-the-wrong-direction-around-a-password-thus-ironically-creating-a.jpg?id=67107951&width=980",
+      "alt": "Image from source article for AI Models Overthink Problems—and It’s a Security Risk",
+      "caption": "AI Models Overthink Problems—and It’s a Security Risk",
+      "sourceTitle": "AI Models Overthink Problems—and It’s a Security Risk",
+      "sourceUrl": "https://spectrum.ieee.org/ai-reasoning-models-security-risk"
+    },
+    {
+      "src": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+      "alt": "Image from CNBC for The future of Wall Street is here as startups and brokers build AI agents to trade 24/7 - CNBC",
+      "caption": "The future of Wall Street is here as startups and brokers build AI agents to trade 24/7 - CNBC (CNBC)",
+      "sourceTitle": "CNBC",
+      "sourceUrl": "https://news.google.com/articles/CBMilwFBVV95cUxOck5BU0I5S0R4MUhkWFRrOWloN1hGQWY5SV9QbWg5Z3EzRm50dkszNEU3VlN5anRiVUt3ejY4V2RVcnNiMUVENjdZVFZzbVhEejYxSDhWZnNmazA1TS16WFI2RkNjNXdHYzd2eVhSWG41TDJKZ0dTN2ctdDI0TmlOb2JBS05PbUtfQURZQkFoUnZFdXdKRUpn0gGcAUFVX3lxTE8yazl4QmlHZXZ1elpzaV9iUENzTm9PLWlnU09OXzJzRnhnekpYV2xORUhKN1RUUUM5VDRPTnFZNGhaWjFKX2REcjlpLTczOUhhN3Y5dk90cjdibThnaTRQRU90LVNhZTZJZzkwdmYzVzJCUDI3bzUwWUl6OWlCY3E5YWZEN1NVdzdfOTdzUGhuMVUzMjVGY2lXMGNFWQ?oc=5"
+    }
+  ],
+  "body": [
+    {
+      "type": "heading",
+      "text": "The Rise of Agentic Scientific Workflows"
+    },
+    {
+      "type": "paragraph",
+      "text": "OpenAI has announced a strategic pivot toward scientific computing, framing agentic AI not merely as a tool for generating text but as an autonomous agent capable of navigating complex research environments. This represents a fundamental shift in the architecture of scientific discovery. Historically, computational science relied on deterministic pipelines where researchers wrote scripts to process datasets and run simulations. The introduction of agentic systems changes this paradigm by injecting probabilistic reasoning into the loop. Instead of a static model taking an input and returning an output, we now see systems that can formulate hypotheses, retrieve relevant literature, design experiments, execute code, and validate results iteratively."
+    },
+    {
+      "type": "paragraph",
+      "text": "The implications for inference economics are profound. In traditional cloud computing, costs are driven by GPU hours and storage. In an agentic workflow, the cost structure shifts toward the latency of decision-making and the token consumption required for self-correction. If an agent must reason through a multi-step problem to avoid hallucinating a scientific fact, the inference overhead increases non-linearly with problem complexity. This suggests that for high-stakes domains like drug discovery or climate modeling, the current cost-benefit ratio of using general-purpose LLMs as agents may be unsustainable unless model efficiency improves dramatically. We are likely approaching a point where specialized, smaller models optimized for specific scientific domains will outperform generic giants when deployed in agentic loops, simply because they require fewer tokens to reach the same level of certainty."
+    },
+    {
+      "type": "image",
+      "src": "https://spectrum.ieee.org/media-library/conceptual-illustration-of-a-dozen-security-lasers-pointed-in-the-wrong-direction-around-a-password-thus-ironically-creating-a.jpg?id=67107951&width=980",
+      "alt": "Image from source article for AI Models Overthink Problems—and It’s a Security Risk",
+      "caption": "AI Models Overthink Problems—and It’s a Security Risk",
+      "sourceTitle": "AI Models Overthink Problems—and It’s a Security Risk",
+      "sourceUrl": "https://spectrum.ieee.org/ai-reasoning-models-security-risk"
+    },
+    {
+      "type": "heading",
+      "text": "Beyond Text: The Tabular Data Frontier"
+    },
+    {
+      "type": "paragraph",
+      "text": "While agentic AI dominates headlines, a quieter but equally critical evolution is occurring in how models handle structured data. Large Language Models, trained primarily on unstructured text, struggle with the precision required for financial and scientific datasets. They often fail to maintain consistency across rows and columns, leading to errors that are unacceptable in regulated environments. Recent developments point toward large tabular models that excel where LLMs falter. These models are designed to ingest structured data directly, preserving the integrity of relationships between variables without the noise of natural language interpretation."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Higher fidelity in handling sparse matrices and high-dimensional numerical arrays.",
+        "Reduced hallucination rates when generating synthetic data for training pipelines.",
+        "Direct compatibility with existing database schemas, minimizing ETL overhead."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "This shift has specific consequences for data boundaries. In the past, companies treated their proprietary datasets as a moat, fearing that feeding them into public models would dilute their competitive advantage. However, the emergence of tabular models suggests a different dynamic: these models may be less sensitive to the specific distribution of training data than text-based LLMs, or they may require such high-quality structured inputs that only a few entities can afford to provide them. The definition of 'proprietary data' is thus evolving from raw text corpora to curated numerical datasets."
+    },
+    {
+      "type": "image",
+      "src": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+      "alt": "Image from CNBC for The future of Wall Street is here as startups and brokers build AI agents to trade 24/7 - CNBC",
+      "caption": "The future of Wall Street is here as startups and brokers build AI agents to trade 24/7 - CNBC (CNBC)",
+      "sourceTitle": "CNBC",
+      "sourceUrl": "https://news.google.com/articles/CBMilwFBVV95cUxOck5BU0I5S0R4MUhkWFRrOWloN1hGQWY5SV9QbWg5Z3EzRm50dkszNEU3VlN5anRiVUt3ejY4V2RVcnNiMUVENjdZVFZzbVhEejYxSDhWZnNmazA1TS16WFI2RkNjNXdHYzd2eVhSWG41TDJKZ0dTN2ctdDI0TmlOb2JBS05PbUtfQURZQkFoUnZFdXdKRUpn0gGcAUFVX3lxTE8yazl4QmlHZXZ1elpzaV9iUENzTm9PLWlnU09OXzJzRnhnekpYV2xORUhKN1RUUUM5VDRPTnFZNGhaWjFKX2REcjlpLTczOUhhN3Y5dk90cjdibThnaTRQRU90LVNhZTZJZzkwdmYzVzJCUDI3bzUwWUl6OWlCY3E5YWZEN1NVdzdfOTdzUGhuMVUzMjVGY2lXMGNFWQ?oc=5"
+    },
+    {
+      "type": "heading",
+      "text": "The Security Risks of Overthinking"
+    },
+    {
+      "type": "paragraph",
+      "text": "As systems become more capable, they also become more prone to 'overthinking.' This phenomenon is not merely a metaphorical description; it refers to the tendency of reasoning models to generate verbose, self-correcting chains that can inadvertently leak sensitive information or expose vulnerabilities. When an agent attempts to solve a security-related problem, it may simulate attack vectors or reconstruct internal logic in ways that are not intended for public consumption. The IEEE Spectrum analysis highlights that this overthinking creates a new class of security risks."
+    },
+    {
+      "type": "paragraph",
+      "text": "Mitigating these risks requires a rethinking of safety protocols. Traditional guardrails, which often rely on keyword filtering or simple classification models, are insufficient against the nuanced reasoning processes of agentic systems. We need architectures that can detect when an agent is entering a 'reasoning mode' and apply stricter containment rules, perhaps by sandboxing the execution environment or limiting access to internal memory states. This operational consequence means that safety engineering will move from being a post-hoc filter to a core component of the model's runtime architecture."
+    },
+    {
+      "type": "heading",
+      "text": "Labor Design in Autonomous Trading"
+    },
+    {
+      "type": "paragraph",
+      "text": "The financial sector is perhaps the most immediate adopter of agentic AI. Startups and established brokers are now building AI agents to trade 24/7, a move that fundamentally alters labor design. In traditional finance, human traders provide the judgment layer, while algorithms handle execution. The new model inverts this: the algorithmic agent handles both judgment and execution, operating continuously without fatigue."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Elimination of overnight trading gaps where market conditions could deteriorate.",
+        "Real-time adaptation to macroeconomic news flows that humans cannot process instantly.",
+        "A shift in human roles from active trading to oversight and exception handling."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "This transition is not without friction. Regulatory bodies are still grappling with how to classify these agents, particularly regarding liability and audit trails. If an agent makes a catastrophic trade decision based on a flawed reasoning chain, who bears responsibility? The industry is moving toward a model where the 'human in the loop' becomes a remote supervisor, reviewing logs rather than executing trades. This raises questions about the adequacy of current compliance frameworks, which were built around discrete human actions and not continuous automated processes."
+    },
+    {
+      "type": "heading",
+      "text": "Product Strategy and the Consumer Interface"
+    },
+    {
+      "type": "paragraph",
+      "text": "While B2B applications drive the scientific and financial shifts, product strategy must also account for consumer-facing updates. Google's recent enhancements to its video tools, allowing users to create, edit, and star videos with personal avatars, illustrate a broader trend: AI is moving from the backend infrastructure to the front-end user experience. These features rely on generative models to synthesize content on demand, blurring the line between human creation and machine generation."
+    },
+    {
+      "type": "paragraph",
+      "text": "This convergence suggests that product teams will increasingly need to integrate agentic capabilities into their core offerings. A video editing tool is no longer just a suite of filters; it is an agent that understands the user's intent and generates the final output autonomously. The data boundaries here are interesting because users expect privacy, yet the models require vast amounts of context to function well. Companies will need to balance the utility of these agents with rigorous data governance policies, ensuring that personal information used for generation does not inadvertently leak into other contexts."
+    },
+    {
+      "type": "heading",
+      "text": "Operational Consequences and Infrastructure"
+    },
+    {
+      "type": "paragraph",
+      "text": "The operational landscape is changing rapidly. Organizations are no longer just managing servers; they are managing fleets of autonomous agents. This requires a new kind of observability stack that can trace not just the code execution but also the reasoning traces and memory states of AI models. Debugging an agent that hallucinates a scientific fact or makes a bad financial trade is exponentially harder than debugging a traditional script, because the error may arise from a subtle misinterpretation of context rather than a syntax error."
+    },
+    {
+      "type": "paragraph",
+      "text": "Furthermore, the cost of maintaining these systems will likely diverge from simple compute metrics. We are seeing early signs that the value proposition of AI agents depends heavily on the quality of the environment they operate in. A scientist working with a high-quality, curated dataset and robust safety protocols will see better returns than one relying on public, noisy data. This creates a two-tiered ecosystem where the most sophisticated applications thrive, while those attempting to cut corners on data or safety face diminishing returns."
+    },
+    {
+      "type": "paragraph",
+      "text": "As we look ahead, the trajectory is clear: agentic AI will become the default interface for complex tasks, whether in the lab or the trading floor. The mechanisms driving this—model shifts toward tabular precision, the economic trade-offs of reasoning latency, and the evolving definitions of security and labor—are all interlocking pieces of a larger transformation. For practitioners, the lesson is to build systems that are not only powerful but also transparent, auditable, and resilient to the very overthinking that defines their strength."
+    },
+    {
+      "type": "heading",
+      "text": "What changes in practice"
+    },
+    {
+      "type": "paragraph",
+      "text": "For AI, the operational question is whether the news changes how products are built, deployed, governed, or paid for. A model announcement matters most when it shifts inference cost, reliability, data boundaries, security exposure, or the amount of work a team can safely delegate to automation."
+    },
+    {
+      "type": "paragraph",
+      "text": "The lead signal is Scientific computing in the age of agentic AI. Leo would not read it as a standalone item. He would place it beside the rest of the source set and ask which assumption is being tested: demand, cost, trust, policy, infrastructure capacity, or the willingness of customers and investors to keep paying for the current narrative."
+    },
+    {
+      "type": "paragraph",
+      "text": "The current source mix points to several connected signals rather than one isolated story: Scientific computing in the age of agentic AI; Large Tabular Models Excel Where LLMs Fail; AI Models Overthink Problems—and It’s a Security Risk; Create, edit and star in videos with two Google Vids updates; The future of Wall Street is here as startups and brokers build AI agents to trade 24/7 - CNBC (CNBC). Read together, they give Leo a broader map of where attention is moving and which assumptions deserve a second look."
+    },
+    {
+      "type": "heading",
+      "text": "Second-order effects"
+    },
+    {
+      "type": "paragraph",
+      "text": "The second-order question is trust. Teams do not adopt artificial intelligence because a demo is impressive; they adopt it when the workflow is observable, the failure mode is bounded, and the economics still make sense after compliance, support, latency, and human review are counted."
+    },
+    {
+      "type": "paragraph",
+      "text": "Leo's operating lens is to look for the control point. Sometimes it is the model, sometimes the distribution channel, sometimes the data contract, and sometimes the boring integration layer that decides whether a capability becomes a dependable product."
+    },
+    {
+      "type": "heading",
+      "text": "What to watch next"
+    },
+    {
+      "type": "paragraph",
+      "text": "The next useful check is adoption quality. Pilots, demos, and benchmark claims are weaker signals than durable workflows, clear ownership, measured costs, and evidence that customers trust the system enough to use it in consequential work."
+    },
+    {
+      "type": "paragraph",
+      "text": "The practical discipline is to avoid treating the freshest headline as the whole story. The stronger read is slower and more mechanical: identify the constraint, watch whether it spreads, and keep revising the map as better evidence arrives."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Scientific computing in the age of agentic AI",
+      "url": "https://openai.com/index/scientific-computing-agentic-ai"
+    },
+    {
+      "title": "Large Tabular Models Excel Where LLMs Fail",
+      "url": "https://spectrum.ieee.org/large-tabular-models-nexus"
+    },
+    {
+      "title": "AI Models Overthink Problems—and It’s a Security Risk",
+      "url": "https://spectrum.ieee.org/ai-reasoning-models-security-risk"
+    },
+    {
+      "title": "Create, edit and star in videos with two Google Vids updates",
+      "url": "https://blog.google/products-and-platforms/products/workspace/gemini-omni-personal-avatars/"
+    },
+    {
+      "title": "The future of Wall Street is here as startups and brokers build AI agents to trade 24/7 - CNBC",
+      "url": "https://news.google.com/articles/CBMilwFBVV95cUxOck5BU0I5S0R4MUhkWFRrOWloN1hGQWY5SV9QbWg5Z3EzRm50dkszNEU3VlN5anRiVUt3ejY4V2RVcnNiMUVENjdZVFZzbVhEejYxSDhWZnNmazA1TS16WFI2RkNjNXdHYzd2eVhSWG41TDJKZ0dTN2ctdDI0TmlOb2JBS05PbUtfQURZQkFoUnZFdXdKRUpn0gGcAUFVX3lxTE8yazl4QmlHZXZ1elpzaV9iUENzTm9PLWlnU09OXzJzRnhnekpYV2xORUhKN1RUUUM5VDRPTnFZNGhaWjFKX2REcjlpLTczOUhhN3Y5dk90cjdibThnaTRQRU90LVNhZTZJZzkwdmYzVzJCUDI3bzUwWUl6OWlCY3E5YWZEN1NVdzdfOTdzUGhuMVUzMjVGY2lXMGNFWQ?oc=5"
+    }
+  ],
+  "audioUrl": "content/audio/ai-2026072817-scientific-computing-in-the-age-of-agentic-ai.mp3",
+  "audioProvider": "kokoro",
+  "audioVoice": "am_michael",
+  "audioScript": "polished",
+  "audioZhUrl": "content/audio/ai-2026072817-scientific-computing-in-the-age-of-agentic-ai.zh.mp3",
+  "audioZhProvider": "kokoro",
+  "audioZhVoice": "zm_yunyang",
+  "audioZhScript": "polished-zh"
+}
