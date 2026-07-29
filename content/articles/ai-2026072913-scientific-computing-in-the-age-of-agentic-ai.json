@@ -1,0 +1,217 @@
+{
+  "slug": "ai-2026072913-scientific-computing-in-the-age-of-agentic-ai",
+  "category": "ai",
+  "title": "AI Briefing: Scientific Computing in the Age of Agentic AI",
+  "summary": "As agentic AI systems begin to orchestrate complex scientific workflows, the infrastructure of computational research is undergoing a fundamental shift. This analysis examines the transition from static model deployment to dynamic, self-correcting inference loops, the rising importance of tabular data architectures ove",
+  "publishedAt": "2026-07-29T13:07:18.443Z",
+  "readingMinutes": 12,
+  "image": "https://spectrum.ieee.org/media-library/three-people-smiling-while-seated-on-a-couch-in-a-casual-office-environment.jpg?id=67114725&width=980",
+  "imageAlt": "Image from source article for Large Tabular Models Excel Where LLMs Fail",
+  "imageCaption": "Large Tabular Models Excel Where LLMs Fail",
+  "imageSourceTitle": "Large Tabular Models Excel Where LLMs Fail",
+  "imageSourceUrl": "https://spectrum.ieee.org/large-tabular-models-nexus",
+  "inlineImages": [
+    {
+      "src": "https://spectrum.ieee.org/media-library/conceptual-illustration-of-a-dozen-security-lasers-pointed-in-the-wrong-direction-around-a-password-thus-ironically-creating-a.jpg?id=67107951&width=980",
+      "alt": "Image from source article for AI Models Overthink Problems—and It’s a Security Risk",
+      "caption": "AI Models Overthink Problems—and It’s a Security Risk",
+      "sourceTitle": "AI Models Overthink Problems—and It’s a Security Risk",
+      "sourceUrl": "https://spectrum.ieee.org/ai-reasoning-models-security-risk"
+    },
+    {
+      "src": "https://wp.technologyreview.com/wp-content/uploads/2025/12/MIT_AI-Hype_1-2-top.jpg?w=840",
+      "alt": "Image from source article for The Download: a chip talent battle, and deflating AI hype",
+      "caption": "The Download: a chip talent battle, and deflating AI hype",
+      "sourceTitle": "The Download: a chip talent battle, and deflating AI hype",
+      "sourceUrl": "https://www.technologyreview.com/2026/07/29/1140884/the-download-chip-talent-battle-deflating-ai-hype/"
+    }
+  ],
+  "body": [
+    {
+      "type": "heading",
+      "text": "The Shift from Static Models to Agentic Workflows"
+    },
+    {
+      "type": "paragraph",
+      "text": "For the past decade, the dominant paradigm in artificial intelligence has been the deployment of large language models (LLMs) as static endpoints. Researchers and engineers would train a model on vast datasets, fine-tune it for a specific task, and then serve it via an API or local inference engine. The workflow was linear: input prompt, model processing, output generation. This approach worked well for natural language tasks but hit hard ceilings in scientific computing, where problems require iterative hypothesis testing, numerical verification, and multi-step reasoning that often exceeds the context window of a single pass."
+    },
+    {
+      "type": "paragraph",
+      "text": "The emergence of agentic AI changes this equation. Rather than treating the model as a black box that returns a final answer, agents are designed to decompose complex problems into sub-tasks, invoke external tools—such as Python interpreters, database queries, or simulation engines—and then synthesize the results. This architectural shift means that inference is no longer a one-off event but a continuous loop of planning, acting, and reflecting. In scientific contexts, this allows models to correct their own errors mid-computation, effectively creating a self-healing reasoning process that mimics the human scientist's iterative notebook work."
+    },
+    {
+      "type": "image",
+      "src": "https://spectrum.ieee.org/media-library/conceptual-illustration-of-a-dozen-security-lasers-pointed-in-the-wrong-direction-around-a-password-thus-ironically-creating-a.jpg?id=67107951&width=980",
+      "alt": "Image from source article for AI Models Overthink Problems—and It’s a Security Risk",
+      "caption": "AI Models Overthink Problems—and It’s a Security Risk",
+      "sourceTitle": "AI Models Overthink Problems—and It’s a Security Risk",
+      "sourceUrl": "https://spectrum.ieee.org/ai-reasoning-models-security-risk"
+    },
+    {
+      "type": "paragraph",
+      "text": "Consider a typical computational chemistry problem: predicting the binding affinity of a new molecule to a protein receptor. In the static model era, one might prompt an LLM with the molecular structure and ask for a prediction. The model would generate a plausible-sounding answer based on patterns in its training data, but it could not verify the result against actual quantum mechanical simulations. If the initial guess was off, the process would require a human to intervene, manually refining the prompt or running external code, then re-submitting. This cycle is slow, error-prone, and scales poorly with the complexity of the system."
+    },
+    {
+      "type": "paragraph",
+      "text": "With agentic workflows, the same task unfolds differently. The agent first breaks down the problem: identify the target protein, retrieve the relevant crystallographic data from a database, set up a quantum chemistry environment, and define the parameters for a density functional theory (DFT) calculation. It then executes these steps sequentially, monitoring the output of each simulation. If the initial energy minimization fails to converge or produces unphysical results, the agent does not simply report failure; it analyzes the error logs, adjusts the computational parameters—perhaps switching functionals or increasing basis set size—and retries the calculation automatically. This loop continues until a satisfactory result is achieved or a hard stop is reached. The outcome is a robust, reproducible workflow that feels less like querying a database and more like collaborating with a junior researcher who never sleeps."
+    },
+    {
+      "type": "image",
+      "src": "https://wp.technologyreview.com/wp-content/uploads/2025/12/MIT_AI-Hype_1-2-top.jpg?w=840",
+      "alt": "Image from source article for The Download: a chip talent battle, and deflating AI hype",
+      "caption": "The Download: a chip talent battle, and deflating AI hype",
+      "sourceTitle": "The Download: a chip talent battle, and deflating AI hype",
+      "sourceUrl": "https://www.technologyreview.com/2026/07/29/1140884/the-download-chip-talent-battle-deflating-ai-hype/"
+    },
+    {
+      "type": "heading",
+      "text": "Tabular Models and the Limits of Pure Language"
+    },
+    {
+      "type": "paragraph",
+      "text": "While agentic capabilities are impressive, they do not solve every domain-specific challenge. A significant portion of scientific data exists in structured formats: genomic sequences, particle physics detector logs, financial time series, and clinical trial registries. Recent developments in large tabular models suggest that these architectures are beginning to outperform LLMs in domains where the underlying data is relational rather than purely textual."
+    },
+    {
+      "type": "paragraph",
+      "text": "The mechanism here is distinct. LLMs rely on token-level probability distributions trained on unstructured text, which makes them prone to hallucinations when faced with sparse or highly structured datasets. Tabular models, by contrast, learn representations of rows and columns directly, capturing statistical dependencies that are often invisible to a language model. For instance, in particle physics, the raw output of a collider detector is a massive table of hits, energies, and timing information. An LLM attempting to parse this would struggle with the sheer volume and the precise numerical relationships required for reconstruction. A tabular model trained on such data can learn to identify invariant masses, reconstruct decay chains, and flag anomalies with a precision that pure generative models cannot match."
+    },
+    {
+      "type": "paragraph",
+      "text": "This shift has profound implications for how we approach scientific discovery. It suggests that the future of AI in science will not be dominated by a single monolithic model, but rather by a heterogeneous stack where different architectures play to their strengths. LLMs excel at natural language understanding, code generation, and high-level reasoning, while tabular models handle the rigorous numerical analysis required for experimental data. Hybrid systems that seamlessly route data between these modalities—perhaps using an LLM to formulate a hypothesis and a tabular model to validate it against sensor readings—are likely to become the standard operating procedure in fields like bioinformatics, materials science, and climate modeling."
+    },
+    {
+      "type": "heading",
+      "text": "The Security Friction of Overthinking"
+    },
+    {
+      "type": "paragraph",
+      "text": "A growing concern in the deployment of agentic systems is that they sometimes overthink problems. When an agent is given a relatively straightforward task, it may generate multiple hypotheses, run simulations for each, and then spend considerable compute resources evaluating edge cases that are irrelevant to the original objective. While this thoroughness can be beneficial in high-stakes environments like drug discovery, it introduces a new class of security and operational risks."
+    },
+    {
+      "type": "paragraph",
+      "text": "The risk manifests in two ways. First, excessive computation leads to latency issues that can disrupt real-time data pipelines. In a cloud-native environment where resources are billed by the second, an agent that loops indefinitely or generates thousands of unnecessary queries can drain budgets and degrade service levels for other users. Second, the agent's internal state becomes more complex, increasing the attack surface for prompt injection or data exfiltration attempts. As we move toward systems where AI agents have autonomous access to corporate networks and proprietary datasets, the ability of a model to 'overthink' could inadvertently expose sensitive information."
+    },
+    {
+      "type": "paragraph",
+      "text": "Imagine an agent tasked with analyzing customer churn data. To be thorough, it might decide to cross-reference this data with every other database in the company's ecosystem—HR records, supply chain logs, and even IoT sensor data from factory floors—to build a comprehensive profile of customer behavior. While the resulting analysis might be incredibly rich, the process involves reading far more data than necessary, potentially leaking information about employees or proprietary manufacturing processes that were never intended to be part of the churn model. Furthermore, the sheer volume of data movement can trigger network congestion, making the system vulnerable to denial-of-service attacks where a malicious actor could simply flood the agent with trivial queries to exhaust its compute budget."
+    },
+    {
+      "type": "paragraph",
+      "text": "Mitigating these risks requires a new layer of governance in AI infrastructure. We need mechanisms that can detect when an agent is deviating from its intended scope, perhaps by monitoring the entropy of its decision tree or the volume of external tool calls. Rate limiting and strict data boundaries—where agents are granted read-only access to specific schemas and write permissions only to designated output logs—are essential. The goal is not to dumb down the intelligence of these systems but to align their curiosity with the security constraints of the organizations deploying them."
+    },
+    {
+      "type": "heading",
+      "text": "Labor Dynamics in the Chip and Model Wars"
+    },
+    {
+      "type": "paragraph",
+      "text": "The hardware foundation of this agentic revolution is the semiconductor supply chain. Recent reports highlight a fierce battle for chip talent, as the demand for specialized processors capable of handling high-throughput inference and training outpaces the availability of engineers with the requisite expertise in advanced packaging and heterogeneous computing architectures."
+    },
+    {
+      "type": "paragraph",
+      "text": "This shortage is not merely a numbers game; it represents a structural bottleneck. As models grow larger and agentic workflows require sustained compute over longer periods, the industry is moving away from relying solely on massive clusters of GPUs for training. Instead, there is an increasing emphasis on efficient inference hardware—chips that can run smaller, specialized models at high speeds with low power consumption. Designing such chips requires a deep understanding of both algorithmic efficiency and physical constraints, a niche skill set that is currently in short supply."
+    },
+    {
+      "type": "paragraph",
+      "text": "Simultaneously, there is a palpable deflation in AI hype cycles. Investors and executives are becoming increasingly cautious, recognizing that the marginal gains from scaling model parameters alone are diminishing without corresponding advances in efficiency. This shift is forcing product strategies to pivot from 'bigger is better' to 'smarter and cheaper.' Companies are now prioritizing inference economics—optimizing the cost-per-token at runtime rather than just focusing on pre-training compute costs."
+    },
+    {
+      "type": "paragraph",
+      "text": "For scientific institutions, this means that the total cost of ownership for an agentic system will likely include significant overheads in monitoring, safety constraints, and human-in-the-loop oversight, not just raw GPU hours. A university lab might find that running a sophisticated agent to automate literature reviews is actually more expensive than hiring a graduate student to do the same work, once you factor in the energy costs, the need for specialized hardware, and the risk of hallucinations requiring manual correction. The era of cheap compute abundance may be ending, and the winners will be those who can architect systems that are both highly capable and frugal with resources."
+    },
+    {
+      "type": "heading",
+      "text": "Operational Efficiency: The NTT DATA Case"
+    },
+    {
+      "type": "paragraph",
+      "text": "The theoretical benefits of agentic AI are already bearing fruit in enterprise operations. NTT DATA, a major IT services provider, has recently integrated OpenAI's Codex capabilities into its incident response workflows. By deploying an agent that can parse logs, identify anomalies, and draft remediation scripts, they have reduced the time required to analyze and resolve critical incidents from hours down to approximately thirty minutes."
+    },
+    {
+      "type": "paragraph",
+      "text": "This reduction is not merely a speed bump; it represents a fundamental change in how organizations approach system reliability. The agent does not replace human engineers but rather acts as a force multiplier, handling the routine diagnostic steps that previously bogged down teams. However, this also underscores the importance of data boundaries. The agent must be strictly confined to the incident context and given read/write permissions only where necessary, ensuring that the efficiency gains do not come at the cost of security compliance."
+    },
+    {
+      "type": "paragraph",
+      "text": "The NTT DATA example illustrates a broader trend: enterprises are beginning to trust AI agents with autonomous actions that were once considered too risky. This trust is built incrementally, starting with low-risk tasks like log parsing and moving toward higher-stakes decisions like applying patches or restarting services. As confidence grows, the scope of these agents will expand, potentially transforming entire IT operations centers into environments where humans focus on strategic oversight while AI handles the tactical execution."
+    },
+    {
+      "type": "heading",
+      "text": "Conclusion"
+    },
+    {
+      "type": "paragraph",
+      "text": "In summary, we are standing at a precipice in scientific computing. The transition from static models to agentic workflows offers the promise of autonomous, iterative discovery that mirrors the creative process of human scientists. Tabular models provide the necessary precision for structured data, filling gaps where language models falter. Yet, these advances bring new challenges: the security risks of overthinking, the labor shortages in chip design, and the economic reality that efficiency will soon trump raw scale. As organizations like NTT DATA demonstrate, the path forward involves careful integration, strict governance, and a realistic appreciation of costs. The future of scientific AI will not be defined by ever-larger models alone, but by the intelligent orchestration of diverse tools, the judicious use of compute, and the ability to balance ambition with responsibility."
+    },
+    {
+      "type": "heading",
+      "text": "What changes in practice"
+    },
+    {
+      "type": "paragraph",
+      "text": "For AI, the operational question is whether the news changes how products are built, deployed, governed, or paid for. A model announcement matters most when it shifts inference cost, reliability, data boundaries, security exposure, or the amount of work a team can safely delegate to automation."
+    },
+    {
+      "type": "paragraph",
+      "text": "The lead signal is Scientific computing in the age of agentic AI. Leo would not read it as a standalone item. He would place it beside the rest of the source set and ask which assumption is being tested: demand, cost, trust, policy, infrastructure capacity, or the willingness of customers and investors to keep paying for the current narrative."
+    },
+    {
+      "type": "paragraph",
+      "text": "The current source mix points to several connected signals rather than one isolated story: Scientific computing in the age of agentic AI; Large Tabular Models Excel Where LLMs Fail; AI Models Overthink Problems—and It’s a Security Risk; The Download: a chip talent battle, and deflating AI hype; NTT DATA Group cuts incident analysis to 30 minutes with Codex. Read together, they give Leo a broader map of where attention is moving and which assumptions deserve a second look."
+    },
+    {
+      "type": "heading",
+      "text": "Second-order effects"
+    },
+    {
+      "type": "paragraph",
+      "text": "The second-order question is trust. Teams do not adopt artificial intelligence because a demo is impressive; they adopt it when the workflow is observable, the failure mode is bounded, and the economics still make sense after compliance, support, latency, and human review are counted."
+    },
+    {
+      "type": "paragraph",
+      "text": "Leo's operating lens is to look for the control point. Sometimes it is the model, sometimes the distribution channel, sometimes the data contract, and sometimes the boring integration layer that decides whether a capability becomes a dependable product."
+    },
+    {
+      "type": "heading",
+      "text": "What to watch next"
+    },
+    {
+      "type": "paragraph",
+      "text": "The next useful check is adoption quality. Pilots, demos, and benchmark claims are weaker signals than durable workflows, clear ownership, measured costs, and evidence that customers trust the system enough to use it in consequential work."
+    },
+    {
+      "type": "paragraph",
+      "text": "The practical discipline is to avoid treating the freshest headline as the whole story. The stronger read is slower and more mechanical: identify the constraint, watch whether it spreads, and keep revising the map as better evidence arrives."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Scientific computing in the age of agentic AI",
+      "url": "https://openai.com/index/scientific-computing-agentic-ai"
+    },
+    {
+      "title": "Large Tabular Models Excel Where LLMs Fail",
+      "url": "https://spectrum.ieee.org/large-tabular-models-nexus"
+    },
+    {
+      "title": "AI Models Overthink Problems—and It’s a Security Risk",
+      "url": "https://spectrum.ieee.org/ai-reasoning-models-security-risk"
+    },
+    {
+      "title": "The Download: a chip talent battle, and deflating AI hype",
+      "url": "https://www.technologyreview.com/2026/07/29/1140884/the-download-chip-talent-battle-deflating-ai-hype/"
+    },
+    {
+      "title": "NTT DATA Group cuts incident analysis to 30 minutes with Codex",
+      "url": "https://openai.com/index/ntt-data"
+    }
+  ],
+  "audioUrl": "content/audio/ai-2026072913-scientific-computing-in-the-age-of-agentic-ai.mp3",
+  "audioProvider": "kokoro",
+  "audioVoice": "am_michael",
+  "audioScript": "polished",
+  "audioZhUrl": "content/audio/ai-2026072913-scientific-computing-in-the-age-of-agentic-ai.zh.mp3",
+  "audioZhProvider": "kokoro",
+  "audioZhVoice": "zm_yunyang",
+  "audioZhScript": "polished-zh"
+}
